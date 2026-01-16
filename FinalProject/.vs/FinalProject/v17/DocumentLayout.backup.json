@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\FinalProject\\FinalProject\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9867CF2F-36BE-4344-9A59-685FD0219523}|src\\Core\\FinalProject.Domain\\FinalProject.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\finalproject\\src\\core\\finalproject.domain\\entities\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9867CF2F-36BE-4344-9A59-685FD0219523}|src\\Core\\FinalProject.Domain\\FinalProject.Domain.csproj|solutionrelative:src\\core\\finalproject.domain\\entities\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\FinalProject\\src\\Core\\FinalProject.Domain\\Entities\\common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "src\\Core\\FinalProject.Domain\\Entities\\common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\FinalProject\\src\\Core\\FinalProject.Domain\\Entities\\common\\BaseEntity.cs",
+              "RelativeToolTip": "src\\Core\\FinalProject.Domain\\Entities\\common\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T19:05:24.132Z",
+              "EditorCaption": ""
             }
           ]
         }
