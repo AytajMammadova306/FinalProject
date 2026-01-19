@@ -5,9 +5,13 @@ namespace Cinemastic.MVC
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddControllersWithViews();
             var app = builder.Build();
+            app.UseStaticFiles();
 
-            app.MapGet("/", () => "Hello World!");
+            app.MapControllerRoute(
+                "defualt",
+                "{controller=home}/{action=index}/{id?}");
 
             app.Run();
         }
