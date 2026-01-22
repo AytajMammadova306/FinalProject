@@ -8,6 +8,8 @@ namespace Cinemastic.Domain.Entities
 {
     internal class Movie:BaseNameableEntity
     {
+        public int DurationMinutes { get; set; }
+        public string Description {  get; set; }
         public List<MovieGenre> MovieGenres { get; set; }
     }
 }
