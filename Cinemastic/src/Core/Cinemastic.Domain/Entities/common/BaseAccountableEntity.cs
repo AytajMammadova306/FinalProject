@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Domain.Entities
 {
-    internal abstract class BaseAccountableEntity: BaseEntity
+    public abstract class BaseAccountableEntity: BaseEntity
     {
         public DateTime? CreatedAt { get; set; }
         public DateTime? Updated { get; set; }

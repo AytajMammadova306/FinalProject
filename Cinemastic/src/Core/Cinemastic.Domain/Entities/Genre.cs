@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Domain.Entities
 {
-    internal class Genre:BaseNameableEntity
+    public class Genre:BaseNameableEntity
     {
         public List<MovieGenre> MovieGenres { get; set; }
 

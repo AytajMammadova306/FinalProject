@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Domain.Entities
 {
-    internal abstract class BaseNameableEntity:BaseAccountableEntity
+    public abstract class BaseNameableEntity:BaseAccountableEntity
     {
         public string Name { get; set; }
     }

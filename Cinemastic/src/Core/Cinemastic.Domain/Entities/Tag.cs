@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Domain.Entities
 {
-    public abstract class BaseEntity
+    public class Tag:BaseNameableEntity
     {
-        public string Id { get; set; }
-        public bool IsDeleted { get; set; }
+        public List<MovieTag> MovieTags { get; set; }
     }
 }
