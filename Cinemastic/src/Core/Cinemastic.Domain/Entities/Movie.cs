@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinemastic.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace Cinemastic.Domain.Entities
         public List<MovieTag> MovieTags { get; set; }
         public List<MovieCast> MovieCasts { get; set; }
         public List<MovieCrew> MovieCrews { get; set; }
+        public AgeRating AgeRating { get; set; }
 
     }
 }
