@@ -1,0 +1,16 @@
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\bin\Debug\net8.0\Cinemastic.Application.deps.json
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\bin\Debug\net8.0\Cinemastic.Application.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\bin\Debug\net8.0\Cinemastic.Application.pdb
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\bin\Debug\net8.0\Cinemastic.Domain.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\bin\Debug\net8.0\Cinemastic.Domain.pdb
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\obj\Debug\net8.0\Cinemastic.Application.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\obj\Debug\net8.0\Cinemastic.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\obj\Debug\net8.0\Cinemastic.Application.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\obj\Debug\net8.0\Cinemastic.Application.AssemblyInfo.cs
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\obj\Debug\net8.0\Cinemastic.Application.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\obj\Debug\net8.0\Cinemastic.Application.sourcelink.json
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\obj\Debug\net8.0\Cinemast.1D9E1BA5.Up2Date
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\obj\Debug\net8.0\Cinemastic.Application.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\obj\Debug\net8.0\refint\Cinemastic.Application.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\obj\Debug\net8.0\Cinemastic.Application.pdb
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Application\obj\Debug\net8.0\ref\Cinemastic.Application.dll

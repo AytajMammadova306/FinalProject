@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cinemastic.Domain\Cinemastic.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

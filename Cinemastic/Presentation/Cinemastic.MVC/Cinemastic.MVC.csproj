@@ -13,4 +13,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Infrastructure\Cinemastic.Infrastructure\Cinemastic.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Infrastructure\Cinemastic.Persistance\Cinemastic.Persistance.csproj" />
+  </ItemGroup>
+
 </Project>

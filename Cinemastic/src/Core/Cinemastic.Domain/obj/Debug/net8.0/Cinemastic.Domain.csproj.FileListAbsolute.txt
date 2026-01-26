@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\bin\Debug\net8.0\Cinemastic.Domain.deps.json
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\bin\Debug\net8.0\Cinemastic.Domain.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\bin\Debug\net8.0\Cinemastic.Domain.pdb
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\obj\Debug\net8.0\Cinemastic.Domain.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\obj\Debug\net8.0\Cinemastic.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\obj\Debug\net8.0\Cinemastic.Domain.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\obj\Debug\net8.0\Cinemastic.Domain.AssemblyInfo.cs
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\obj\Debug\net8.0\Cinemastic.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\obj\Debug\net8.0\Cinemastic.Domain.sourcelink.json
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\obj\Debug\net8.0\Cinemastic.Domain.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\obj\Debug\net8.0\refint\Cinemastic.Domain.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\obj\Debug\net8.0\Cinemastic.Domain.pdb
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Core\Cinemastic.Domain\obj\Debug\net8.0\ref\Cinemastic.Domain.dll
