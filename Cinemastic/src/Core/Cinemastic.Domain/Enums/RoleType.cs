@@ -10,6 +10,7 @@ namespace Cinemastic.Domain.Enums
     {
         Lead=1,
         Supporting=2,
-        Cameo=3
+        Cameo=3,
+        Voice=4
     }
 }

@@ -8,6 +8,6 @@ namespace Cinemastic.Domain.Entities
 {
     public class Crew:BaseNameableEntity
     {
-        public List<MovieCrew> MovieCrews { get; set; }
+        public List<ContentCrew> ContentCrews { get; set; }
     }
 }
