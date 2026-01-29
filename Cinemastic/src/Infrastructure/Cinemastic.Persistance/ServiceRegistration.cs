@@ -15,7 +15,7 @@ namespace Cinemastic.Persistance
         public static IServiceCollection AddPersistanceServices(this IServiceCollection services, IConfiguration config)
         {
 
-            services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("default")));
+            services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("default")));//cloude u qosmaqa calisiram 3 gundu
 
             return services;
 
