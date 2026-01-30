@@ -8,7 +8,7 @@ namespace Cinemastic.Domain.Entities
 {
     public class Genre:BaseNameableEntity
     {
-        public List<ContentGenre> ContentGenres { get; set; }
+        public ICollection<ContentGenre> ContentGenres { get; set; }
 
     }
 }

@@ -8,6 +8,6 @@ namespace Cinemastic.Domain.Entities
 {
     public class Tag:BaseNameableEntity
     {
-        public List<ContentTag> ContentTags { get; set; }
+        public ICollection<ContentTag> ContentTags { get; set; }
     }
 }

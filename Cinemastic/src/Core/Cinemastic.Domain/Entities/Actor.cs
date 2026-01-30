@@ -8,6 +8,6 @@ namespace Cinemastic.Domain.Entities
 {
     public class Actor:BaseNameableEntity
     {
-        public List<ContentCast> ContentCasts { get; set; }
+        public ICollection<ContentCast> ContentCasts { get; set; }
     }
 }
