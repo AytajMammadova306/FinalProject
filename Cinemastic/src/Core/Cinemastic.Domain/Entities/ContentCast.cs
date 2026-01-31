@@ -9,8 +9,8 @@ namespace Cinemastic.Domain.Entities
 {
     public class ContentCast
     {
-        public int ContentId { get; set; }
-        public int ActorId { get; set; }
+        public long ContentId { get; set; }
+        public long ActorId { get; set; }
         public Content Content { get; set; }
         public Actor Actor { get; set; }
         public RoleType Role { get; set; }

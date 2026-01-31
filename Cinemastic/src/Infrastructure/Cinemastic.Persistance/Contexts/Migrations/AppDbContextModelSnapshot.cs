@@ -24,8 +24,11 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Actor", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -127,8 +130,11 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Content", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<int>("AgeRating")
                         .HasColumnType("int");
@@ -174,108 +180,77 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.ContentCast", b =>
                 {
-                    b.Property<int>("ContentId")
-                        .HasColumnType("int");
+                    b.Property<long>("ContentId")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("ActorId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ActorId1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ContentId1")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<long>("ActorId")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
                     b.HasKey("ContentId", "ActorId");
 
-                    b.HasIndex("ActorId1");
-
-                    b.HasIndex("ContentId1");
+                    b.HasIndex("ActorId");
 
                     b.ToTable("ContentCasts");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.ContentCrew", b =>
                 {
-                    b.Property<int>("ContentId")
-                        .HasColumnType("int");
+                    b.Property<long>("ContentId")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("CrewId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ContentId1")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("CrewId1")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<long>("CrewId")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("CrewType")
                         .HasColumnType("int");
 
                     b.HasKey("ContentId", "CrewId");
 
-                    b.HasIndex("ContentId1");
-
-                    b.HasIndex("CrewId1");
+                    b.HasIndex("CrewId");
 
                     b.ToTable("ContentCrews");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.ContentGenre", b =>
                 {
-                    b.Property<int>("ContentId")
-                        .HasColumnType("int");
+                    b.Property<long>("ContentId")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("GenreId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ContentId1")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("GenreId1")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<long>("GenreId")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ContentId", "GenreId");
 
-                    b.HasIndex("ContentId1");
-
-                    b.HasIndex("GenreId1");
+                    b.HasIndex("GenreId");
 
                     b.ToTable("ContentGenres");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.ContentTag", b =>
                 {
-                    b.Property<int>("ContentId")
-                        .HasColumnType("int");
+                    b.Property<long>("ContentId")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("TagId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ContentId1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("TagId1")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<long>("TagId")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ContentId", "TagId");
 
-                    b.HasIndex("ContentId1");
-
-                    b.HasIndex("TagId1");
+                    b.HasIndex("TagId");
 
                     b.ToTable("ContentTags");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Crew", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -302,8 +277,11 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Genre", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -330,8 +308,11 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Tag", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -493,13 +474,15 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                 {
                     b.HasOne("Cinemastic.Domain.Entities.Actor", "Actor")
                         .WithMany("ContentCasts")
-                        .HasForeignKey("ActorId1")
+                        .HasForeignKey("ActorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Cinemastic.Domain.Entities.Content", "Content")
                         .WithMany("ContentCasts")
-                        .HasForeignKey("ContentId1");
+                        .HasForeignKey("ContentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Actor");
 
@@ -510,11 +493,15 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                 {
                     b.HasOne("Cinemastic.Domain.Entities.Content", "Content")
                         .WithMany("ContentCrews")
-                        .HasForeignKey("ContentId1");
+                        .HasForeignKey("ContentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Cinemastic.Domain.Entities.Crew", "Crew")
                         .WithMany("ContentCrews")
-                        .HasForeignKey("CrewId1");
+                        .HasForeignKey("CrewId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Content");
 
@@ -525,11 +512,15 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                 {
                     b.HasOne("Cinemastic.Domain.Entities.Content", "Content")
                         .WithMany("ContentGenres")
-                        .HasForeignKey("ContentId1");
+                        .HasForeignKey("ContentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Cinemastic.Domain.Entities.Genre", "Genre")
                         .WithMany("ContentGenres")
-                        .HasForeignKey("GenreId1");
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Content");
 
@@ -540,13 +531,15 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                 {
                     b.HasOne("Cinemastic.Domain.Entities.Content", "Content")
                         .WithMany("ContentTags")
-                        .HasForeignKey("ContentId1")
+                        .HasForeignKey("ContentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Cinemastic.Domain.Entities.Tag", "Tag")
                         .WithMany("ContentTags")
-                        .HasForeignKey("TagId1");
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Content");
 

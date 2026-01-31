@@ -9,8 +9,8 @@ namespace Cinemastic.Domain.Entities
 {
     public class ContentCrew
     {
-        public int CrewId { get; set; }
-        public int ContentId { get; set; }
+        public long CrewId { get; set; }
+        public long ContentId { get; set; }
         public Content Content { get; set; }
         public Crew Crew { get; set; }
         public CrewType CrewType { get; set; }
