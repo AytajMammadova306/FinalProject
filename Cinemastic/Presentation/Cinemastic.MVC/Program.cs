@@ -1,4 +1,5 @@
 using Cinemastic.Persistance;
+using Cinemastic.Infrastructure;
 namespace Cinemastic.MVC
 {
     public class Program
@@ -8,8 +9,9 @@ namespace Cinemastic.MVC
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllersWithViews();
 
-            builder.Services.
-                AddPersistanceServices(builder.Configuration);
+            builder.Services
+                .AddPersistanceServices(builder.Configuration)
+                .AddInfrastructureServices(builder.Configuration);
 
             var app = builder.Build();
             app.UseStaticFiles();
