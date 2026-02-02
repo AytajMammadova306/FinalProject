@@ -10,3 +10,4 @@ C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infr
 C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\obj\Debug\net8.0\refint\Cinemastic.Infrastructure.dll
 C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\obj\Debug\net8.0\Cinemastic.Infrastructure.pdb
 C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\obj\Debug\net8.0\ref\Cinemastic.Infrastructure.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\obj\Debug\net8.0\Cinemastic.Infrastructure.csproj.AssemblyReference.cache

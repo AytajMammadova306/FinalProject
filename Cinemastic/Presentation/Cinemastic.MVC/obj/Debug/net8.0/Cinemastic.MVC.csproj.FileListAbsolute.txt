@@ -157,3 +157,9 @@ C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\De
 C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\Debug\net8.0\Cinemastic.Domain.pdb
 C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\obj\Debug\net8.0\Cinemastic.MVC.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\obj\Debug\net8.0\Cinemast.8170A95C.Up2Date
+C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\Debug\net8.0\CloudinaryDotNet.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\Debug\net8.0\Newtonsoft.Json.dll

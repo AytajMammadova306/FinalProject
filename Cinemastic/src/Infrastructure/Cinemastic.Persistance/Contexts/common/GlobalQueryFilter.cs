@@ -18,6 +18,14 @@ namespace Cinemastic.Persistance.Context.common
             builder.ApplyQueryFilter<Genre>();
             builder.ApplyQueryFilter<Content>();
             builder.ApplyQueryFilter<Tag>();
+            builder.Entity<ContentTag>()
+                .HasQueryFilter(ct=>!ct.Content.IsDeleted);
+            builder.Entity<ContentGenre>()
+                .HasQueryFilter(cg=>!cg.Content.IsDeleted);
+            builder.Entity<ContentCast>()
+                .HasQueryFilter(cc=>!cc.Content.IsDeleted);
+            builder.Entity<ContentCrew>()
+                .HasQueryFilter(cc=>!cc.Content.IsDeleted);
         }
         private static void ApplyQueryFilter<T>(this ModelBuilder builder) where T : BaseEntity, new()
         {

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Cinemastic.Persistance.Contexts.Migrations
+namespace Cinemastic.Persistance.Contents.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration
@@ -81,6 +81,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     AgeRating = table.Column<int>(type: "int", nullable: false),
                     ContentType = table.Column<int>(type: "int", nullable: false),
                     EpisodCount = table.Column<int>(type: "int", nullable: true),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Updated = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -405,6 +406,24 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                 name: "IX_ContentTags_TagId",
                 table: "ContentTags",
                 column: "TagId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Crews_Name",
+                table: "Crews",
+                column: "Name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Genres_Name",
+                table: "Genres",
+                column: "Name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tags_Name",
+                table: "Tags",
+                column: "Name",
+                unique: true);
         }
 
         /// <inheritdoc />
