@@ -9,5 +9,6 @@ namespace Cinemastic.Domain.Entities
     public class Actor:BaseNameableEntity
     {
         public ICollection<ContentCast> ContentCasts { get; set; }
+        
     }
 }
