@@ -19,4 +19,8 @@
     <ProjectReference Include="..\..\Core\Cinemastic.Application\Cinemastic.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Implementations\Services\FeatureServices\" />
+  </ItemGroup>
+
 </Project>

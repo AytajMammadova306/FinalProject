@@ -1,6 +1,8 @@
 ﻿using Cinemastic.Application.Interfaces.Repositories;
+using Cinemastic.Application.Interfaces.Services.EntityServices;
 using Cinemastic.Persistance.Context;
 using Cinemastic.Persistance.Implementations.Repositories;
+using Cinemastic.Persistance.Implementations.Services.EntityServices;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +27,8 @@ namespace Cinemastic.Persistance
             services.AddScoped<IGenreRepository, GenreRepository>();
             services.AddScoped<ITagRepository, TagRepository>();
 
+
+            services.AddScoped<IContentService, ContentService>();
 
             return services;
 

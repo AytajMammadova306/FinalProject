@@ -1,5 +1,6 @@
 using Cinemastic.Persistance;
 using Cinemastic.Infrastructure;
+using Cinemastic.Application;
 namespace Cinemastic.MVC
 {
     public class Program
@@ -11,7 +12,8 @@ namespace Cinemastic.MVC
 
             builder.Services
                 .AddPersistanceServices(builder.Configuration)
-                .AddInfrastructureServices(builder.Configuration);
+                .AddInfrastructureServices(builder.Configuration)
+                .AddApplicationServices();
 
             var app = builder.Build();
             app.UseStaticFiles();

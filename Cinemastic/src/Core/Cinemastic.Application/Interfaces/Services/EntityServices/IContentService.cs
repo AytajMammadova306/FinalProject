@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cinemastic.Persistance.Implementations.Services
+namespace Cinemastic.Application.Interfaces.Services.EntityServices
 {
-    internal class MovieService
+    public interface IContentService
     {
     }
 }
