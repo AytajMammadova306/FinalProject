@@ -163,3 +163,4 @@ C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\De
 C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\Presentation\Cinemastic.MVC\bin\Debug\net8.0\AutoMapper.dll

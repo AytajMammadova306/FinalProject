@@ -1,8 +1,10 @@
 ﻿using Cinemastic.Application.Interfaces.Repositories;
 using Cinemastic.Application.Interfaces.Services.EntityServices;
+using Cinemastic.Application.Interfaces.Services.Feature_Services;
 using Cinemastic.Persistance.Context;
 using Cinemastic.Persistance.Implementations.Repositories;
 using Cinemastic.Persistance.Implementations.Services.EntityServices;
+using Cinemastic.Persistance.Implementations.Services.FeatureServices;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +31,8 @@ namespace Cinemastic.Persistance
 
 
             services.AddScoped<IContentService, ContentService>();
+            services.AddScoped<IHomeService, HomeService>();
+            
 
             return services;
 

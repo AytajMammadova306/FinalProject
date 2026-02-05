@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Cinemastic.Application.Interfaces.Services.Feature_Services;
+using Cinemastic.Application.ViewModel.Home;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Cinemastic.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IHomeService _homeService;
+
+        public HomeController(IHomeService homeService)
         {
-            return View();
+            _homeService=homeService;
+        }
+        public async Task<IActionResult> Index()
+        {
+            HomePageVM HomeVM =await _homeService.GetHomePageVMAsync();
+            return View(HomeVM);
         }
     }
 }

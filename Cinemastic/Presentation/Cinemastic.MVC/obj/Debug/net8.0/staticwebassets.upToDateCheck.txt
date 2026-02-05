@@ -600,6 +600,7 @@ wwwroot\assets\images\media\deadpool.webp
 wwwroot\assets\images\media\deadpool-portrait.webp
 wwwroot\assets\images\media\dinoosaur.webp
 wwwroot\assets\images\media\dinoosaur-portrait.webp
+wwwroot\assets\images\media\download.jpg
 wwwroot\assets\images\media\episode\s1e1-awakening-of-the-drakes.webp
 wwwroot\assets\images\media\episode\s1e1-cats-in-the-bag.webp
 wwwroot\assets\images\media\episode\s1e1-recap-severance.webp

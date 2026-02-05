@@ -15,8 +15,4 @@
     <ProjectReference Include="..\Cinemastic.Domain\Cinemastic.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\Services\Feature Services\" />
-  </ItemGroup>
-
 </Project>

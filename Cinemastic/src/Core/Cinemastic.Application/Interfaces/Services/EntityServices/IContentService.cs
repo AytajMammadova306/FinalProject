@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinemastic.MVC.ViewModel.Movie;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace Cinemastic.Application.Interfaces.Services.EntityServices
 {
     public interface IContentService
     {
+        Task<ICollection<GetContentItemVM>> GetAllAsync();
     }
 }
