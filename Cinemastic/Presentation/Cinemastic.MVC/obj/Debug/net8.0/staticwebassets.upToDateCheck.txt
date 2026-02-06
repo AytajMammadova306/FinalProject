@@ -586,6 +586,8 @@ wwwroot\assets\images\media\assassins-creed-portrait.webp
 wwwroot\assets\images\media\avengers.webp
 wwwroot\assets\images\media\batter-caill.webp
 wwwroot\assets\images\media\batter-caill-portrait.webp
+wwwroot\assets\images\media\BeautyAndBeast.jpg
+wwwroot\assets\images\media\BlackPantera.jpg
 wwwroot\assets\images\media\breaking-bad.webp
 wwwroot\assets\images\media\breaking-bad-portrait.webp
 wwwroot\assets\images\media\Bumblebee.webp
@@ -674,8 +676,12 @@ wwwroot\assets\images\media\guilty-portrait.webp
 wwwroot\assets\images\media\hanuman.webp
 wwwroot\assets\images\media\hanuman1.webp
 wwwroot\assets\images\media\hanuman-portrait.webp
+wwwroot\assets\images\media\HarryPotter.jpg
+wwwroot\assets\images\media\HomeAlone.jpg
+wwwroot\assets\images\media\Iron Man 3.jpg
 wwwroot\assets\images\media\john-wick.webp
 wwwroot\assets\images\media\john-wick-portrait.webp
+wwwroot\assets\images\media\Joker.jpg
 wwwroot\assets\images\media\joker.webp
 wwwroot\assets\images\media\joker-portrait.webp
 wwwroot\assets\images\media\jumanji-portrait.webp

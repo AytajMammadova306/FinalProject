@@ -14,11 +14,12 @@ namespace Cinemastic.Application.MappingProfiles
         public ContentProfile()
         {
             CreateMap<Content, GetContentItemVM>()
-                .ForMember(cVM => cVM.Genre, opt => opt.MapFrom(c =>
+                .ForMember(cVM => cVM.Genres, opt => opt.MapFrom(c =>
                     c.ContentGenres
                     .Select(cg => cg.Genre.Name)
-                    .ToList()
-            ));
+                    .Take(2)
+                    .ToList()))
+                .ForMember(cVM=>cVM.GenresCount,opt=>opt.MapFrom(c=>c.ContentGenres.Count()));
 
         }
     }

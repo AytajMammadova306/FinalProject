@@ -10,7 +10,7 @@ namespace Cinemastic.Domain.Entities
 {
     public class Content:BaseNameableEntity
     {
-        public int ReleaseYear { get; set; }
+        public DateTime? ReleaseDate { get; set; }
         public int DurationMinutes { get; set; }
         public string Description {  get; set; }
         public ICollection<ContentGenre> ContentGenres { get; set; }

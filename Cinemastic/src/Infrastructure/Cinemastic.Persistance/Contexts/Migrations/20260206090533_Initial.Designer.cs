@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Cinemastic.Persistance.Contents.Migrations
+namespace Cinemastic.Persistance.Contexts.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260202143756_Initial")]
+    [Migration("20260206090533_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -174,8 +174,8 @@ namespace Cinemastic.Persistance.Contents.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("ReleaseYear")
-                        .HasColumnType("int");
+                    b.Property<DateTime?>("ReleaseDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("Updated")
                         .HasColumnType("datetime2");

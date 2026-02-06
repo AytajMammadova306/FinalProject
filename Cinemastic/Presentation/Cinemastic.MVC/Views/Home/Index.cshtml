@@ -1500,12 +1500,18 @@
                                         </div>
                                         <div class="card-description with-transition">
                                             <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
-                                                @foreach(string genre in contentItemVM.Genre)
+                                                @foreach(string genre in contentItemVM.Genres)
                                                 {
                                                     <li class="fw-semi-bold">
                                                         <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
                                                             @genre
                                                         </a>
+                                                    </li>
+                                                }
+                                                @if (contentItemVM.GenresCount > 2)
+                                                {
+                                                    <li class="fw-semi-bold">
+                                                        <span>+@(contentItemVM.GenresCount-2)</span>
                                                     </li>
                                                 }
                                             </ul>

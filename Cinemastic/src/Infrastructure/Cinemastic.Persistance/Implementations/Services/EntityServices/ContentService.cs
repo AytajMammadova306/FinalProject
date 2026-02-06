@@ -31,7 +31,8 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             IReadOnlyList<Content> contents = await _repository.GetAll(
                 includes: "ContentGenres.Genre")
                 .ToListAsync();
-            return _mapper.Map<ICollection<GetContentItemVM>>(contents);
+            ICollection<GetContentItemVM> contentVms = _mapper.Map<ICollection<GetContentItemVM>>(contents);
+            return contentVms;
         }
     }
 }
