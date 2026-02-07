@@ -25,7 +25,16 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
 
             HomePageVM homePageVM = new HomePageVM
             {
-                ContentItemVMs = contentItemVMs.OrderByDescending(cVM=>cVM.ReleaseDate).Take(15).ToList()
+                LatestContentItemVMs = contentItemVMs
+                    .Where(cVM=>cVM.ReleaseDate<=DateTime.UtcNow)
+                    .OrderByDescending(cVM=>cVM.ReleaseDate)
+                    .Take(15)
+                    .ToList(),
+                CommingContentItemVMs=contentItemVMs
+                    .Where(cVM=>cVM.ReleaseDate>DateTime.UtcNow)
+                    .OrderBy(cVM=>cVM.ReleaseDate)
+                    .Take(15)
+                    .ToList()
             };
             return homePageVM;
         }

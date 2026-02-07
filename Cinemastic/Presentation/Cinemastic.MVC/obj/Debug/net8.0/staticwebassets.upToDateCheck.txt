@@ -583,6 +583,7 @@ wwwroot\assets\images\media\arrival.webp
 wwwroot\assets\images\media\arrival-portrait.webp
 wwwroot\assets\images\media\assassins-creed.webp
 wwwroot\assets\images\media\assassins-creed-portrait.webp
+wwwroot\assets\images\media\Avengers Doomsday.jpg
 wwwroot\assets\images\media\avengers.webp
 wwwroot\assets\images\media\batter-caill.webp
 wwwroot\assets\images\media\batter-caill-portrait.webp
@@ -702,6 +703,7 @@ wwwroot\assets\images\media\minions-2.webp
 wwwroot\assets\images\media\minions-3.webp
 wwwroot\assets\images\media\minions-4.webp
 wwwroot\assets\images\media\minions-portrait.webp
+wwwroot\assets\images\media\Moana.jpg
 wwwroot\assets\images\media\onepeoc-portrait.webp
 wwwroot\assets\images\media\pirates-ofdayones-orignal.webp
 wwwroot\assets\images\media\rabbit.webp

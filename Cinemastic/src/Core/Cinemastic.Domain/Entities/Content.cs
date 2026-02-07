@@ -11,7 +11,7 @@ namespace Cinemastic.Domain.Entities
     public class Content:BaseNameableEntity
     {
         public DateTime? ReleaseDate { get; set; }
-        public int DurationMinutes { get; set; }
+        public int? DurationMinutes { get; set; }
         public string Description {  get; set; }
         public ICollection<ContentGenre> ContentGenres { get; set; }
         public ICollection<ContentTag> ContentTags { get; set; }
