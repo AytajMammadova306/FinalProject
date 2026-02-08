@@ -19,7 +19,6 @@ namespace Cinemastic.Domain.Entities
         public ICollection<ContentCrew> ContentCrews { get; set; }
         public AgeRating AgeRating { get; set; }
         public ContentTypeCus ContentType { get; set; }
-        public int? EpisodCount { get; set; }
         public string ImageUrl { get; set; }
 
     }
