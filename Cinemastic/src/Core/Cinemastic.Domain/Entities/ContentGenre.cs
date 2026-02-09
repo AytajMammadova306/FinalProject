@@ -10,7 +10,7 @@ namespace Cinemastic.Domain.Entities
     {
         public long ContentId { get; set; }
         public long GenreId { get; set; }
-        public Content Content { get; set; }
+        public Movie Content { get; set; }
         public Genre Genre { get; set; }
     }
 }

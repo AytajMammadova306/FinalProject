@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Application.Interfaces.Services.EntityServices
 {
-    public interface IContentService
+    public interface IMovieService
     {
         Task<ICollection<GetContentItemVM>> GetAllAsync();
     }

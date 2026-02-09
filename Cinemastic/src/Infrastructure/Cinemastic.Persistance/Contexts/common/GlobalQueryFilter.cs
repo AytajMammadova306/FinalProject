@@ -16,7 +16,7 @@ namespace Cinemastic.Persistance.Context.common
             builder.ApplyQueryFilter<Actor>();
             builder.ApplyQueryFilter<Crew>();
             builder.ApplyQueryFilter<Genre>();
-            builder.ApplyQueryFilter<Content>();
+            builder.ApplyQueryFilter<Movie>();
             builder.ApplyQueryFilter<Tag>();
             builder.Entity<ContentTag>()
                 .HasQueryFilter(ct=>!ct.Content.IsDeleted);

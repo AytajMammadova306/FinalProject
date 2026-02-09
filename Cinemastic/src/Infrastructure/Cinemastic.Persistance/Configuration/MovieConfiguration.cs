@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Persistance.Configuration
 {
-    internal class ContentConfiguration : IEntityTypeConfiguration<Content>
+    internal class MovieConfiguration : IEntityTypeConfiguration<Movie>
     {
-        public void Configure(EntityTypeBuilder<Content> builder)
+        public void Configure(EntityTypeBuilder<Movie> builder)
         {
             builder.Property(c => c.Name)
                 .IsRequired()

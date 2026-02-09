@@ -12,9 +12,9 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
 {
     internal class HomeService:IHomeService
     {
-        private readonly IContentService _contentService;
+        private readonly IMovieService _contentService;
 
-        public HomeService(IContentService contentService)
+        public HomeService(IMovieService contentService)
         {
             _contentService=contentService; 
         }

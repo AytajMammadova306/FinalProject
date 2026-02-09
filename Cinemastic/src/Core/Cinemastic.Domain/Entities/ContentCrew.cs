@@ -11,7 +11,7 @@ namespace Cinemastic.Domain.Entities
     {
         public long CrewId { get; set; }
         public long ContentId { get; set; }
-        public Content Content { get; set; }
+        public Movie Content { get; set; }
         public Crew Crew { get; set; }
         public CrewType CrewType { get; set; }
     }

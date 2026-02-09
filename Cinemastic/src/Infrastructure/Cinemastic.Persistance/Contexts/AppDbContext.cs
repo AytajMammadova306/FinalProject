@@ -37,8 +37,8 @@ namespace Cinemastic.Persistance.Context
                     case EntityState.Modified:
                         //var  result=entry.Property(nameof(Category.IsDeleted)).IsModified;
 
-                        var result = entry.OriginalValues.GetValue<bool>(nameof(Content.IsDeleted)) !=
-                            entry.CurrentValues.GetValue<bool>(nameof(Content.IsDeleted));
+                        var result = entry.OriginalValues.GetValue<bool>(nameof(Movie.IsDeleted)) !=
+                            entry.CurrentValues.GetValue<bool>(nameof(Movie.IsDeleted));
 
                         if (!result)
                         {
@@ -57,7 +57,7 @@ namespace Cinemastic.Persistance.Context
         public DbSet<Actor> Actors { get; set; }
         public DbSet<Crew> Crews { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Content> Contents { get; set; }
+        public DbSet<Movie> Contents { get; set; }
         public DbSet<ContentCast> ContentCasts { get; set; }
         public DbSet<ContentCrew> ContentCrews { get; set; }
         public DbSet<ContentGenre> ContentGenres { get; set; }

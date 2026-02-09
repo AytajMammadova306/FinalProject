@@ -24,13 +24,13 @@ namespace Cinemastic.Persistance
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("default")));//cloude u qosmaqa calisiram 3 gundu
 
             services.AddScoped<IActorRepository, ActorRepository>();
-            services.AddScoped<IContentRepository, ContentRepository>();
+            services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddScoped<ICrewRepository, CrewRepository>();
             services.AddScoped<IGenreRepository, GenreRepository>();
             services.AddScoped<ITagRepository, TagRepository>();
 
 
-            services.AddScoped<IContentService, ContentService>();
+            services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<IHomeService, HomeService>();
             
 

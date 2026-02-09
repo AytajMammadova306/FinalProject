@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Persistance.Implementations.Repositories
 {
-    internal class ContentRepository:Repository<Content>,IContentRepository
+    internal class MovieRepository:Repository<Movie>,IMovieRepository
     {
-        public ContentRepository(AppDbContext context) : base(context) { }
+        public MovieRepository(AppDbContext context) : base(context) { }
     }
 }

@@ -11,7 +11,7 @@ namespace Cinemastic.Domain.Entities
     {
         public long ContentId { get; set; }
         public long ActorId { get; set; }
-        public Content Content { get; set; }
+        public Movie Content { get; set; }
         public Actor Actor { get; set; }
         public RoleType Role { get; set; }
     }

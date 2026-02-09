@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Persistance.Implementations.Services.EntityServices
 {
-    internal class ContentService:IContentService
+    internal class MovieService:IMovieService
     {
-        private readonly IContentRepository _repository;
+        private readonly IMovieRepository _repository;
         private readonly IMapper _mapper;
 
-        public ContentService(
-            IContentRepository repository,
+        public MovieService(
+            IMovieRepository repository,
             IMapper mapper
             )
         {
@@ -28,7 +28,7 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
         
         public async Task<ICollection<GetContentItemVM>> GetAllAsync()
         {
-            IReadOnlyList<Content> contents = await _repository.GetAll(
+            IReadOnlyList<Movie> contents = await _repository.GetAll(
                 includes: "ContentGenres.Genre")
                 .ToListAsync();
             ICollection<GetContentItemVM> contentVms = _mapper.Map<ICollection<GetContentItemVM>>(contents);

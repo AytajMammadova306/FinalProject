@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Application.Interfaces.Repositories
 {
-    public interface IContentRepository:IRepository<Content>
+    public interface IMovieRepository:IRepository<Movie>
     {
     }
 }
