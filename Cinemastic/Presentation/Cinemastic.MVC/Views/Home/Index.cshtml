@@ -861,19 +861,19 @@
                data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true"
                data-pagination="true">
                <ul class="p-0 swiper-wrapper m-0  list-inline">
-                  @foreach(GetContentItemVM contentItemVM in Model.CommingContentItemVMs){
+                  @foreach(GetMovieItemVM movieItemVM in Model.CommingMovieItemVMs){
                       <li class="swiper-slide">
                      <div class="iq-card card-hover">
                        <div class="block-images position-relative w-100">
                          <div class="img-box w-100">
                            <a href="./movie-detail.html" class="position-relative top-0 bottom-0 start-0 end-0">
-                             <img src="@contentItemVM.ImageUrl" alt="@contentItemVM.Name"
+                             <img src="@movieItemVM.ImageUrl" alt="@movieItemVM.Name"
                                class="img-fluid object-cover w-100 d-block border-0 rounded-3">
                            </a>
                          </div>
                          <div class="card-description with-transition">
                            <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
-                                @foreach(string genre in contentItemVM.Genres)
+                                @foreach(string genre in movieItemVM.Genres)
                                     {
                                                     <li class="fw-semi-bold">
                                                         <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
@@ -881,17 +881,17 @@
                                                         </a>
                                                     </li>
                                     }
-                                @if (contentItemVM.GenresCount > 2)
+                                @if (movieItemVM.GenresCount > 2)
                                     {
                                         <li class="fw-semi-bold">
-                                        <span>+@(contentItemVM.GenresCount - 2)</span>
+                                        <span>+@(movieItemVM.GenresCount - 2)</span>
                                         </li>
                                     }
                            </ul>
                            <div class="cart-content">
                              <div class="content-left">
                                <h5 class="iq-title text-capitalize">
-                                 <a href="./movie-detail.html">@contentItemVM.Name</a>
+                                 <a href="./movie-detail.html">@movieItemVM.Name</a>
                                </h5>
                              </div>
                            </div>
@@ -1202,20 +1202,20 @@
                data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true"
                data-pagination="true">
                <ul class="p-0 swiper-wrapper m-0  list-inline">
-                        @foreach (GetContentItemVM contentItemVM in Model.LatestContentItemVMs)
+                        @foreach (GetMovieItemVM movieItemVM in Model.LatestMovieItemVMs)
                         {
                             <li class="swiper-slide">
                                 <div class="iq-card card-hover">
                                     <div class="block-images position-relative w-100">
                                         <div class="img-box w-100">
                                             <a href="./movie-detail.html" class="position-relative top-0 bottom-0 start-0 end-0">
-                                                <img src="@contentItemVM.ImageUrl" alt="@contentItemVM.Name"
+                                                <img src="@movieItemVM.ImageUrl" alt="@movieItemVM.Name"
                                                      class="img-fluid object-cover w-100 d-block border-0 rounded-3">
                                             </a>
                                         </div>
                                         <div class="card-description with-transition">
                                             <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
-                                                @foreach(string genre in contentItemVM.Genres)
+                                                @foreach(string genre in movieItemVM.Genres)
                                                 {
                                                     <li class="fw-semi-bold">
                                                         <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
@@ -1223,17 +1223,17 @@
                                                         </a>
                                                     </li>
                                                 }
-                                                @if (contentItemVM.GenresCount > 2)
+                                                @if (movieItemVM.GenresCount > 2)
                                                 {
                                                     <li class="fw-semi-bold">
-                                                        <span>+@(contentItemVM.GenresCount-2)</span>
+                                                        <span>+@(movieItemVM.GenresCount-2)</span>
                                                     </li>
                                                 }
                                             </ul>
                                             <div class="cart-content">
                                                 <div class="content-left">
                                                     <h5 class="iq-title text-capitalize">
-                                                        <a href="./movie-detail.html">@contentItemVM.Name</a>
+                                                        <a href="./movie-detail.html">@movieItemVM.Name</a>
                                                     </h5>
                                                 </div>
                                             </div>

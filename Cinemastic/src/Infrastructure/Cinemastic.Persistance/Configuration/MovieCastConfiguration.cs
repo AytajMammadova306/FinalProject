@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Persistance.Configuration
 {
-    internal class ContentCastConfiguration : IEntityTypeConfiguration<ContentCast>
+    internal class MovieCastConfiguration : IEntityTypeConfiguration<MovieCast>
     {
-        public void Configure(EntityTypeBuilder<ContentCast> builder)
+        public void Configure(EntityTypeBuilder<MovieCast> builder)
         {
             builder
-                .HasKey(cc => new { cc.ContentId, cc.ActorId });
+                .HasKey(cc => new { cc.MovieId, cc.ActorId });
         }
     }
 }

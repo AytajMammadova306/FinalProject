@@ -12,25 +12,25 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
 {
     internal class HomeService:IHomeService
     {
-        private readonly IMovieService _contentService;
+        private readonly IMovieService _movieService;
 
-        public HomeService(IMovieService contentService)
+        public HomeService(IMovieService movieService)
         {
-            _contentService=contentService; 
+            _movieService=movieService; 
         }
 
         public async Task<HomePageVM> GetHomePageVMAsync()
         {
-            ICollection<GetContentItemVM> contentItemVMs =await _contentService.GetAllAsync();
+            ICollection<GetMovieItemVM> movieItemVMs =await _movieService.GetAllAsync();
 
             HomePageVM homePageVM = new HomePageVM
             {
-                LatestContentItemVMs = contentItemVMs
+                LatestMovieItemVMs = movieItemVMs
                     .Where(cVM=>cVM.ReleaseDate<=DateTime.UtcNow)
                     .OrderByDescending(cVM=>cVM.ReleaseDate)
                     .Take(15)
                     .ToList(),
-                CommingContentItemVMs=contentItemVMs
+                CommingMovieItemVMs=movieItemVMs
                     .Where(cVM=>cVM.ReleaseDate>DateTime.UtcNow)
                     .OrderBy(cVM=>cVM.ReleaseDate)
                     .Take(15)

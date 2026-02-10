@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cinemastic.Persistance.Contexts.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260208193621_Movies")]
-    partial class Movies
+    [Migration("20260210044242_movieFix")]
+    partial class movieFix
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -131,146 +131,6 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("Cinemastic.Domain.Entities.Content", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<int>("AgeRating")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ContentType")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("DurationMinutes")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("EpisodCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime?>("ReleaseDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("Updated")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Content");
-                });
-
-            modelBuilder.Entity("Cinemastic.Domain.Entities.ContentCast", b =>
-                {
-                    b.Property<long>("ContentId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("ActorId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("MovieId")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
-
-                    b.HasKey("ContentId", "ActorId");
-
-                    b.HasIndex("ActorId");
-
-                    b.HasIndex("MovieId");
-
-                    b.ToTable("ContentCasts");
-                });
-
-            modelBuilder.Entity("Cinemastic.Domain.Entities.ContentCrew", b =>
-                {
-                    b.Property<long>("ContentId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("CrewId")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("CrewType")
-                        .HasColumnType("int");
-
-                    b.Property<long?>("MovieId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("ContentId", "CrewId");
-
-                    b.HasIndex("CrewId");
-
-                    b.HasIndex("MovieId");
-
-                    b.ToTable("ContentCrews");
-                });
-
-            modelBuilder.Entity("Cinemastic.Domain.Entities.ContentGenre", b =>
-                {
-                    b.Property<long>("ContentId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("GenreId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("MovieId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("ContentId", "GenreId");
-
-                    b.HasIndex("GenreId");
-
-                    b.HasIndex("MovieId");
-
-                    b.ToTable("ContentGenres");
-                });
-
-            modelBuilder.Entity("Cinemastic.Domain.Entities.ContentTag", b =>
-                {
-                    b.Property<long>("ContentId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("TagId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("MovieId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("ContentId", "TagId");
-
-                    b.HasIndex("MovieId");
-
-                    b.HasIndex("TagId");
-
-                    b.ToTable("ContentTags");
-                });
-
             modelBuilder.Entity("Cinemastic.Domain.Entities.Crew", b =>
                 {
                     b.Property<long>("Id")
@@ -384,7 +244,73 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movie");
+                    b.ToTable("Movies");
+                });
+
+            modelBuilder.Entity("Cinemastic.Domain.Entities.MovieCast", b =>
+                {
+                    b.Property<long>("MovieId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ActorId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.HasKey("MovieId", "ActorId");
+
+                    b.HasIndex("ActorId");
+
+                    b.ToTable("MovieCasts");
+                });
+
+            modelBuilder.Entity("Cinemastic.Domain.Entities.MovieCrew", b =>
+                {
+                    b.Property<long>("MovieId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("CrewId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("CrewType")
+                        .HasColumnType("int");
+
+                    b.HasKey("MovieId", "CrewId");
+
+                    b.HasIndex("CrewId");
+
+                    b.ToTable("MovieCrews");
+                });
+
+            modelBuilder.Entity("Cinemastic.Domain.Entities.MovieGenre", b =>
+                {
+                    b.Property<long>("MovieId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("GenreId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("MovieId", "GenreId");
+
+                    b.HasIndex("GenreId");
+
+                    b.ToTable("MovieGenres");
+                });
+
+            modelBuilder.Entity("Cinemastic.Domain.Entities.MovieTag", b =>
+                {
+                    b.Property<long>("MovieId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("TagId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("MovieId", "TagId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("MovieTags");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Tag", b =>
@@ -554,94 +480,78 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Cinemastic.Domain.Entities.ContentCast", b =>
+            modelBuilder.Entity("Cinemastic.Domain.Entities.MovieCast", b =>
                 {
                     b.HasOne("Cinemastic.Domain.Entities.Actor", "Actor")
-                        .WithMany("ContentCasts")
+                        .WithMany("MovieCasts")
                         .HasForeignKey("ActorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Cinemastic.Domain.Entities.Content", "Content")
-                        .WithMany("ContentCasts")
-                        .HasForeignKey("ContentId")
+                    b.HasOne("Cinemastic.Domain.Entities.Movie", "Movie")
+                        .WithMany("MovieCasts")
+                        .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Cinemastic.Domain.Entities.Movie", null)
-                        .WithMany("ContentCasts")
-                        .HasForeignKey("MovieId");
 
                     b.Navigation("Actor");
 
-                    b.Navigation("Content");
+                    b.Navigation("Movie");
                 });
 
-            modelBuilder.Entity("Cinemastic.Domain.Entities.ContentCrew", b =>
+            modelBuilder.Entity("Cinemastic.Domain.Entities.MovieCrew", b =>
                 {
-                    b.HasOne("Cinemastic.Domain.Entities.Content", "Content")
-                        .WithMany("ContentCrews")
-                        .HasForeignKey("ContentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Cinemastic.Domain.Entities.Crew", "Crew")
-                        .WithMany("ContentCrews")
+                        .WithMany("MovieCrews")
                         .HasForeignKey("CrewId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Cinemastic.Domain.Entities.Movie", null)
-                        .WithMany("ContentCrews")
-                        .HasForeignKey("MovieId");
-
-                    b.Navigation("Content");
-
-                    b.Navigation("Crew");
-                });
-
-            modelBuilder.Entity("Cinemastic.Domain.Entities.ContentGenre", b =>
-                {
-                    b.HasOne("Cinemastic.Domain.Entities.Content", "Content")
-                        .WithMany("ContentGenres")
-                        .HasForeignKey("ContentId")
+                    b.HasOne("Cinemastic.Domain.Entities.Movie", "Movie")
+                        .WithMany("MovieCrews")
+                        .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Crew");
+
+                    b.Navigation("Movie");
+                });
+
+            modelBuilder.Entity("Cinemastic.Domain.Entities.MovieGenre", b =>
+                {
                     b.HasOne("Cinemastic.Domain.Entities.Genre", "Genre")
-                        .WithMany("ContentGenres")
+                        .WithMany("MovieGenres")
                         .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Cinemastic.Domain.Entities.Movie", null)
-                        .WithMany("ContentGenres")
-                        .HasForeignKey("MovieId");
-
-                    b.Navigation("Content");
-
-                    b.Navigation("Genre");
-                });
-
-            modelBuilder.Entity("Cinemastic.Domain.Entities.ContentTag", b =>
-                {
-                    b.HasOne("Cinemastic.Domain.Entities.Content", "Content")
-                        .WithMany("ContentTags")
-                        .HasForeignKey("ContentId")
+                    b.HasOne("Cinemastic.Domain.Entities.Movie", "Movie")
+                        .WithMany("MovieGenres")
+                        .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Cinemastic.Domain.Entities.Movie", null)
-                        .WithMany("ContentTags")
-                        .HasForeignKey("MovieId");
+                    b.Navigation("Genre");
+
+                    b.Navigation("Movie");
+                });
+
+            modelBuilder.Entity("Cinemastic.Domain.Entities.MovieTag", b =>
+                {
+                    b.HasOne("Cinemastic.Domain.Entities.Movie", "Movie")
+                        .WithMany("MovieTags")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Cinemastic.Domain.Entities.Tag", "Tag")
-                        .WithMany("ContentTags")
+                        .WithMany("MovieTags")
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Content");
+                    b.Navigation("Movie");
 
                     b.Navigation("Tag");
                 });
@@ -699,44 +609,33 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Actor", b =>
                 {
-                    b.Navigation("ContentCasts");
-                });
-
-            modelBuilder.Entity("Cinemastic.Domain.Entities.Content", b =>
-                {
-                    b.Navigation("ContentCasts");
-
-                    b.Navigation("ContentCrews");
-
-                    b.Navigation("ContentGenres");
-
-                    b.Navigation("ContentTags");
+                    b.Navigation("MovieCasts");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Crew", b =>
                 {
-                    b.Navigation("ContentCrews");
+                    b.Navigation("MovieCrews");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Genre", b =>
                 {
-                    b.Navigation("ContentGenres");
+                    b.Navigation("MovieGenres");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Movie", b =>
                 {
-                    b.Navigation("ContentCasts");
+                    b.Navigation("MovieCasts");
 
-                    b.Navigation("ContentCrews");
+                    b.Navigation("MovieCrews");
 
-                    b.Navigation("ContentGenres");
+                    b.Navigation("MovieGenres");
 
-                    b.Navigation("ContentTags");
+                    b.Navigation("MovieTags");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Tag", b =>
                 {
-                    b.Navigation("ContentTags");
+                    b.Navigation("MovieTags");
                 });
 #pragma warning restore 612, 618
         }

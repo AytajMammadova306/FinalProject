@@ -57,11 +57,11 @@ namespace Cinemastic.Persistance.Context
         public DbSet<Actor> Actors { get; set; }
         public DbSet<Crew> Crews { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Movie> Contents { get; set; }
-        public DbSet<ContentCast> ContentCasts { get; set; }
-        public DbSet<ContentCrew> ContentCrews { get; set; }
-        public DbSet<ContentGenre> ContentGenres { get; set; }
-        public DbSet<ContentTag> ContentTags { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<MovieCast> MovieCasts { get; set; }
+        public DbSet<MovieCrew> MovieCrews { get; set; }
+        public DbSet<MovieGenre> MovieGenres { get; set; }
+        public DbSet<MovieTag> MovieTags { get; set; }
         public DbSet<Tag> Tags { get; set; }
 
 

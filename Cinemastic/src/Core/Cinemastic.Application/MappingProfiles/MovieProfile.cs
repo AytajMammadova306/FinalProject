@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Application.MappingProfiles
 {
-    internal class ContentProfile:Profile
+    internal class MovieProfile:Profile
     {
-        public ContentProfile()
+        public MovieProfile()
         {
-            CreateMap<Movie, GetContentItemVM>()
+            CreateMap<Movie, GetMovieItemVM>()
                 .ForMember(cVM => cVM.Genres, opt => opt.MapFrom(c =>
-                    c.ContentGenres
+                    c.MovieGenres
                     .Select(cg => cg.Genre.Name)
                     .Take(2)
                     .ToList()))
-                .ForMember(cVM=>cVM.GenresCount,opt=>opt.MapFrom(c=>c.ContentGenres.Count()));
+                .ForMember(cVM=>cVM.GenresCount,opt=>opt.MapFrom(c=>c.MovieGenres.Count()));
 
         }
     }

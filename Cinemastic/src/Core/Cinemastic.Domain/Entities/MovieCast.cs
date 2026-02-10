@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Domain.Entities
 {
-    public class ContentCast
+    public class MovieCast
     {
-        public long ContentId { get; set; }
+        public long MovieId { get; set; }
         public long ActorId { get; set; }
-        public Movie Content { get; set; }
+        public Movie Movie { get; set; }
         public Actor Actor { get; set; }
         public RoleType Role { get; set; }
     }

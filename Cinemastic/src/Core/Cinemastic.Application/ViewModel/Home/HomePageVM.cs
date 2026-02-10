@@ -9,7 +9,7 @@ namespace Cinemastic.Application.ViewModel.Home
 {
     public class HomePageVM
     {
-        public ICollection<GetContentItemVM> LatestContentItemVMs { get; set; }
-        public ICollection<GetContentItemVM> CommingContentItemVMs { get; set; }
+        public ICollection<GetMovieItemVM> LatestMovieItemVMs { get; set; }
+        public ICollection<GetMovieItemVM> CommingMovieItemVMs { get; set; }
     }
 }

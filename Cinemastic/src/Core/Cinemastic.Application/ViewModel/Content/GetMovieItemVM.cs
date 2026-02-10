@@ -3,7 +3,7 @@ using Cinemastic.Domain.Enums;
 
 namespace Cinemastic.MVC.ViewModel.Movie
 {
-    public class GetContentItemVM
+    public class GetMovieItemVM
     {
         public string Name { get; set; }
         public DateTime? ReleaseDate { get; set; }

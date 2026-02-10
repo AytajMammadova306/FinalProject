@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Domain.Entities
 {
-    public class ContentCrew
+    public class MovieCrew
     {
         public long CrewId { get; set; }
-        public long ContentId { get; set; }
-        public Movie Content { get; set; }
+        public long MovieId { get; set; }
+        public Movie Movie { get; set; }
         public Crew Crew { get; set; }
         public CrewType CrewType { get; set; }
     }

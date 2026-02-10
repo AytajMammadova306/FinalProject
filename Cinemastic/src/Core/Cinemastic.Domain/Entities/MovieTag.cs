@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Domain.Entities
 {
-    public class ContentTag
+    public class MovieTag
     {
-        public long ContentId { get; set; }
+        public long MovieId { get; set; }
         public long TagId { get; set; }
-        public Movie Content { get; set; }
+        public Movie Movie { get; set; }
         public Tag Tag { get; set; }
     }
 }

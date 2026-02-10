@@ -26,13 +26,13 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             _mapper=mapper;
         }
         
-        public async Task<ICollection<GetContentItemVM>> GetAllAsync()
+        public async Task<ICollection<GetMovieItemVM>> GetAllAsync()
         {
-            IReadOnlyList<Movie> contents = await _repository.GetAll(
-                includes: "ContentGenres.Genre")
+            IReadOnlyList<Movie> movies = await _repository.GetAll(
+                includes: "MovieGenres.Genre")
                 .ToListAsync();
-            ICollection<GetContentItemVM> contentVms = _mapper.Map<ICollection<GetContentItemVM>>(contents);
-            return contentVms;
+            ICollection<GetMovieItemVM> movieVms = _mapper.Map<ICollection<GetMovieItemVM>>(movies);
+            return movieVms;
         }
     }
 }

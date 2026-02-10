@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Cinemastic.Persistance.Configuration
 {
-    internal class ContentGenreConfiguration : IEntityTypeConfiguration<ContentGenre>
+    internal class MovieTagConfiguration : IEntityTypeConfiguration<MovieTag>
     {
-        public void Configure(EntityTypeBuilder<ContentGenre> builder)
+        public void Configure(EntityTypeBuilder<MovieTag> builder)
         {
             builder
-                .HasKey(cg => new { cg.ContentId, cg.GenreId });
+                .HasKey(ct => new { ct.MovieId, ct.TagId });
         }
     }
 }
