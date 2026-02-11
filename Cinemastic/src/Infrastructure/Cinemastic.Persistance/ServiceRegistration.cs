@@ -28,6 +28,10 @@ namespace Cinemastic.Persistance
             services.AddScoped<ICrewRepository, CrewRepository>();
             services.AddScoped<IGenreRepository, GenreRepository>();
             services.AddScoped<ITagRepository, TagRepository>();
+            services.AddScoped<IFranchiseRepository, FranchiseRepository>();
+            services.AddScoped<ITvShowRepository, TvShowRepository>();
+            services.AddScoped<ISeasonRepository, SeasonRepository>();
+            services.AddScoped<IEpisodeRepository, EpisodeRepository>();
 
 
             services.AddScoped<IMovieService, MovieService>();

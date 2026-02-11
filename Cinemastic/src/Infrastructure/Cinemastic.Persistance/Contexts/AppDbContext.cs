@@ -63,6 +63,10 @@ namespace Cinemastic.Persistance.Context
         public DbSet<MovieGenre> MovieGenres { get; set; }
         public DbSet<MovieTag> MovieTags { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<Episode> Episods { get; set; }
+        public DbSet<Franchise> Franchises { get; set; }
+        public DbSet<Season> Seasons { get; set; }
+        public DbSet<TvShow> TvShows { get; set; }
 
 
     }

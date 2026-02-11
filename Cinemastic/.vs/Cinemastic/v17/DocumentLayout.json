@@ -3,6 +3,122 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\episodeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\episodeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\episode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\episode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\season.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\season.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\tvshowconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\tvshowconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\franchise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\franchise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\seasonconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\seasonconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\franchiseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\franchiseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\episoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\episoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.application\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|solutionrelative:src\\core\\cinemastic.application\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\tvshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\tvshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\movieconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\movieconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\actorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\actorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\moviecastconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\moviecastconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\seasonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\seasonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\tvshowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\tvshowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\crewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\crewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\actorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\actorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\implementations\\services\\entityservices\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\services\\entityservices\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\contexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\contexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\movietag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\movietag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.application\\interfaces\\repositories\\iactorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|solutionrelative:src\\core\\cinemastic.application\\interfaces\\repositories\\iactorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.application\\interfaces\\repositories\\ifranchiserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|solutionrelative:src\\core\\cinemastic.application\\interfaces\\repositories\\ifranchiserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.application\\interfaces\\repositories\\iepisoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|solutionrelative:src\\core\\cinemastic.application\\interfaces\\repositories\\iepisoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.application\\interfaces\\repositories\\itvshowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|solutionrelative:src\\core\\cinemastic.application\\interfaces\\repositories\\itvshowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\moviecrew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\moviecrew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\implementations\\services\\featureservices\\homeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\services\\featureservices\\homeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,14 +139,6 @@
       "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\genreconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\moviecastconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\moviecastconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\movieconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\movieconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\moviecrewconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\moviecrewconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -45,22 +153,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\moviegenreconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\moviegenreconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\configuration\\actorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\configuration\\actorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\contexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\contexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\contexts\\common\\globalqueryfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\contexts\\common\\globalqueryfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\implementations\\services\\entityservices\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\services\\entityservices\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64599B4E-D8E7-4AFA-9531-B60B3059F28D}|src\\Infrastructure\\Cinemastic.Infrastructure\\Cinemastic.Infrastructure.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.infrastructure\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,10 +179,6 @@
       "RelativeMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|solutionrelative:src\\core\\cinemastic.application\\interfaces\\repositories\\icrewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.application\\interfaces\\repositories\\iactorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|solutionrelative:src\\core\\cinemastic.application\\interfaces\\repositories\\iactorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\generic\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\generic\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -107,28 +195,12 @@
       "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\genrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\crewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\crewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\actorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\implementations\\repositories\\actorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.application\\viewmodel\\home\\homepagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|solutionrelative:src\\core\\cinemastic.application\\viewmodel\\home\\homepagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.application\\viewmodel\\content\\getmovieitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|solutionrelative:src\\core\\cinemastic.application\\viewmodel\\content\\getmovieitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\movietag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\movietag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\crew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -139,24 +211,12 @@
       "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\moviecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\moviecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\moviecrew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\moviecrew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\moviegenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\moviegenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|solutionrelative:src\\core\\cinemastic.domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\entities\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -179,20 +239,12 @@
       "RelativeMoniker": "D:0:0:{9EA5447F-6368-4D5D-ADD7-A95FD7A8AE99}|Presentation\\Cinemastic.MVC\\Cinemastic.MVC.csproj|solutionrelative:presentation\\cinemastic.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\infrastructure\\cinemastic.persistance\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB195072-7615-4165-8295-A98772CFC858}|src\\Infrastructure\\Cinemastic.Persistance\\Cinemastic.Persistance.csproj|solutionrelative:src\\infrastructure\\cinemastic.persistance\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.application\\interfaces\\repositories\\generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|solutionrelative:src\\core\\cinemastic.application\\interfaces\\repositories\\generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9EA5447F-6368-4D5D-ADD7-A95FD7A8AE99}|Presentation\\Cinemastic.MVC\\Cinemastic.MVC.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\presentation\\cinemastic.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9EA5447F-6368-4D5D-ADD7-A95FD7A8AE99}|Presentation\\Cinemastic.MVC\\Cinemastic.MVC.csproj|solutionrelative:presentation\\cinemastic.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.application\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53EDBDCB-469D-4F9E-A31F-E88B1F499D02}|src\\Core\\Cinemastic.Application\\Cinemastic.Application.csproj|solutionrelative:src\\core\\cinemastic.application\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABE80527-D2F1-45C6-AD6A-170B17620B05}|src\\Core\\Cinemastic.Domain\\Cinemastic.Domain.csproj|c:\\users\\user\\desktop\\finalproject\\cinemastic\\src\\core\\cinemastic.domain\\enums\\agerating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -258,7 +310,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -270,142 +322,149 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Cinemastic.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "Presentation\\Cinemastic.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAKgEAAAAAAAAAAAYwAIFAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-20T18:06:49.128Z",
+              "DocumentIndex": 0,
+              "Title": "EpisodeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\EpisodeConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\EpisodeConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\EpisodeConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\EpisodeConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:55:56.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FranchiseConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\FranchiseConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\FranchiseConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\FranchiseConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\FranchiseConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:09:37.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\ServiceRegistration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\ServiceRegistration.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAswCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T12:44:01.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EpisodeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\EpisodeRepository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\EpisodeRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\EpisodeRepository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\EpisodeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:00:29.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FileValidator.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Common\\Extentions\\FileValidator.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Common\\Extentions\\FileValidator.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Common\\Extentions\\FileValidator.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Common\\Extentions\\FileValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAJAAAAAAAAAA==",
+              "Title": "Episode.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Episode.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\Episode.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Episode.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\Episode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T15:05:06.803Z",
+              "WhenOpened": "2026-02-11T13:44:12.172Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "GenreConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\GenreConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\GenreConfiguration.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\GenreConfiguration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\GenreConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Franchise.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Franchise.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\Franchise.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Franchise.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\Franchise.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T04:34:17.683Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MovieCastConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCastConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCastConfiguration.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCastConfiguration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCastConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T16:16:15.985Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MovieConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieConfiguration.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieConfiguration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T15:56:16.29Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MovieCrewConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCrewConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCrewConfiguration.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCrewConfiguration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCrewConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T16:20:15.13Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\FeatureServices\\HomeService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\FeatureServices\\HomeService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\FeatureServices\\HomeService.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\FeatureServices\\HomeService.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAawBsAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T15:18:14.778Z",
+              "WhenOpened": "2026-02-11T11:39:28.194Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CrewConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\CrewConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\CrewConfiguration.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\CrewConfiguration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\CrewConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Title": "TvShowConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TvShowConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TvShowConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TvShowConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TvShowConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T04:34:12.558Z"
+              "WhenOpened": "2026-02-11T15:23:56.754Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TagConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TagConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TagConfiguration.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TagConfiguration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TagConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Season.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Season.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\Season.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Season.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\Season.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T16:26:41.4Z"
+              "WhenOpened": "2026-02-11T12:13:57.787Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "MovieTagConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieTagConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieTagConfiguration.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieTagConfiguration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieTagConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ServiceRegistration.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\ServiceRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T04:34:49.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MovieGenreConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieGenreConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieGenreConfiguration.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieGenreConfiguration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieGenreConfiguration.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwAsAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T16:21:34.601Z"
+              "WhenOpened": "2026-02-04T09:18:46.022Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "MovieConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T15:56:16.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SeasonConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\SeasonConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\SeasonConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\SeasonConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\SeasonConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:28:52.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "ActorConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\ActorConfiguration.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\ActorConfiguration.cs",
@@ -417,99 +476,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
+              "Title": "TvShow.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\TvShow.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\TvShow.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\TvShow.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\TvShow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T11:38:56.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SeasonRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\SeasonRepository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\SeasonRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\SeasonRepository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\SeasonRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:59:37.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MovieCastConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCastConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCastConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCastConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCastConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T16:16:15.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TvShowRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TvShowRepository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TvShowRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TvShowRepository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TvShowRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:57:05.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Contexts\\AppDbContext.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Contexts\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Contexts\\AppDbContext.cs",
               "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Contexts\\AppDbContext.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAUwD0AAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T12:33:03.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GlobalQueryFilter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Contexts\\common\\GlobalQueryFilter.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Contexts\\common\\GlobalQueryFilter.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Contexts\\common\\GlobalQueryFilter.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Contexts\\common\\GlobalQueryFilter.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBcAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T12:17:26.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MovieService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\EntityServices\\MovieService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\EntityServices\\MovieService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\EntityServices\\MovieService.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\EntityServices\\MovieService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAmwBEAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T14:57:19.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "MovieProfile.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\MappingProfiles\\MovieProfile.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\MappingProfiles\\MovieProfile.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\MappingProfiles\\MovieProfile.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\MappingProfiles\\MovieProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T09:16:43.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IHomeService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Services\\Feature Services\\IHomeService.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Services\\Feature Services\\IHomeService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Services\\Feature Services\\IHomeService.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Interfaces\\Services\\Feature Services\\IHomeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T15:30:06.941Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IMovieService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Services\\EntityServices\\IMovieService.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Services\\EntityServices\\IMovieService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Services\\EntityServices\\IMovieService.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Interfaces\\Services\\EntityServices\\IMovieService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T09:09:12.651Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IMovieRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IMovieRepository.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IMovieRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IMovieRepository.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IMovieRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T11:43:16.285Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ICrewRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ICrewRepository.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ICrewRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ICrewRepository.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ICrewRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T11:44:25.661Z"
+              "WhenOpened": "2026-01-26T12:33:03.116Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -526,114 +550,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\Generic\\Repository.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\Generic\\Repository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\Generic\\Repository.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\Generic\\Repository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
+              "Title": "IFranchiseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IFranchiseRepository.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IFranchiseRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IFranchiseRepository.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IFranchiseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T12:04:28.357Z"
+              "WhenOpened": "2026-02-11T14:36:45.986Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CloudinaryService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Infrastructure\\Services\\CloudinaryService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Infrastructure\\Services\\CloudinaryService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Infrastructure\\Services\\CloudinaryService.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Infrastructure\\Services\\CloudinaryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T15:21:42.824Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "TagRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TagRepository.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TagRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TagRepository.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TagRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T14:17:03.001Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "MovieRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\MovieRepository.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\MovieRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\MovieRepository.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\MovieRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T12:07:39.277Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "GenreRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\GenreRepository.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\GenreRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\GenreRepository.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\GenreRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T14:16:25.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CrewRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\CrewRepository.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\CrewRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\CrewRepository.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\CrewRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T14:15:31.516Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ActorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\ActorRepository.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\ActorRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\ActorRepository.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\ActorRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T12:04:55.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "HomePageVM.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ViewModel\\Home\\HomePageVM.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\ViewModel\\Home\\HomePageVM.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ViewModel\\Home\\HomePageVM.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\ViewModel\\Home\\HomePageVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T15:36:12.783Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "GetMovieItemVM.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ViewModel\\Content\\GetMovieItemVM.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\ViewModel\\Content\\GetMovieItemVM.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ViewModel\\Content\\GetMovieItemVM.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\ViewModel\\Content\\GetMovieItemVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T09:30:18.33Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 20,
               "Title": "MovieTag.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\MovieTag.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\MovieTag.cs",
@@ -645,7 +573,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 18,
+              "Title": "MovieService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\EntityServices\\MovieService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\EntityServices\\MovieService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\EntityServices\\MovieService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\EntityServices\\MovieService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwBEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T14:57:19.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ActorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\ActorRepository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\ActorRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\ActorRepository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\ActorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T12:04:55.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CrewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\CrewRepository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\CrewRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\CrewRepository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\CrewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:15:31.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IEpisodeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IEpisodeRepository.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IEpisodeRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IEpisodeRepository.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IEpisodeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:41:49.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ITvShowRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ITvShowRepository.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ITvShowRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ITvShowRepository.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ITvShowRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:39:52.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Movie.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\Movie.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Movie.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\Movie.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T16:28:02.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "Tag.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Tag.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\Tag.cs",
@@ -657,55 +658,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Crew.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Crew.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\Crew.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Crew.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\Crew.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 27,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\AppUser.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\AppUser.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\AppUser.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T16:29:06.027Z"
+              "WhenOpened": "2026-01-26T12:36:26.391Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Genre.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Genre.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\Genre.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Genre.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\Genre.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 29,
+              "Title": "HomeService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\FeatureServices\\HomeService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\FeatureServices\\HomeService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\FeatureServices\\HomeService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Services\\FeatureServices\\HomeService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAawBsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T16:20:07.494Z"
+              "WhenOpened": "2026-02-05T15:18:14.778Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "Movie.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Movie.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\Movie.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Movie.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\Movie.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
+              "Title": "MovieCrewConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCrewConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCrewConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCrewConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieCrewConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T16:28:02.539Z"
+              "WhenOpened": "2026-01-29T16:20:15.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "MovieCast.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\MovieCast.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\MovieCast.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\MovieCast.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\MovieCast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "DocumentIndex": 33,
+              "Title": "GenreConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\GenreConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\GenreConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\GenreConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\GenreConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T04:01:12.172Z"
+              "WhenOpened": "2026-02-10T04:34:17.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 30,
+              "Title": "FileValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Common\\Extentions\\FileValidator.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Common\\Extentions\\FileValidator.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Common\\Extentions\\FileValidator.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Common\\Extentions\\FileValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T15:05:06.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "MovieCrew.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\MovieCrew.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\MovieCrew.cs",
@@ -717,7 +730,247 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Cinemastic.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Presentation\\Cinemastic.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAKgEAAAAAAAAAAAYwAIFAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T18:06:49.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CrewConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\CrewConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\CrewConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\CrewConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\CrewConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T04:34:12.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "TagConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TagConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TagConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TagConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\TagConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T16:26:41.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "MovieTagConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieTagConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieTagConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieTagConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieTagConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T04:34:49.467Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 37,
+              "Title": "MovieGenreConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieGenreConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieGenreConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieGenreConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\MovieGenreConfiguration.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwAsAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T16:21:34.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "MovieProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\MappingProfiles\\MovieProfile.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\MappingProfiles\\MovieProfile.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\MappingProfiles\\MovieProfile.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\MappingProfiles\\MovieProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T09:16:43.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IHomeService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Services\\Feature Services\\IHomeService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Services\\Feature Services\\IHomeService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Services\\Feature Services\\IHomeService.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Interfaces\\Services\\Feature Services\\IHomeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T15:30:06.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IMovieService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Services\\EntityServices\\IMovieService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Services\\EntityServices\\IMovieService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Services\\EntityServices\\IMovieService.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Interfaces\\Services\\EntityServices\\IMovieService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T09:09:12.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IMovieRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IMovieRepository.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IMovieRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IMovieRepository.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IMovieRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T11:43:16.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ICrewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ICrewRepository.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ICrewRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ICrewRepository.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ICrewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T11:44:25.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\Generic\\Repository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\Generic\\Repository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\Generic\\Repository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\Generic\\Repository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T12:04:28.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "CloudinaryService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Infrastructure\\Services\\CloudinaryService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Infrastructure\\Services\\CloudinaryService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Infrastructure\\Services\\CloudinaryService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Infrastructure\\Services\\CloudinaryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T15:21:42.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "TagRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TagRepository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TagRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TagRepository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\TagRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:17:03.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "MovieRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\MovieRepository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\MovieRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\MovieRepository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\MovieRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T12:07:39.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "GenreRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\GenreRepository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\GenreRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\GenreRepository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\Implementations\\Repositories\\GenreRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:16:25.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "HomePageVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ViewModel\\Home\\HomePageVM.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\ViewModel\\Home\\HomePageVM.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ViewModel\\Home\\HomePageVM.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\ViewModel\\Home\\HomePageVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T15:36:12.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "GetMovieItemVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ViewModel\\Content\\GetMovieItemVM.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\ViewModel\\Content\\GetMovieItemVM.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ViewModel\\Content\\GetMovieItemVM.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\ViewModel\\Content\\GetMovieItemVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T09:30:18.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Crew.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Crew.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\Crew.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Crew.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\Crew.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T16:29:06.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Genre.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\Genre.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Genre.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T16:20:07.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "MovieCast.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\MovieCast.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\MovieCast.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\MovieCast.cs",
+              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\MovieCast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T04:01:12.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
               "Title": "MovieGenre.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\MovieGenre.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\MovieGenre.cs",
@@ -729,19 +982,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\AppUser.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\AppUser.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\AppUser.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Domain\\Entities\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T12:36:26.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 54,
               "Title": "Actor.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\Actor.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\Actor.cs",
@@ -753,7 +994,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 55,
               "Title": "RoleType.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Enums\\RoleType.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Enums\\RoleType.cs",
@@ -765,7 +1006,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 56,
               "Title": "CrewType.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Enums\\CrewType.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Enums\\CrewType.cs",
@@ -777,7 +1018,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 57,
               "Title": "BaseAccountableEntity.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\common\\BaseAccountableEntity.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\common\\BaseAccountableEntity.cs",
@@ -789,19 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\ServiceRegistration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\ServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\ServiceRegistration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Cinemastic.Persistance\\ServiceRegistration.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAswCQAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T12:44:01.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 58,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Presentation\\Cinemastic.MVC\\Controllers\\HomeController.cs",
@@ -813,7 +1042,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 59,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\Generic\\IRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\Generic\\IRepository.cs",
@@ -825,19 +1054,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "ServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ServiceRegistration.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\ServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\ServiceRegistration.cs",
-              "RelativeToolTip": "src\\Core\\Cinemastic.Application\\ServiceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T09:18:46.022Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 60,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\Program.cs",
               "RelativeDocumentMoniker": "Presentation\\Cinemastic.MVC\\Program.cs",
@@ -849,7 +1066,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 61,
               "Title": "AgeRating.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Enums\\AgeRating.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Enums\\AgeRating.cs",
@@ -861,7 +1078,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 62,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\common\\BaseEntity.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\common\\BaseEntity.cs",
@@ -873,7 +1090,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 63,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\appsettings.json",
               "RelativeDocumentMoniker": "Presentation\\Cinemastic.MVC\\appsettings.json",
@@ -885,7 +1102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 64,
               "Title": "ITagRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ITagRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\ITagRepository.cs",
@@ -897,7 +1114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 65,
               "Title": "IGenreRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IGenreRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Interfaces\\Repositories\\IGenreRepository.cs",
@@ -909,7 +1126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 66,
               "Title": "MovieController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\Areas\\Admin\\Controllers\\MovieController.cs",
               "RelativeDocumentMoniker": "Presentation\\Cinemastic.MVC\\Areas\\Admin\\Controllers\\MovieController.cs",
@@ -921,7 +1138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 70,
               "Title": "FileSize.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Application\\Common\\Enum\\FileSize.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Application\\Common\\Enum\\FileSize.cs",
@@ -933,7 +1150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 68,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Cinemastic.MVC\\Areas\\Admin\\Views\\_ViewStart.cshtml",
@@ -945,7 +1162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 67,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\Areas\\Admin\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Presentation\\Cinemastic.MVC\\Areas\\Admin\\Controllers\\HomeController.cs",
@@ -957,7 +1174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 69,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Infrastructure\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Infrastructure\\ServiceRegistration.cs",
@@ -969,7 +1186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 71,
               "Title": "BaseNameableEntity.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Core\\Cinemastic.Domain\\Entities\\common\\BaseNameableEntity.cs",
               "RelativeDocumentMoniker": "src\\Core\\Cinemastic.Domain\\Entities\\common\\BaseNameableEntity.cs",
@@ -981,7 +1198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 72,
               "Title": "AppUserConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\AppUserConfiguration.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Cinemastic.Persistance\\Configuration\\AppUserConfiguration.cs",
@@ -993,7 +1210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 73,
               "Title": "libman.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\libman.json",
               "RelativeDocumentMoniker": "Presentation\\Cinemastic.MVC\\libman.json",
@@ -1005,7 +1222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 74,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FinalProject\\Cinemastic\\Presentation\\Cinemastic.MVC\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Cinemastic.MVC\\Views\\_ViewStart.cshtml",

@@ -13,12 +13,16 @@ namespace Cinemastic.Domain.Entities
         public DateTime? ReleaseDate { get; set; }
         public int? DurationMinutes { get; set; }
         public string Description {  get; set; }
+        public AgeRating AgeRating { get; set; }
+        public string ImageUrl { get; set; }
+        //relational
+        public int? FranchiseId {  get; set; }
+        public Franchise? Franchise { get; set; }
         public ICollection<MovieGenre> MovieGenres { get; set; }
         public ICollection<MovieTag> MovieTags { get; set; }
         public ICollection<MovieCast> MovieCasts { get; set; }
         public ICollection<MovieCrew> MovieCrews { get; set; }
-        public AgeRating AgeRating { get; set; }
-        public string ImageUrl { get; set; }
+
 
     }
 }

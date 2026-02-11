@@ -18,6 +18,10 @@ namespace Cinemastic.Persistance.Context.common
             builder.ApplyQueryFilter<Genre>();
             builder.ApplyQueryFilter<Movie>();
             builder.ApplyQueryFilter<Tag>();
+            builder.ApplyQueryFilter<Franchise>();
+            builder.ApplyQueryFilter<TvShow>();
+            builder.ApplyQueryFilter<Season>();
+            builder.ApplyQueryFilter<Episode>();
             builder.Entity<MovieTag>()
                 .HasQueryFilter(ct=>!ct.Movie.IsDeleted);
             builder.Entity<MovieGenre>()
