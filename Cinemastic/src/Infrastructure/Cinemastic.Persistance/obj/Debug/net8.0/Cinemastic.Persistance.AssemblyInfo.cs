@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cinemastic.Persistance")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78c273eab4a62e7e4eefbbe6819102e62e358443")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+441f9ee6d16f9cc240121a93d9c33f27c8ffed12")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cinemastic.Persistance")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cinemastic.Persistance")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
