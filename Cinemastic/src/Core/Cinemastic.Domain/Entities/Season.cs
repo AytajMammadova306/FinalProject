@@ -8,7 +8,7 @@ namespace Cinemastic.Domain.Entities
 {
     public class Season:BaseNameableEntity
     {
-        public int TvShowId { get; set; }
+        public long TvShowId { get; set; }
         public TvShow TvShow { get; set; }
         public int SeasonNumber { get; set; }
         public DateTime Releasedate { get; set; }

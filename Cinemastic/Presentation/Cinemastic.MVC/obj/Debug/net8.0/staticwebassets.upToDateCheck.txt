@@ -719,6 +719,7 @@ wwwroot\assets\images\media\sonil.webp
 wwwroot\assets\images\media\sonil-portrait.webp
 wwwroot\assets\images\media\spiderman.webp
 wwwroot\assets\images\media\spiderman-portrait.webp
+wwwroot\assets\images\media\Stranger_Things_season_1.jpg
 wwwroot\assets\images\media\synchronic.webp
 wwwroot\assets\images\media\synchronic-portrait.webp
 wwwroot\assets\images\media\te-oaler.webp

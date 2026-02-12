@@ -11,12 +11,14 @@ namespace Cinemastic.Domain.Entities
         public DateTime? ReleaseDate { get; set; }
         public string Description { get; set; }
         public int EpisodeCount { get; set; }
-        public int? FranchiseId {  get; set; }
+        public long? FranchiseId {  get; set; }
         public Franchise? Franchise { get; set; }
-        public int GenreId { get; set; }
-        public Genre Genre { get; set; }
         public ICollection<Season> Seasons { get; set; }
-
+        public ICollection<TvShowCast> TvShowCasts { get; set;}
+        public ICollection<TvShowCrew> TvShowCrews { get; set; }
+        public ICollection<TvShowGenre> TvShowGenres { get; set; }
+        public ICollection<TvShowTag> TvShowTags { get; set; }
+        public string ImageUrl {  get; set; }
 
     }
 }

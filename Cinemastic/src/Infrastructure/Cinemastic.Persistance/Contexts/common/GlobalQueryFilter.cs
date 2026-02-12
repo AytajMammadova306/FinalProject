@@ -22,14 +22,24 @@ namespace Cinemastic.Persistance.Context.common
             builder.ApplyQueryFilter<TvShow>();
             builder.ApplyQueryFilter<Season>();
             builder.ApplyQueryFilter<Episode>();
+
             builder.Entity<MovieTag>()
-                .HasQueryFilter(ct=>!ct.Movie.IsDeleted);
+                .HasQueryFilter(mt=>!mt.Movie.IsDeleted);
             builder.Entity<MovieGenre>()
-                .HasQueryFilter(cg=>!cg.Movie.IsDeleted);
+                .HasQueryFilter(mg=>!mg.Movie.IsDeleted);
             builder.Entity<MovieCast>()
-                .HasQueryFilter(cc=>!cc.Movie.IsDeleted);
+                .HasQueryFilter(mc=>!mc.Movie.IsDeleted);
             builder.Entity<MovieCrew>()
-                .HasQueryFilter(cc=>!cc.Movie.IsDeleted);
+                .HasQueryFilter(mc=>!mc.Movie.IsDeleted);
+
+            builder.Entity<TvShowTag>()
+                .HasQueryFilter(tst=>!tst.TvShow.IsDeleted);
+            builder.Entity<TvShowGenre>()
+                .HasQueryFilter(tsg=>!tsg.TvShow.IsDeleted);
+            builder.Entity<TvShowCrew>()
+                .HasQueryFilter(tsc=>!tsc.TvShow.IsDeleted);
+            builder.Entity<TvShowCast>()
+                .HasQueryFilter(tsc=>!tsc.TvShow.IsDeleted);
         }
         private static void ApplyQueryFilter<T>(this ModelBuilder builder) where T : BaseEntity, new()
         {

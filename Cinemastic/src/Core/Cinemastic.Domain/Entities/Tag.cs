@@ -9,5 +9,6 @@ namespace Cinemastic.Domain.Entities
     public class Tag:BaseNameableEntity
     {
         public ICollection<MovieTag> MovieTags { get; set; }
+        public ICollection<TvShowTag> TvShowTags { get; set; }
     }
 }

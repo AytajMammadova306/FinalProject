@@ -11,7 +11,7 @@ namespace Cinemastic.Domain.Entities
         public int DurationInMinutes { get; set; }
         public int EpisodNumber { get; set; }
         public Season Season { get; set; }
-        public int SeasonId { get; set; }
+        public long SeasonId { get; set; }
         public string Description { get; set; }
     }
 }

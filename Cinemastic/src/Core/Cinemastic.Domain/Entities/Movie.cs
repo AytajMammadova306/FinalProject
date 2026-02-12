@@ -16,7 +16,7 @@ namespace Cinemastic.Domain.Entities
         public AgeRating AgeRating { get; set; }
         public string ImageUrl { get; set; }
         //relational
-        public int? FranchiseId {  get; set; }
+        public long? FranchiseId {  get; set; }
         public Franchise? Franchise { get; set; }
         public ICollection<MovieGenre> MovieGenres { get; set; }
         public ICollection<MovieTag> MovieTags { get; set; }

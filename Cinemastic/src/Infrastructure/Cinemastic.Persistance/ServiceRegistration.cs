@@ -35,6 +35,7 @@ namespace Cinemastic.Persistance
 
 
             services.AddScoped<IMovieService, MovieService>();
+            services.AddScoped<ITvShowService, TvShowService>();
             services.AddScoped<IHomeService, HomeService>();
             
 

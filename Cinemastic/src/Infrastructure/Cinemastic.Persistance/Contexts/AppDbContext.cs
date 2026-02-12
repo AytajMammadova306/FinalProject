@@ -43,7 +43,6 @@ namespace Cinemastic.Persistance.Context
                         if (!result)
                         {
                             entry.Entity.Updated = DateTime.UtcNow;
-
                         }
                         break;
                     case EntityState.Added:
@@ -63,11 +62,14 @@ namespace Cinemastic.Persistance.Context
         public DbSet<MovieGenre> MovieGenres { get; set; }
         public DbSet<MovieTag> MovieTags { get; set; }
         public DbSet<Tag> Tags { get; set; }
-        public DbSet<Episode> Episods { get; set; }
+        public DbSet<Episode> Episodes { get; set; }
         public DbSet<Franchise> Franchises { get; set; }
         public DbSet<Season> Seasons { get; set; }
         public DbSet<TvShow> TvShows { get; set; }
-
+        public DbSet<TvShowCast> TvShowCasts { get; set; }
+        public DbSet<TvShowCrew> TvShowCrews { get; set; }
+        public DbSet<TvShowGenre> TvShowGenres { get; set; }
+        public DbSet<TvShowTag> TvShowTags { get; set; }
 
     }
 }
