@@ -24,13 +24,8 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MovieId = table.Column<long>(type: "bigint", nullable: true),
                     TvShowId = table.Column<long>(type: "bigint", nullable: true),
-                    SeasonOrDuration = table.Column<int>(type: "int", nullable: false),
-                    AgeRating = table.Column<int>(type: "int", nullable: true),
-                    TvShowAgeRating = table.Column<int>(type: "int", nullable: true),
                     CoverUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TrailerUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
@@ -56,10 +51,9 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                 });
 
             migrationBuilder.AddCheckConstraint(
-                name: "CK_Slide_OnlyOneContent",
-                table: "Slides",
-                sql: "(MovieId IS NULL OR TvShowId IS NULL)"
-);
+                name: "CK_Slide_OnlyOneContent", 
+                table: "Slides", 
+                sql: "(MovieId IS NULL OR TvShowId IS NULL)");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Slides_MovieId",
@@ -79,12 +73,11 @@ namespace Cinemastic.Persistance.Contexts.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropCheckConstraint(
+                name: "CK_Slide_OnlyOneContent", 
+                table: "Slides");
             migrationBuilder.DropTable(
                 name: "Slides");
-            migrationBuilder.DropCheckConstraint(
-            name: "CK_Slide_OnlyOneContent",
-            table: "Slides");
-
 
             migrationBuilder.DropColumn(
                 name: "Surname",

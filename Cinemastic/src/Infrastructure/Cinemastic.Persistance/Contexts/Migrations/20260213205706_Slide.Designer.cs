@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cinemastic.Persistance.Contexts.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260213173503_Slide")]
+    [Migration("20260213205706_Slide")]
     partial class Slide
     {
         /// <inheritdoc />
@@ -458,9 +458,6 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<int?>("AgeRating")
-                        .HasColumnType("int");
-
                     b.Property<string>("CoverUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -472,30 +469,15 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<long?>("MovieId")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("SeasonOrDuration")
-                        .HasColumnType("int");
-
                     b.Property<string>("TrailerUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("TvShowAgeRating")
-                        .HasColumnType("int");
 
                     b.Property<long?>("TvShowId")
                         .HasColumnType("bigint");

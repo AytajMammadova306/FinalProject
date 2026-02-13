@@ -17,9 +17,6 @@ namespace Cinemastic.Persistance.Configuration
                 .IsRequired();
             builder.Property(s=>s.TrailerUrl)
                 .IsRequired();
-            builder.Property(s => s.Name)
-                .IsRequired()
-                .HasMaxLength(50);
             builder.HasOne(s => s.Movie)
                 .WithOne(m => m.Slide)
                 .HasForeignKey<Slide>(s => s.MovieId)

@@ -38,6 +38,10 @@ namespace Cinemastic.Persistance.Implementations.Repositories.Generic
             {
                 query = query.Where(func);
             }
+            if (includes is not null)
+            {
+                query = _getIncludes(query, includes);
+            }
             if (sort is not null)
             {
                 if (desc)
@@ -52,11 +56,6 @@ namespace Cinemastic.Persistance.Implementations.Repositories.Generic
             if (page > 0 && take > 0)
             {
                 query = query.Skip((page - 1) * take).Take(take);
-            }
-
-            if (includes is not null)
-            {
-                query = _getIncludes(query, includes);
             }
 
             if (isIgnore)

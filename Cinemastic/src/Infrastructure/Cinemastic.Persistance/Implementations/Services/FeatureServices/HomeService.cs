@@ -37,7 +37,7 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
             slideVMs = slideVMs.Where(sVM => sVM.ReleaseDate < DateTime.UtcNow).Take(2)//bu en son cixmis 2 dene
                 .Concat(slideVMs
                     .OrderBy(sVM=>sVM.ReleaseDate)
-                    .Where(sVM=>sVM.ReleaseDate>DateTime.UtcNow).Take(2))//en yaxinda olan cixma uze olanlar
+                    .Where(sVM=>sVM.ReleaseDate>DateTime.UtcNow).Take(2))//indiye en yaxinda olan cixma uzre olanlar
                 .ToList();
 
             HomePageVM homePageVM = new HomePageVM

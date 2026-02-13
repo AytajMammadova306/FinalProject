@@ -12,7 +12,7 @@ namespace Cinemastic.Application.ViewModel.Slide
         public string Name { get; set; }
         public string Description { get; set; }
         public int ContentId { get; set; }
-        public int SeasonOrDuration { get; set; }
+        public int? SeasonOrDuration { get; set; }
         public string AgeRating { get; set; }
         public string CoverUrl { get; set; }
         public string TrailerUrl { get; set; }

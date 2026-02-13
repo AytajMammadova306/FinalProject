@@ -21,17 +21,21 @@
                            <div class="d-flex flex-wrap align-items-center gap-3 r-mb-23 RightAnimate-two">
                               <span class="badge rounded-2 text-white bg-secondary font-size-12">NC-17</span>
                               <div class="d-flex align-items-center gap-1">
-                                                @if (slideVM.IsMovie)
-                                                {
-                                                    int hour = slideVM.SeasonOrDuration / 60;
-                                                    int minute = slideVM.SeasonOrDuration - hour * 60;
-                                                    <i class="ph ph-clock"></i>
-                                                    <span class="time">(@hour)h : (@minute)m</span>
-                                                }
-                                                else
-                                                {
-                                                    <span class="time">@slideVM.SeasonOrDuration @(slideVM.SeasonOrDuration>1 ? "Season" :"Season")</span>
-                                                }
+                                  @if(slideVM.SeasonOrDuration is not null){
+                                                
+                                                    @if (slideVM.IsMovie)
+                                                    {
+                                                        int hour = slideVM.SeasonOrDuration.Value / 60;
+                                                        int minute = slideVM.SeasonOrDuration.Value - hour * 60;
+                                                        <i class="ph ph-clock"></i>
+                                                        <span class="time">(@hour)h : (@minute)m</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="time">@slideVM.SeasonOrDuration @(slideVM.SeasonOrDuration > 1 ? "Season" : "Season")</span>
+                                                    }
+                                  }
+                                                
                                             </div>
                            </div>
                            <p class="line-count-3 my-3 RightAnimate-two">@slideVM.Description

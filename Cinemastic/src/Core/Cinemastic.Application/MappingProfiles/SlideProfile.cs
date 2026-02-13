@@ -15,14 +15,33 @@ namespace Cinemastic.Application.MappingProfiles
         public SlideProfile()
         {
             CreateMap<Slide, GetSlideVM>()
+
+                .ForMember(sVM => sVM.Name,
+                opt => opt.MapFrom(s =>
+                s.Movie != null
+                ? s.Movie.Name
+                : s.TvShow.Name))
+
+                .ForMember(sVM => sVM.Description,
+                opt => opt.MapFrom(s =>
+                s.Movie != null
+                ? s.Movie.Description
+                : s.TvShow.Description))
+
                 .ForMember(sVM => sVM.ContentId,
                 opt => opt.MapFrom(s => s.MovieId ?? s.TvShowId ?? 0))
 
-                .ForMember(sVM => sVM.AgeRating,
-                opt => opt.MapFrom(s =>
-                s.Movie != null
-                ? s.Movie.AgeRating.ToString()
-                : s.TvShow.AgeRating.ToString()))
+                .ForMember(dest => dest.SeasonOrDuration,
+                opt => opt.MapFrom(src =>
+                src.Movie != null
+                ? src.Movie.DurationMinutes ?? 0
+                : src.TvShow.EpisodeCount))
+
+                .ForMember(dest => dest.AgeRating,
+                opt => opt.MapFrom(src =>
+                src.Movie != null
+                ? src.Movie.AgeRating.ToString()
+                : src.TvShow.AgeRating.ToString()))
 
                 .ForMember(sVM => sVM.Genres,
                 opt => opt.MapFrom(s =>
@@ -47,10 +66,7 @@ namespace Cinemastic.Application.MappingProfiles
                  : s.TvShow.ReleaseDate))
 
                  .ForMember(sVM=>sVM.IsMovie,
-                 opt=>opt.MapFrom(s=>
-                 s.Movie !=null
-                 ? true
-                 :false))
+                 opt=>opt.MapFrom(s=>s.Movie !=null))
 
                 .ForMember(sVM => sVM.Starrings,
                 opt => opt.MapFrom(s =>
