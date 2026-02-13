@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cinemastic.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78c273eab4a62e7e4eefbbe6819102e62e358443")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46564e84028a028bb869b5490ff1244c1d88c7af")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cinemastic.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cinemastic.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

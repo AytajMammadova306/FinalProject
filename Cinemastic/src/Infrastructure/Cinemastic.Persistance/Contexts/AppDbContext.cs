@@ -70,6 +70,7 @@ namespace Cinemastic.Persistance.Context
         public DbSet<TvShowCrew> TvShowCrews { get; set; }
         public DbSet<TvShowGenre> TvShowGenres { get; set; }
         public DbSet<TvShowTag> TvShowTags { get; set; }
+        public DbSet<Slide> Slides { get; set; }
 
     }
 }

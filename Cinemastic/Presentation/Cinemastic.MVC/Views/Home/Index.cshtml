@@ -1,4 +1,5 @@
 ﻿@using Cinemastic.Application.ViewModel.Home
+@using Cinemastic.Application.ViewModel.Slide
 @using Cinemastic.Application.ViewModel.TvShow
 @using Cinemastic.MVC.ViewModel.Movie
 @model HomePageVM;
@@ -7,92 +8,108 @@
       <div id="home-banner-slider" class="iq-main-slider p-0 swiper banner-home-swiper" data-swiper="home-banner-slider"
          data-pagination="true" data-loop="true">
          <div class="slider m-0 p-0 swiper-wrapper home-slider">
-            <div class="swiper-slide slide s-bg-1 p-0">
+            @foreach(GetSlideVM slideVM in Model.SlideVMs){
+                <div class="swiper-slide slide s-bg-1 p-0">
                <div class="banner-home-swiper-image"
-                  style="background-image: url(./assets/images/media/krishna.webp)">
+                  style="background-image: url(@slideVM.CoverUrl)">
                   <div class="container-fluid position-relative">
                      <div class="row align-items-center iq-ltr-direction h-100 slider-content-full-height">
                         <div class="col-lg-6 col-md-12 col-xl-5">
                            <h2 class="texture-text big-font letter-spacing-1 line-count-1 text-capitalize RightAnimate">
-                              Krishna
+                              @slideVM.Name
                            </h2>
                            <div class="d-flex flex-wrap align-items-center gap-3 r-mb-23 RightAnimate-two">
-                              <div class="slider-ratting d-flex align-items-center">
-                                 <ul
-                                    class="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star-half" aria-hidden="true"></i>
-                                    </li>
-                                 </ul>
-                              </div>
-                              <span class="d-flex align-items-center gap-1">
-                                 <span class="">5</span><img src="~/assets/images/pages/imdb-logo.svg"
-                                    alt="imdb logo" class="img-fluid imdb-img">
-                              </span>
                               <span class="badge rounded-2 text-white bg-secondary font-size-12">NC-17</span>
                               <div class="d-flex align-items-center gap-1">
-                                 <i class="ph ph-clock"></i>
-                                 <span class="time">2h : 45m</span>
-                              </div>
+                                                @if (slideVM.IsMovie)
+                                                {
+                                                    int hour = slideVM.SeasonOrDuration / 60;
+                                                    int minute = slideVM.SeasonOrDuration - hour * 60;
+                                                    <i class="ph ph-clock"></i>
+                                                    <span class="time">(@hour)h : (@minute)m</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="time">@slideVM.SeasonOrDuration @(slideVM.SeasonOrDuration>1 ? "Season" :"Season")</span>
+                                                }
+                                            </div>
                            </div>
-                           <p class="line-count-3 my-3 RightAnimate-two">Krishna is a mythological fantasy film blending ancient legend and modern warfare. The rebirth of a divine warrior promises to tip the scales in a cosmic battle.
+                           <p class="line-count-3 my-3 RightAnimate-two">@slideVM.Description
                            </p>
                            <div class="trending-list RightAnimate-three">
+                               @{int count=0;}
                               <div class="text-primary genres font-size-14 mb-1"> Starring:
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">Olivia
-                                    Foster, </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">Leena
-                                    Burton, </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">Ryan
-                                    Pierce </a>
+                                 @foreach(string star in slideVM.Starrings){
+                                                    @if (slideVM.Starrings.Count() >count)
+                                                    {
+                                                        <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
+                                                            @star,
+                                                        </a>
+                                                        count++;
+                                                        continue;
+                                                    }
+                                                    <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
+                                                        @star
+                                                    </a>
+                                                }
                               </div>
+                              @{count=0;}
                               <div class="text-primary genres font-size-14 mb-1"> Genres:
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
-                                    Action,
-                                 </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
-                                    Animation,
-                                 </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
-                                    Mystery
-                                 </a>
+                                 @foreach(string genre in slideVM.Genres){
+                                     @if(slideVM.Genres.Count()>count){
+                                                    
+                                                        <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
+                                                            @genre,
+                                                        </a>
+                                                        count++;
+                                                        continue;
+                                                    
+
+                                     }
+                                                    <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
+                                                        @genre
+                                                    </a>
+                                 }
+
                               </div>
+                              @{count=0;}
                               <div class="text-primary tag font-size-14"> Tag:
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
-                                    Action,
-                                 </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Adventure, </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Horror
-                                 </a>
+                                  @foreach(string tag in slideVM.Tags){
+                                      @if(slideVM.Tags.Count()>count){
+                                                    
+                                                        <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
+                                                            @tag,
+                                                        </a>
+                                      }
+                                                    <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
+                                                        @tag
+                                                    </a>
+                                  }
                               </div>
                            </div>
                            <div class="RightAnimate-four">
-                              <a href="movie-detail.html" class="btn btn-primary text-capitalize position-relative rounded-3">
+                              @if(slideVM.ReleaseDate<DateTime.UtcNow){
+                                  <a href="movie-detail.html" class="btn btn-primary text-capitalize position-relative rounded-3">
                                   <span class="d-flex align-items-center gap-2">
-                                      <span class="button-text">play
-                                                            now</span>
+                                      <span class="button-text">Play
+                                                            Now</span>
                                       <i class="ph-fill ph-play fs-6"></i>
                                   </span>
                               </a>
+                              }
+                              else{
+                                  <a href="movie-detail.html" class="btn btn-primary text-capitalize position-relative rounded-3">
+                                  <span class="d-flex align-items-center gap-2">
+                                      <span class="button-text">Coming Soon</span>
+                                      <i class="ph-fill ph-play fs-6"></i>
+                                  </span>
+                              </a>
+                              }
                            </div>
                         </div>
                         <div class="col-xl-7 col-lg-6 col-md-12 trailor-video iq-slider d-none d-lg-block">
                            <a data-fslightbox="html5-video"
-                              href="https://www.youtube.com/embed/_PhvjbegfBI?autoplay=1&mute=1&loop=1&playlist=_PhvjbegfBI"
+                              href="@slideVM.TrailerUrl"
                               class="video-open playbtn text-decoration-none" tabindex="0">
                               <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="80px"
@@ -112,7 +129,7 @@
       "techOrder": ["youtube"],
       "sources": [{
         "type": "video/youtube",
-        "src": "https://www.youtube.com/embed/_PhvjbegfBI?autoplay=1&mute=1&loop=1&playlist=_PhvjbegfBI"
+        "src": "@slideVM.TrailerUrl"
       }],
       "youtube": {         
         "modestbranding": 1,
@@ -128,242 +145,7 @@
                   </div>
                </div>
             </div>
-            <div class="swiper-slide slide s-bg-1 p-0">
-               <div class="banner-home-swiper-image"
-                  style="background-image: url(./assets/images/media/breaking-bad.webp);">
-                  <div class="container-fluid position-relative ">
-                     <div class="row align-items-center iq-ltr-direction h-100 slider-content-full-height">
-                        <div class="col-lg-6 col-md-12 col-xl-5">
-                           <h2
-                              class="texture-text big-font letter-spacing-1 line-count-1 text-capitalize  RightAnimate">
-                              Breaking Bad </h2>
-                           <div class="d-flex flex-wrap align-items-center gap-3 r-mb-23 RightAnimate-two">
-                              <div class="slider-ratting d-flex align-items-center">
-                                 <ul
-                                    class="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star-half" aria-hidden="true"></i>
-                                    </li>
-                                 </ul>
-                              </div>
-                              <span class="d-flex align-items-center gap-1">
-                                 <span class="">6</span>
-                                 <img src="~/assets/images/pages/imdb-logo.svg" alt="imdb logo"
-                                    class="img-fluid imdb-img">
-                              </span>
-                              <div class="d-flex align-items-center gap-1">
-                                 <span class="time"> 3 Seasons </span>
-                              </div>
-                           </div>
-                           <p class="line-count-3 my-3 RightAnimate-two">Breaking Bad" transcended the confines of
-                              television, becoming a symbol of narrative excellence and pushing the boundaries of
-                              storytelling. Its impact resonated far beyond the screen, leaving an indelible imprint on
-                              popular culture and forever altering the landscape of modern television dramas.
-                           </p>
-                           <div class="trending-list RightAnimate-three">
-                              <div class="text-primary genres font-size-14 mb-1"> Starring:
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">Leena
-                                    Burton,
-                                 </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">Michael
-                                    Fox,
-                                 </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">Maxwell
-                                    Carter
-                                 </a>
-                              </div>
-                              <div class="text-primary genres font-size-14 mb-1"> Genres:
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Action,
-                                 </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Animation,
-                                 </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Crime
-                                 </a>
-                              </div>
-                              <div class="text-primary tag font-size-14"> Tag:
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Brother,
-                                 </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Cricket, </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Detective
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="RightAnimate-four">
-                              <a href="movie-detail.html" class="btn btn-primary text-capitalize position-relative rounded-3">
-                                  <span class="d-flex align-items-center gap-2">
-                                      <span class="button-text">play
-                                                            now</span>
-                                      <i class="ph-fill ph-play fs-6"></i>
-                                  </span>
-                              </a>
-                           </div>
-                        </div>
-                        <div class="col-xl-7 col-lg-6 col-md-12 trailor-video iq-slider d-none d-lg-block">
-                           <a data-fslightbox="html5-video"
-                              href="https://www.youtube.com/embed/-oOoTIuoL8M?autoplay=1&mute=1&loop=1&playlist=-oOoTIuoL8M"
-                              class="video-open playbtn text-decoration-none" tabindex="0">
-                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="80px"
-                                 viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
-                                 <polygon class="triangle" fill="none" stroke-width="7" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-miterlimit="10"
-                                    points="73.5,62.5 148.5,105.8 73.5,149.1 ">
-                                 </polygon>
-                                 <circle class="circle" fill="none" stroke-width="7" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3">
-                                 </circle>
-                              </svg>
-                              <span class="w-trailor text-uppercase"> Watch Trailer </span>
-                           </a>
-                           <video id="my-video2" class=" my-video video-js vjs-big-play-centered w-100 d-none" loop
-                              autoplay muted preload="auto" data-setup='{
-      "techOrder": ["youtube"],
-      "sources": [{
-        "type": "video/youtube",
-        "src": "https://www.youtube.com/embed/-oOoTIuoL8M?autoplay=1&mute=1&loop=1&playlist=-oOoTIuoL8M"
-      }],
-      "youtube": {         
-        "modestbranding": 1,
-        "rel": 0,
-        "showinfo": 0,
-        "autoplay": 1
-      },
-      "fullscreen": true
-    }'>
-                           </video>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="swiper-slide slide s-bg-1 p-0">
-               <div class="banner-home-swiper-image"
-                  style="background-image: url(./assets/images/media/charlie-chaplin.webp);">
-                  <div class="container-fluid position-relative">
-                     <div class="row align-items-center iq-ltr-direction h-100 slider-content-full-height">
-                        <div class="col-lg-6 col-md-12 col-xl-5">
-                           <h2 class="texture-text big-font letter-spacing-1 line-count-1 text-capitalize RightAnimate">
-                              Charlie Chaplin
-                           </h2>
-                           <div class="d-flex flex-wrap align-items-center gap-3 r-mb-23 RightAnimate-two">
-                              <div class="slider-ratting d-flex align-items-center">
-                                 <ul
-                                    class="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                       <i class="ph-fill ph-star-half" aria-hidden="true"></i>
-                                    </li>
-                                 </ul>
-                              </div>
-                              <span class="d-flex align-items-center gap-1">
-                                 <span class="">247</span>
-                                 <img src="~/assets/images/pages/imdb-logo.svg" alt="imdb logo"
-                                    class="img-fluid imdb-img">
-                              </span>
-                              <span class="badge rounded-2 text-white bg-secondary font-size-12">80</span>
-
-                           </div>
-                           <p class="line-count-3 my-3 RightAnimate-two"> The Timeless Legacy of Charlie Chaplin" is a
-                              captivating documentary that celebrates the life and career of one of cinema's most iconic
-                              figures, Sir Charles Spencer Chaplin. This video delves into the genius of the silent film
-                              era, exploring his pioneering contributions to comedy, drama, and cinematic storytelling.
-                              Viewers will embark on a journey through Chaplin's extraordinary life, witnessing his
-                              remarkable journey from a struggling artist to a global superstar.
-                           </p>
-                           <div class="trending-list RightAnimate-three">
-                              <div class="text-primary genres font-size-14 mb-1"> Genres:
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Action
-                                 </a>
-                              </div>
-                              <div class="text-primary tag font-size-14"> Tag:
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Action,
-                                 </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Adventure, </a>
-                                 <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body ">
-                                    Horror
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="RightAnimate-four">
-                              <a href="movie-detail.html" class="btn btn-primary text-capitalize position-relative rounded-3">
-                                  <span class="d-flex align-items-center gap-2">
-                                      <span class="button-text">play
-                                                            now</span>
-                                      <i class="ph-fill ph-play fs-6"></i>
-                                  </span>
-                              </a>
-                           </div>
-                        </div>
-                        <div class="col-xl-7 col-lg-6 col-md-12 trailor-video iq-slider d-none d-lg-block">
-                           <a data-fslightbox="html5-video"
-                              href="https://www.youtube.com/embed/-oOoTIuoL8M?autoplay=1&mute=1&loop=1&playlist=-oOoTIuoL8M"
-                              class="video-open playbtn text-decoration-none" tabindex="0">
-                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="80px"
-                                 viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
-                                 <polygon class="triangle" fill="none" stroke-width="7" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-miterlimit="10"
-                                    points="73.5,62.5 148.5,105.8 73.5,149.1 ">
-                                 </polygon>
-                                 <circle class="circle" fill="none" stroke-width="7" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3">
-                                 </circle>
-                              </svg>
-                              <span class="w-trailor text-uppercase"> Watch Trailer </span>
-                           </a>
-                           <video id="my-video3" class="my-video video-js vjs-big-play-centered w-100 d-none" loop
-                              autoplay muted preload="auto" data-setup='{
-      "techOrder": ["youtube"],
-      "sources": [{
-        "type": "video/youtube",
-        "src": "https://www.youtube.com/embed/-oOoTIuoL8M?autoplay=1&mute=1&loop=1&playlist=-oOoTIuoL8M"
-      }],
-      "youtube": {         
-        "modestbranding": 1,
-        "rel": 0,
-        "showinfo": 0,
-        "autoplay": 1
-      },
-      "fullscreen": true
-    }'>
-                           </video>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            }
          </div>
          <button class="PreArrow-two swiper-arrows d-flex align-items-center justify-content-center d-xl-block d-none"
             style="" id="home-banner-slider-prev"><i class="ph ph-caret-left"></i></button>

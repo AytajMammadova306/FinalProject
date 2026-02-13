@@ -19,6 +19,7 @@ namespace Cinemastic.Persistance.Configuration
             builder.Property(c => c.Description)
                 .IsRequired();
 
+
                 
         }
     }

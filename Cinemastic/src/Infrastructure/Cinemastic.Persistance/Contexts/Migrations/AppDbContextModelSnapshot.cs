@@ -45,6 +45,10 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("Updated")
                         .HasColumnType("datetime2");
 
@@ -443,6 +447,72 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.ToTable("Seasons");
                 });
 
+            modelBuilder.Entity("Cinemastic.Domain.Entities.Slide", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<int?>("AgeRating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CoverUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<long?>("MovieId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("SeasonOrDuration")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TrailerUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("TvShowAgeRating")
+                        .HasColumnType("int");
+
+                    b.Property<long?>("TvShowId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("Updated")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MovieId")
+                        .IsUnique()
+                        .HasFilter("[MovieId] IS NOT NULL");
+
+                    b.HasIndex("TvShowId")
+                        .IsUnique()
+                        .HasFilter("[TvShowId] IS NOT NULL");
+
+                    b.ToTable("Slides");
+                });
+
             modelBuilder.Entity("Cinemastic.Domain.Entities.Tag", b =>
                 {
                     b.Property<long>("Id")
@@ -484,6 +554,9 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                         .HasColumnType("bigint");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<int>("AgeRating")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -844,6 +917,23 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.Navigation("TvShow");
                 });
 
+            modelBuilder.Entity("Cinemastic.Domain.Entities.Slide", b =>
+                {
+                    b.HasOne("Cinemastic.Domain.Entities.Movie", "Movie")
+                        .WithOne("Slide")
+                        .HasForeignKey("Cinemastic.Domain.Entities.Slide", "MovieId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Cinemastic.Domain.Entities.TvShow", "TvShow")
+                        .WithOne("Slide")
+                        .HasForeignKey("Cinemastic.Domain.Entities.Slide", "TvShowId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Movie");
+
+                    b.Navigation("TvShow");
+                });
+
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShow", b =>
                 {
                     b.HasOne("Cinemastic.Domain.Entities.Franchise", "Franchise")
@@ -1017,6 +1107,8 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.Navigation("MovieGenres");
 
                     b.Navigation("MovieTags");
+
+                    b.Navigation("Slide");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Season", b =>
@@ -1034,6 +1126,8 @@ namespace Cinemastic.Persistance.Contexts.Migrations
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShow", b =>
                 {
                     b.Navigation("Seasons");
+
+                    b.Navigation("Slide");
 
                     b.Navigation("TvShowCasts");
 

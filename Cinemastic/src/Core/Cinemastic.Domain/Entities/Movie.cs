@@ -22,6 +22,7 @@ namespace Cinemastic.Domain.Entities
         public ICollection<MovieTag> MovieTags { get; set; }
         public ICollection<MovieCast> MovieCasts { get; set; }
         public ICollection<MovieCrew> MovieCrews { get; set; }
+        public Slide? Slide { get; set; }
 
 
     }

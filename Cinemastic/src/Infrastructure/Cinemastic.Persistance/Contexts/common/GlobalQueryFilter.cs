@@ -22,6 +22,7 @@ namespace Cinemastic.Persistance.Context.common
             builder.ApplyQueryFilter<TvShow>();
             builder.ApplyQueryFilter<Season>();
             builder.ApplyQueryFilter<Episode>();
+            builder.ApplyQueryFilter<Slide>();
 
             builder.Entity<MovieTag>()
                 .HasQueryFilter(mt=>!mt.Movie.IsDeleted);

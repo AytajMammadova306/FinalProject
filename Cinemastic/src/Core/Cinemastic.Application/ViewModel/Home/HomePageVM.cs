@@ -1,4 +1,5 @@
-﻿using Cinemastic.Application.ViewModel.TvShow;
+﻿using Cinemastic.Application.ViewModel.Slide;
+using Cinemastic.Application.ViewModel.TvShow;
 using Cinemastic.MVC.ViewModel.Movie;
 using System;
 using System.Collections.Generic;
@@ -13,5 +14,6 @@ namespace Cinemastic.Application.ViewModel.Home
         public ICollection<GetMovieItemVM> LatestMovieItemVMs { get; set; }
         public ICollection<GetMovieItemVM> CommingMovieItemVMs { get; set; }
         public ICollection<GetTvShowItemVM> RecommendedTVShowItemVM { get; set; }
+        public ICollection<GetSlideVM> SlideVMs { get; set; }
     }
 }

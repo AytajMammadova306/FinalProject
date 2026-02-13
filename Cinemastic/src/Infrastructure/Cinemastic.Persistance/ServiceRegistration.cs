@@ -32,10 +32,13 @@ namespace Cinemastic.Persistance
             services.AddScoped<ITvShowRepository, TvShowRepository>();
             services.AddScoped<ISeasonRepository, SeasonRepository>();
             services.AddScoped<IEpisodeRepository, EpisodeRepository>();
+            services.AddScoped<ISlideRepository, SlideRepository>();
+            
 
 
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<ITvShowService, TvShowService>();
+            services.AddScoped<ISlideService, SlideService>();
             services.AddScoped<IHomeService, HomeService>();
             
 
