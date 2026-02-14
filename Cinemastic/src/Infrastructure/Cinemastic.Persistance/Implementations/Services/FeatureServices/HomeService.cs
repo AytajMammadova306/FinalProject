@@ -34,11 +34,7 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
             ICollection<GetMovieItemVM> movieItemVMs =await _movieService.GetAllAsync();
             ICollection<GetTvShowItemVM> showItemVMs = await _showService.GetAllAsync();
             ICollection<GetSlideVM> slideVMs = await _slideService.GetAllAsync();
-            slideVMs = slideVMs.Where(sVM => sVM.ReleaseDate < DateTime.UtcNow).Take(2)//bu en son cixmis 2 dene
-                .Concat(slideVMs
-                    .OrderBy(sVM=>sVM.ReleaseDate)
-                    .Where(sVM=>sVM.ReleaseDate>DateTime.UtcNow).Take(2))//indiye en yaxinda olan cixma uzre olanlar
-                .ToList();
+
 
             HomePageVM homePageVM = new HomePageVM
             {
@@ -55,7 +51,12 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
                 RecommendedTVShowItemVM=showItemVMs
                     .Take(15)
                     .ToList(),
-                SlideVMs=slideVMs
+                SlideVMs=slideVMs.Where(sVM=>sVM.IsMovie==true && sVM.ReleaseDate<DateTime.Now).Take(8).ToList(),
+                HeroSlideVMs = slideVMs.Where(sVM => sVM.ReleaseDate < DateTime.UtcNow).Take(2)//bu en son cixmis 2 dene
+                .Concat(slideVMs
+                    .OrderBy(sVM => sVM.ReleaseDate)
+                    .Where(sVM => sVM.ReleaseDate > DateTime.UtcNow).Take(2))//indiye en yaxinda olan cixma uzre olanlar
+                .ToList(),
             };
             return homePageVM;
         }

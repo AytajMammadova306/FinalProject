@@ -14,6 +14,9 @@ namespace Cinemastic.Application.MappingProfiles
     {
         public SlideProfile()
         {
+
+
+
             CreateMap<Slide, GetSlideVM>()
 
                 .ForMember(sVM => sVM.Name,
@@ -31,17 +34,18 @@ namespace Cinemastic.Application.MappingProfiles
                 .ForMember(sVM => sVM.ContentId,
                 opt => opt.MapFrom(s => s.MovieId ?? s.TvShowId ?? 0))
 
-                .ForMember(dest => dest.SeasonOrDuration,
-                opt => opt.MapFrom(src =>
-                src.Movie != null
-                ? src.Movie.DurationMinutes ?? 0
-                : src.TvShow.EpisodeCount))
+                .ForMember(sVM => sVM.SeasonOrDuration,
+                opt => opt.MapFrom(s =>
+                s.Movie != null
+                ? s.Movie.DurationMinutes ?? 0
+                : s.TvShow.Seasons.Count))
 
-                .ForMember(dest => dest.AgeRating,
-                opt => opt.MapFrom(src =>
-                src.Movie != null
-                ? src.Movie.AgeRating.ToString()
-                : src.TvShow.AgeRating.ToString()))
+                .ForMember(sVM => sVM.AgeRating,
+                opt => opt.MapFrom(s =>
+                s.Movie != null
+                ? s.Movie.AgeRating.ToString().Replace("_", "-")
+                : s.TvShow.AgeRating.ToString().Replace("_", "-")))
+
 
                 .ForMember(sVM => sVM.Genres,
                 opt => opt.MapFrom(s =>

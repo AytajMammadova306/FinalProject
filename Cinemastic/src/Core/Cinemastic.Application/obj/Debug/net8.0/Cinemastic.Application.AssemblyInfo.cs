@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cinemastic.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+053041ed47123db29738e23178a2b4ff41da77da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81f40592cd57c4bb849d278489ab219aecced013")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cinemastic.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cinemastic.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

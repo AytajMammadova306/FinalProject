@@ -9,15 +9,11 @@ namespace Cinemastic.Domain.Enums
 {
     public enum AgeRating
     {
-        [Display(Name = "G")]
         G,
-        [Display(Name = "PG")]
         PG,
-        [Display(Name = "PG-13")]
-        PG13,
-        [Display(Name = "R")]
+        PG_13,
         R,
-        [Display(Name = "NC-17")]
-        NC17
+        NC_17
     }
 }
+

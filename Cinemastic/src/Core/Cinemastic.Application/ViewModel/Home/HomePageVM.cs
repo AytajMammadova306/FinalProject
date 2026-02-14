@@ -14,6 +14,7 @@ namespace Cinemastic.Application.ViewModel.Home
         public ICollection<GetMovieItemVM> LatestMovieItemVMs { get; set; }
         public ICollection<GetMovieItemVM> CommingMovieItemVMs { get; set; }
         public ICollection<GetTvShowItemVM> RecommendedTVShowItemVM { get; set; }
+        public ICollection<GetSlideVM> HeroSlideVMs { get; set; }
         public ICollection<GetSlideVM> SlideVMs { get; set; }
     }
 }

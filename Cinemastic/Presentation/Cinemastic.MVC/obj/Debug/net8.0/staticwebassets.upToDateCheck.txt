@@ -681,6 +681,7 @@ wwwroot\assets\images\media\Home Alone.jpg
 wwwroot\assets\images\media\Iron Man 3.jpg
 wwwroot\assets\images\media\john-wick.webp
 wwwroot\assets\images\media\john-wick-portrait.webp
+wwwroot\assets\images\media\Joker Cover.jpg
 wwwroot\assets\images\media\Joker.jpg
 wwwroot\assets\images\media\joker.webp
 wwwroot\assets\images\media\joker-portrait.webp
@@ -702,6 +703,7 @@ wwwroot\assets\images\media\minions-2.webp
 wwwroot\assets\images\media\minions-3.webp
 wwwroot\assets\images\media\minions-4.webp
 wwwroot\assets\images\media\minions-portrait.webp
+wwwroot\assets\images\media\Moana Cover.jpg
 wwwroot\assets\images\media\Moana.jpg
 wwwroot\assets\images\media\onepeoc-portrait.webp
 wwwroot\assets\images\media\pirates-ofdayones-orignal.webp
@@ -719,6 +721,7 @@ wwwroot\assets\images\media\sonil.webp
 wwwroot\assets\images\media\sonil-portrait.webp
 wwwroot\assets\images\media\spiderman.webp
 wwwroot\assets\images\media\spiderman-portrait.webp
+wwwroot\assets\images\media\StangerSthings Cover.jpg
 wwwroot\assets\images\media\Stranger_Things_season_1.jpg
 wwwroot\assets\images\media\synchronic.webp
 wwwroot\assets\images\media\synchronic-portrait.webp

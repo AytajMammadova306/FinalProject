@@ -9,19 +9,12 @@ namespace Cinemastic.Domain.Enums
 {
     public enum TvShowAgeRating
     {
-        [Display(Name = "TV-Y")]
-        TVY,
-        [Display(Name = "TV-Y7")]
-        TVY7,
-        [Display(Name = "TV-Y7-FV")]
-        TVY7_FV,
-        [Display(Name = "TV-G")]
-        TVG,
-        [Display(Name = "TV-PG")]
-        TVPG,
-        [Display(Name = "TV-14")]
-        TV14,
-        [Display(Name = "TV-MA")]
-        TVMA
+        TV_Y,
+        TV_Y7,
+        TV_Y7_FV,
+        TV_G,
+        TV_PG,
+        TV_14,
+        TV_MA
     }
 }
