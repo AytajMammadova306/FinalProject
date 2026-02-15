@@ -107,8 +107,8 @@
                 <!-- Sidebar Menu Start -->
                 <ul class="navbar-nav iq-main-menu" id="sidebar-menu">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page"
-                           href="./index.html">
+                        <a class="nav-link" aria-current="page"
+                           asp-area="Admin" asp-controller="Home" asp-action="Index">
                             <i class="icon" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard"
                                data-bs-original-title="Dashboard">
                                 <i class="ph ph-squares-four fs-4"></i>
@@ -170,7 +170,7 @@
                         <ul class="sub-nav collapse" id="sidebar-Movies" data-bs-parent="#sidebar-menu">
                             <li class="nav-item">
                                 <a class="nav-link "
-                                   href="./movie/movie-list.html">
+                                   asp-area="Admin" asp-controller="Movie" asp-action="Index">
                                     <i class="icon" data-bs-toggle="tooltip" title="Movie List" data-bs-placement="right"
                                        aria-label="Movie List" data-bs-original-title="Movie List">
                                         <i class="ph ph-film-strip fs-5"></i>
@@ -1778,6 +1778,121 @@
     <script src="~/admin/js/plugins/flatpickr.js?v=5.4.0" defer></script>
 
     <script src="~/admin/js/plugins/countdown.js?v=5.4.0" defer></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== NAVIGATION START ===');
+
+            const currentPath = window.location.pathname.toLowerCase();
+            console.log('Current URL:', currentPath);
+
+            document.querySelectorAll('#sidebar-menu .nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            const links = [];
+            document.querySelectorAll('#sidebar-menu .nav-link').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && !href.startsWith('#')) {
+                    links.push({
+                        element: link,
+                        href: href.toLowerCase(),
+                        length: href.length
+                    });
+                }
+            });
+
+            links.sort((a, b) => b.length - a.length);
+
+            console.log('Checking links (longest to shortest):');
+            let matchFound = false;
+
+            for (const linkData of links) {
+                const link = linkData.element;
+                const href = linkData.href;
+
+                const isMatch = currentPath === href;
+
+                const linkText = link.querySelector('.item-name')?.textContent || 'Unknown';
+                console.log(`  "${linkText}": ${href} ${isMatch ? '✅ MATCH' : '❌'}`);
+
+                if (isMatch && !matchFound) {
+                    console.log(`  ✅✅✅ ACTIVATING: "${linkText}"`);
+
+                    link.classList.add('active');
+                    matchFound = true;
+
+                    const parentCollapse = link.closest('.sub-nav');
+                    if (parentCollapse) {
+                        console.log('    📂 Expanding parent menu...');
+                        parentCollapse.classList.add('show');
+
+                        const collapseId = parentCollapse.getAttribute('id');
+                        const parentToggle = document.querySelector(`[data-bs-toggle="collapse"][href="#${collapseId}"]`);
+                        if (parentToggle) {
+                            parentToggle.classList.add('active');
+                            parentToggle.setAttribute('aria-expanded', 'true');
+                        }
+                    }
+
+                    const breadcrumb = document.getElementById('page-breadcrumb');
+                    const itemName = link.querySelector('.item-name');
+                    if (breadcrumb && itemName) {
+                        breadcrumb.textContent = itemName.textContent;
+                    }
+
+                    break;
+                }
+            }
+
+            if (!matchFound) {
+                console.warn('❌ No exact match found for:', currentPath);
+                console.log('💡 Trying with /Index appended...');
+
+                const pathWithIndex = currentPath + '/index';
+
+                for (const linkData of links) {
+                    const link = linkData.element;
+                    const href = linkData.href;
+
+                    if (pathWithIndex === href) {
+                        const linkText = link.querySelector('.item-name')?.textContent || 'Unknown';
+                        console.log(`  ✅ Match found with /Index: "${linkText}"`);
+
+                        link.classList.add('active');
+                        matchFound = true;
+
+                        const parentCollapse = link.closest('.sub-nav');
+                        if (parentCollapse) {
+                            parentCollapse.classList.add('show');
+                            const collapseId = parentCollapse.getAttribute('id');
+                            const parentToggle = document.querySelector(`[data-bs-toggle="collapse"][href="#${collapseId}"]`);
+                            if (parentToggle) {
+                                parentToggle.classList.add('active');
+                                parentToggle.setAttribute('aria-expanded', 'true');
+                            }
+                        }
+
+                        const breadcrumb = document.getElementById('page-breadcrumb');
+                        const itemName = link.querySelector('.item-name');
+                        if (breadcrumb && itemName) {
+                            breadcrumb.textContent = itemName.textContent;
+                        }
+
+                        break;
+                    }
+                }
+            }
+
+            if (matchFound) {
+                console.log('✅ Navigation activated successfully!');
+            } else {
+                console.error('❌ Still no match found!');
+            }
+
+            console.log('=== NAVIGATION END ===');
+        });
+    </script>
 
 </body>
 
