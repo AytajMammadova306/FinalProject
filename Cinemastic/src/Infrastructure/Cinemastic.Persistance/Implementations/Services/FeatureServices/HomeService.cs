@@ -43,7 +43,7 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
                     .OrderByDescending(cVM=>cVM.ReleaseDate)
                     .Take(15)
                     .ToList(),
-                CommingMovieItemVMs=movieItemVMs
+                ComingMovieItemVMs=movieItemVMs
                     .Where(cVM=>cVM.ReleaseDate>DateTime.UtcNow)
                     .OrderBy(cVM=>cVM.ReleaseDate)
                     .Take(15)

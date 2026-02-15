@@ -587,6 +587,7 @@ wwwroot\assets\images\media\Avangers Doomsday.webp
 wwwroot\assets\images\media\avengers.webp
 wwwroot\assets\images\media\batter-caill.webp
 wwwroot\assets\images\media\batter-caill-portrait.webp
+wwwroot\assets\images\media\Beauty and Beast cover.jpg
 wwwroot\assets\images\media\Beauty and Beast.jpg
 wwwroot\assets\images\media\Black Panter.webp
 wwwroot\assets\images\media\breaking-bad.webp
@@ -676,8 +677,12 @@ wwwroot\assets\images\media\guilty-portrait.webp
 wwwroot\assets\images\media\hanuman.webp
 wwwroot\assets\images\media\hanuman1.webp
 wwwroot\assets\images\media\hanuman-portrait.webp
+wwwroot\assets\images\media\Harry Potter Cover.jpg
 wwwroot\assets\images\media\Harry Potter.jpg
+wwwroot\assets\images\media\Home Alone Cover.jpg
 wwwroot\assets\images\media\Home Alone.jpg
+wwwroot\assets\images\media\home-alone-1990 Cover.jpg
+wwwroot\assets\images\media\Iron Man 3 Cover.jpg
 wwwroot\assets\images\media\Iron Man 3.jpg
 wwwroot\assets\images\media\john-wick.webp
 wwwroot\assets\images\media\john-wick-portrait.webp
@@ -716,6 +721,7 @@ wwwroot\assets\images\media\reed-dog-portrait.webp
 wwwroot\assets\images\media\revengeofthesith.webp
 wwwroot\assets\images\media\revenge-of-the-sith.webp
 wwwroot\assets\images\media\revenge-of-the-sith-portrait.webp
+wwwroot\assets\images\media\Shrek Cover.jpg
 wwwroot\assets\images\media\Shrek.jpg
 wwwroot\assets\images\media\sonil.webp
 wwwroot\assets\images\media\sonil-portrait.webp
