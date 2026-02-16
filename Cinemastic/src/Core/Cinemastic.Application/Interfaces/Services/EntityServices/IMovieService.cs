@@ -9,6 +9,6 @@ namespace Cinemastic.Application.Interfaces.Services.EntityServices
 {
     public interface IMovieService
     {
-        Task<ICollection<GetMovieItemVM>> GetAllAsync();
+        Task<ICollection<GetMovieItemVM>> GetAllItemAsync();
     }
 }

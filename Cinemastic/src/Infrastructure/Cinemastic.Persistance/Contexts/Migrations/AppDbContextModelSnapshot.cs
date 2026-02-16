@@ -234,6 +234,10 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.Property<long>("GenreId")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -795,7 +799,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
             modelBuilder.Entity("Cinemastic.Domain.Entities.Franchise", b =>
                 {
                     b.HasOne("Cinemastic.Domain.Entities.Genre", "Genre")
-                        .WithMany()
+                        .WithMany("Franchises")
                         .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1075,6 +1079,8 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Genre", b =>
                 {
+                    b.Navigation("Franchises");
+
                     b.Navigation("MovieGenres");
 
                     b.Navigation("TvShowGenres");

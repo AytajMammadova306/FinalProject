@@ -24,7 +24,7 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             _repository=repository;
             _mapper=mapper;
         }
-        public async Task<ICollection<GetSlideVM>> GetAllAsync()
+        public async Task<ICollection<GetSlideVM>> GetAllItemAsync()
         {
             IReadOnlyList<Slide> slides =await _repository.GetAll(
                 includes: [

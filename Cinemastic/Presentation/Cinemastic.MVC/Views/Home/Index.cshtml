@@ -648,7 +648,14 @@
             <div class="position-relative swiper swiper-card" data-slide="6" data-laptop="4" data-tab="3"
                data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true"
                data-pagination="true">
-               @Html.Partial("MovieItemPartialView",Model.ComingMovieItemVMs)
+                    <ul class="p-0 swiper-wrapper m-0  list-inline">
+                        @foreach (GetMovieItemVM movieItemVM in Model.ComingMovieItemVMs)
+                        {
+                            <li class="swiper-slide">
+                                @Html.Partial("MovieItemPartialView",movieItemVM)
+                            </li>
+                        }
+                    </ul>
                <div class="d-none d-lg-block">
                   <div class="swiper-button swiper-button-next"></div>
                   <div class="swiper-button swiper-button-prev"></div>
@@ -931,7 +938,14 @@
             <div class="position-relative swiper swiper-card" data-slide="6" data-laptop="4" data-tab="3"
                data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true"
                data-pagination="true">
-               @Html.Partial("MovieItemPartialView",Model.LatestMovieItemVMs)
+                    <ul class="p-0 swiper-wrapper m-0  list-inline">
+                        @foreach (GetMovieItemVM movieItemVM in Model.LatestMovieItemVMs)
+                        {
+                            <li class="swiper-slide">
+                                @Html.Partial("MovieItemPartialView",movieItemVM)
+                            </li>
+                        }
+                    </ul>
                <div class="d-none d-lg-block">
                   <div class="swiper-button swiper-button-next"></div>
                   <div class="swiper-button swiper-button-prev"></div>
@@ -3613,62 +3627,7 @@
                         @foreach(GetTvShowItemVM showItemVM in Model.RecommendedTVShowItemVM)
                         {
                             <li class="swiper-slide">
-                                <div class="iq-card card-hover">
-                                    <div class="block-images position-relative w-100">
-                                        <div class="img-box w-100">
-                                            <a href="./tv-show-detail.html" class="position-relative top-0 bottom-0 start-0 end-0">
-                                                <img src="@showItemVM.ImageUrl" alt="@showItemVM.Name"
-                                                     class="img-fluid object-cover w-100 d-block border-0 rounded-3">
-                                            </a>
-                                        </div>
-                                        <div class="card-description with-transition">
-                                            <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
-                                                @foreach(string genre in showItemVM.Genres)
-                                                {
-                                                    <li class="fw-semi-bold">
-                                                        <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
-                                                            @genre
-                                                        </a>
-                                                    </li>
-                                                }
-                                                @if (showItemVM.GenresCount > 2)
-                                                {
-                                                    <li class="fw-semi-bold">
-                                                        <span>@(showItemVM.GenresCount-2)</span>
-                                                    </li>
-                                                }
-                                            </ul>
-                                            <div class="cart-content">
-                                                <div class="content-left">
-                                                    <h5 class="iq-title text-capitalize">
-                                                        <a href="./tv-show-detail.html">@showItemVM.Name</a>
-                                                    </h5>
-                                                    <div class="d-flex align-items-center gap-3">
-                                                        <div class="d-flex align-items-center gap-2">
-                                                            <small class="font-size-12">@showItemVM.SeasonCount @((showItemVM.SeasonCount > 1) ? "Seasons" : "Season")</small>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
-                                                <a href="./watchlist-detail.html"
-                                                   class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
-                                                   data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                                                   data-bs-title="Add to Watchlist">
-                                                    <i class="ph ph-plus font-size-18"></i>
-                                                </a>
-                                                <div class="iq-play-button iq-button">
-                                                    <a href="./tv-show-detail.html" class="btn btn-primary w-100">
-                                                        Play Now
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
+                                @Html.Partial("TvShowItemPartialView",showItemVM)
                             </li>
                         }
 

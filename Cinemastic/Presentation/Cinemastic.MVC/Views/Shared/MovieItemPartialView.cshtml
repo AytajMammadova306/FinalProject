@@ -1,20 +1,17 @@
 ﻿@using Cinemastic.MVC.ViewModel.Movie
-@model ICollection<GetMovieItemVM>
-<ul class="p-0 swiper-wrapper m-0  list-inline">
-    @foreach (GetMovieItemVM movieItemVM in Model)
-    {
-        <li class="swiper-slide">
+@model GetMovieItemVM
+
             <div class="iq-card card-hover">
                 <div class="block-images position-relative w-100">
                     <div class="img-box w-100">
                         <a href="./movie-detail.html" class="position-relative top-0 bottom-0 start-0 end-0">
-                            <img src="@movieItemVM.ImageUrl" alt="@movieItemVM.Name"
+                            <img src="@Model.ImageUrl" alt="@Model.Name"
                                  class="img-fluid object-cover w-100 d-block border-0 rounded-3">
                         </a>
                     </div>
                     <div class="card-description with-transition">
                         <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
-                            @foreach (string genre in movieItemVM.Genres)
+                            @foreach (string genre in Model.Genres)
                             {
                                 <li class="fw-semi-bold">
                                     <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
@@ -22,17 +19,17 @@
                                     </a>
                                 </li>
                             }
-                            @if (movieItemVM.GenresCount > 2)
+                            @if (Model.GenresCount > 2)
                             {
                                 <li class="fw-semi-bold">
-                                    <span>+@(movieItemVM.GenresCount - 2)</span>
+                                    <span>+@(Model.GenresCount - 2)</span>
                                 </li>
                             }
                         </ul>
                         <div class="cart-content">
                             <div class="content-left">
                                 <h5 class="iq-title text-capitalize">
-                                    <a href="./movie-detail.html">@movieItemVM.Name</a>
+                                    <a href="./movie-detail.html">@Model.Name</a>
                                 </h5>
                             </div>
                         </div>
@@ -44,7 +41,7 @@
                                 <i class="ph ph-plus font-size-18"></i>
                             </a>
                             <div class="iq-play-button iq-button">
-                                @if (movieItemVM.ReleaseDate>DateTime.UtcNow)
+                                @if (Model.ReleaseDate>DateTime.UtcNow)
                                 {
                                     <a href="./movie-detail.html" class="btn btn-primary w-100">
                                         Coming Soon
@@ -67,6 +64,3 @@
                 </div>
 
             </div>
-        </li>
-    }
-</ul>

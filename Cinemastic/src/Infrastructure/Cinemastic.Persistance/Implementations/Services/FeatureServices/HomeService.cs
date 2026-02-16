@@ -31,9 +31,9 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
 
         public async Task<HomePageVM> GetHomePageVMAsync()
         {
-            ICollection<GetMovieItemVM> movieItemVMs =await _movieService.GetAllAsync();
-            ICollection<GetTvShowItemVM> showItemVMs = await _showService.GetAllAsync();
-            ICollection<GetSlideVM> slideVMs = await _slideService.GetAllAsync();
+            ICollection<GetMovieItemVM> movieItemVMs =await _movieService.GetAllItemAsync();
+            ICollection<GetTvShowItemVM> showItemVMs = await _showService.GetAllItemAsync();
+            ICollection<GetSlideVM> slideVMs = await _slideService.GetAllItemAsync();
 
 
             HomePageVM homePageVM = new HomePageVM

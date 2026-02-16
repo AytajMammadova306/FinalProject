@@ -9,6 +9,6 @@ namespace Cinemastic.Application.Interfaces.Services.EntityServices
 {
     public interface ITvShowService
     {
-        Task<ICollection<GetTvShowItemVM>> GetAllAsync();
+        Task<ICollection<GetTvShowItemVM>> GetAllItemAsync();
     }
 }

@@ -9,6 +9,6 @@ namespace Cinemastic.Application.Interfaces.Services.EntityServices
 {
     public interface ISlideService
     {
-        Task<ICollection<GetSlideVM>> GetAllAsync();
+        Task<ICollection<GetSlideVM>> GetAllItemAsync();
     }
 }

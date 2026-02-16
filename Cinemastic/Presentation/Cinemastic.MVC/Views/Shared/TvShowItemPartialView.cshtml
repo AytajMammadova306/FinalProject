@@ -1,0 +1,58 @@
+﻿@using Cinemastic.Application.ViewModel.TvShow
+@model GetTvShowItemVM
+<div class="iq-card card-hover">
+    <div class="block-images position-relative w-100">
+        <div class="img-box w-100">
+            <a href="./tv-show-detail.html" class="position-relative top-0 bottom-0 start-0 end-0">
+                <img src="@Model.ImageUrl" alt="@Model.Name"
+                     class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+            </a>
+        </div>
+        <div class="card-description with-transition">
+            <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                @foreach (string genre in Model.Genres)
+                {
+                    <li class="fw-semi-bold">
+                        <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                            @genre
+                        </a>
+                    </li>
+                }
+                @if (Model.GenresCount > 2)
+                {
+                    <li class="fw-semi-bold">
+                        <span>+@(Model.GenresCount - 2)</span>
+                    </li>
+                }
+            </ul>
+            <div class="cart-content">
+                <div class="content-left">
+                    <h5 class="iq-title text-capitalize">
+                        <a href="./tv-show-detail.html">@Model.Name</a>
+                    </h5>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <small class="font-size-12">@Model.SeasonCount @((Model.SeasonCount > 1) ? "Seasons" : "Season")</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                <a href="./watchlist-detail.html"
+                   class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                   data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                   data-bs-title="Add to Watchlist">
+                    <i class="ph ph-plus font-size-18"></i>
+                </a>
+                <div class="iq-play-button iq-button">
+                    <a href="./tv-show-detail.html" class="btn btn-primary w-100">
+                        Play Now
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

@@ -26,7 +26,7 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             _mapper=mapper;
         }
         
-        public async Task<ICollection<GetMovieItemVM>> GetAllAsync()
+        public async Task<ICollection<GetMovieItemVM>> GetAllItemAsync()
         {
             IReadOnlyList<Movie> movies = await _repository.GetAll(
                 includes: "MovieGenres.Genre")

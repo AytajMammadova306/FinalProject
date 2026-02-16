@@ -664,6 +664,7 @@ wwwroot\assets\images\media\episode\s3e4-legacy-of-the-sea.webp
 wwwroot\assets\images\media\episode\s4e1-rebirth-of-the-realm.webp
 wwwroot\assets\images\media\episode\s4e2-echoes-of-legends.webp
 wwwroot\assets\images\media\episode\s4e3-the-final-dawn.webp
+wwwroot\assets\images\media\Fantastic Beasts and Where to Find Them.png
 wwwroot\assets\images\media\fast-furious.webp
 wwwroot\assets\images\media\fast-furious-portrait.webp
 wwwroot\assets\images\media\frzzen.webp
@@ -700,6 +701,7 @@ wwwroot\assets\images\media\kung-fu-panda.webp
 wwwroot\assets\images\media\kung-fu-panda-portrait.webp
 wwwroot\assets\images\media\lost-in-space.webp
 wwwroot\assets\images\media\lost-in-space-portrait.webp
+wwwroot\assets\images\media\Marvel Cinematic Universe.jpg
 wwwroot\assets\images\media\midnightHunter-portrait.webp
 wwwroot\assets\images\media\migration.webp
 wwwroot\assets\images\media\migration-portrait.webp
@@ -754,6 +756,7 @@ wwwroot\assets\images\media\vikings-portrait.webp
 wwwroot\assets\images\media\war-for-the-planet.webp
 wwwroot\assets\images\media\war-for-the-planet-portrait.webp
 wwwroot\assets\images\media\we-gare.webp
+wwwroot\assets\images\media\Wizarding World.jpg
 wwwroot\assets\images\media\yoshi.webp
 wwwroot\assets\images\media\yoshi-portrait.webp
 wwwroot\assets\images\mega-menu\home.webp

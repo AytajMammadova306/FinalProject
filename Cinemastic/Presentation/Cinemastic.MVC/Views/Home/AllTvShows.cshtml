@@ -1,0 +1,77 @@
+﻿@using Cinemastic.Application.ViewModel.Home
+@using Cinemastic.Application.ViewModel.TvShow
+@model AllTvShowsVM
+<!--bread-crumb-->
+<div class="iq-breadcrumb">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-12">
+                <nav aria-label="breadcrumb" class="text-center">
+                    <ol class="breadcrumb justify-content-center text-white mt-0">
+                        <li class="breadcrumb-item"><a asp-controller="home" asp-action="index">Home</a></li>
+                        <li class="breadcrumb-item active">View @((Model.TvShows.Count > 1) ? "All Tv Shows" : "Tv Show")</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>    <!--bread-crumb-->
+
+
+<div class="section-padding view-all-movies">
+    <div class="container-fluid">
+        <div class="card-style-grid">
+            <div class="row gy-4 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 data-listing">
+
+                @foreach (GetTvShowItemVM tvShowItemVM in Model.TvShows)
+                {
+                    <div class="col">
+                        @Html.Partial("TvShowItemPartialView", tvShowItemVM)
+                    </div>
+                }
+
+
+            </div>
+            <!-- Static Load More -->
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-primary position-relative load-more-btn">
+                    <span class="button-text">Load More</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="streamit-mobile-footer-menu" aria-label="Mobile Footer Navigation">
+    <ul class="footer-menu list-inline d-flex align-items-center justify-content-between m-0">
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-film-reel d-block  text-center "></i>
+                Movies
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-monitor-play d-block  text-center "></i>
+                Videos
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu- font-size-12">
+                <i class="ph ph-magnifying-glass d-block  text-center "></i>
+                Search
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-television d-block  text-center "></i>
+                TV Shows
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./profile-marvin.html" class="menu-link font-size-12">
+                <i class="ph ph-user d-block  text-center "></i>
+                Profile
+            </a>
+        </li>
+    </ul>
+</div>  </main>

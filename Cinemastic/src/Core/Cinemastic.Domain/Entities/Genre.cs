@@ -10,6 +10,6 @@ namespace Cinemastic.Domain.Entities
     {
         public ICollection<MovieGenre> MovieGenres { get; set; }
         public ICollection<TvShowGenre> TvShowGenres { get; set; }
-
+        public ICollection<Franchise> Franchises { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             _repository = tvShowRepository;
             _mapper = mapper;
         }
-        public async Task<ICollection<GetTvShowItemVM>> GetAllAsync()
+        public async Task<ICollection<GetTvShowItemVM>> GetAllItemAsync()
         {
             IReadOnlyList<TvShow> shows = await _repository.GetAll(
                 includes: ["TvShowGenres.Genre","Seasons"])

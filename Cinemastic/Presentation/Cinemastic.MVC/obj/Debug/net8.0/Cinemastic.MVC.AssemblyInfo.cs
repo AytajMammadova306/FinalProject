@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cinemastic.MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6626f741f4a09a32e4069c10c7c0ffbe5ac3373b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6497251d779c17f6100ef4e34ab6fd080fff0758")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cinemastic.MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cinemastic.MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
