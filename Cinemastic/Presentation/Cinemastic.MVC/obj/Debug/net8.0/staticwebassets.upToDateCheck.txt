@@ -585,10 +585,12 @@ wwwroot\assets\images\media\assassins-creed.webp
 wwwroot\assets\images\media\assassins-creed-portrait.webp
 wwwroot\assets\images\media\Avangers Doomsday.webp
 wwwroot\assets\images\media\avengers.webp
+wwwroot\assets\images\media\avengersdoomsday Cover.jpg
 wwwroot\assets\images\media\batter-caill.webp
 wwwroot\assets\images\media\batter-caill-portrait.webp
 wwwroot\assets\images\media\Beauty and Beast cover.jpg
 wwwroot\assets\images\media\Beauty and Beast.jpg
+wwwroot\assets\images\media\Black Panter Cover.jpg
 wwwroot\assets\images\media\Black Panter.webp
 wwwroot\assets\images\media\breaking-bad.webp
 wwwroot\assets\images\media\breaking-bad-portrait.webp
@@ -664,6 +666,7 @@ wwwroot\assets\images\media\episode\s3e4-legacy-of-the-sea.webp
 wwwroot\assets\images\media\episode\s4e1-rebirth-of-the-realm.webp
 wwwroot\assets\images\media\episode\s4e2-echoes-of-legends.webp
 wwwroot\assets\images\media\episode\s4e3-the-final-dawn.webp
+wwwroot\assets\images\media\Fantastic Beasts and Where to Find Them Cover.jpg
 wwwroot\assets\images\media\Fantastic Beasts and Where to Find Them.png
 wwwroot\assets\images\media\fast-furious.webp
 wwwroot\assets\images\media\fast-furious-portrait.webp

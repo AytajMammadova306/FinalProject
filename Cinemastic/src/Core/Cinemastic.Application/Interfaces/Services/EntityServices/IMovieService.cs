@@ -1,4 +1,5 @@
-﻿using Cinemastic.MVC.ViewModel.Movie;
+﻿using Cinemastic.Application.ViewModel.Movie;
+using Cinemastic.MVC.ViewModel.Movie;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Cinemastic.Application.Interfaces.Services.EntityServices
     public interface IMovieService
     {
         Task<ICollection<GetMovieItemVM>> GetAllItemAsync();
+        Task<GetMovieVM> GetByIdAsync(long id);
     }
 }

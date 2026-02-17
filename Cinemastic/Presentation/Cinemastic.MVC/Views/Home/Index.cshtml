@@ -45,7 +45,7 @@
                                @{int count=0;}
                               <div class="text-primary genres font-size-14 mb-1"> Starring:
                                  @foreach(string star in slideVM.Starrings){
-                                                    @if (slideVM.Starrings.Count() >count)
+                                                    @if (slideVM.Starrings.Count() >count+1)
                                                     {
                                                         <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
                                                             @star,
@@ -61,7 +61,7 @@
                               @{count=0;}
                               <div class="text-primary genres font-size-14 mb-1"> Genres:
                                  @foreach(string genre in slideVM.Genres){
-                                     @if(slideVM.Genres.Count()>count){
+                                     @if(slideVM.Genres.Count()>count+1){
                                                     
                                                         <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
                                                             @genre,
@@ -80,7 +80,7 @@
                               @{count=0;}
                               <div class="text-primary tag font-size-14"> Tag:
                                   @foreach(string tag in slideVM.Tags){
-                                      @if(slideVM.Tags.Count()>count){
+                                      @if(slideVM.Tags.Count()>count+1){
                                                     
                                                         <a href="view-all-movie.html" class="fw-normal text-decoration-none text-body">
                                                             @tag,
@@ -94,7 +94,7 @@
                            </div>
                            <div class="RightAnimate-four">
                               @if(slideVM.ReleaseDate<DateTime.UtcNow){
-                                  <a href="movie-detail.html" class="btn btn-primary text-capitalize position-relative rounded-3">
+                                  <a asp-controller="home" asp-action="moviedetail" asp-route-id="@slideVM.ContentId" class="btn btn-primary text-capitalize position-relative rounded-3">
                                   <span class="d-flex align-items-center gap-2">
                                       <span class="button-text">Play
                                                             Now</span>
@@ -103,7 +103,7 @@
                               </a>
                               }
                               else{
-                                  <a href="movie-detail.html" class="btn btn-primary text-capitalize position-relative rounded-3">
+                                  <a asp-controller="home" asp-action="moviedetail" asp-route-id="@slideVM.ContentId" class="btn btn-primary text-capitalize position-relative rounded-3">
                                   <span class="d-flex align-items-center gap-2">
                                       <span class="button-text">Coming Soon</span>
                                       <i class="ph-fill ph-play fs-6"></i>
@@ -1012,7 +1012,7 @@
 
                                         </ul>
                                         <h2 class="iq-title m-0 line-count-2">
-                                            <a href="./tv-show-detail.html">
+                                            <a asp-controller="home" asp-action="moviedetail" asp-route-id="@slideVM.ContentId">
                                                 @slideVM.Name
                                             </a>
                                         </h2>
@@ -1031,7 +1031,7 @@
                                         <p class="mt-2 mb-3 line-count-3">
                                             @slideVM.Description
                                         </p>
-                                        <a href="movie-detail.html" class="btn btn-primary text-capitalize position-relative rounded-3">
+                                        <a asp-controller="home" asp-action="moviedetail" asp-route-id="@slideVM.ContentId" class="btn btn-primary text-capitalize position-relative rounded-3">
                                             <span class="d-flex align-items-center gap-2">
                                                 <span class="button-text">play now</span>
                                                 <i class="ph-fill ph-play fs-6"></i>

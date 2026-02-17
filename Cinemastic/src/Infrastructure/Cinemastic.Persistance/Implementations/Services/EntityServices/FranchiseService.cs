@@ -28,7 +28,7 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
         public async Task<ICollection<GetFranchiseItemVM>> GetAllItemAsync()
         {
             IReadOnlyList<Franchise> franchises = await _repository.GetAll(
-                includes: ["Genre","Movies","TvShows"])
+                includes: [nameof(Genre),"Movies","TvShows"])
                 .ToListAsync();
             ICollection<GetFranchiseItemVM> franchiseVms = _mapper.Map<ICollection<GetFranchiseItemVM>>(franchises);
             return franchiseVms;
