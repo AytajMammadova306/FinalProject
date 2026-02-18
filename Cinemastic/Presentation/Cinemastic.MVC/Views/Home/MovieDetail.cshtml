@@ -83,10 +83,23 @@
                             </span>
                         </span>
                     </li>
-
+                    
+                    
+                    
                 </ul>
 
-                
+                <div class="d-flex align-items-center flex-wrap gap-3 gap-md-4 my-5">
+                    @if (Model.MovieVM.FranchiseId is not null)
+                    {
+
+                            <span class="badge bg-secondary d-flex align-items-center gap-2 fw-bold font-size-12 movie-type-tag">
+                                <span>
+                                    @Model.MovieVM.FranchiseName
+                                </span>
+                            </span>
+
+                    }
+                </div>
                 <div class="d-flex align-items-center flex-wrap gap-3 gap-md-4 my-5">
                     <div class="iq-play-button iq-button">
                         @if (Model.MovieVM.ReleaseDate <= DateTime.UtcNow)

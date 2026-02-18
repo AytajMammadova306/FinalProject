@@ -11,5 +11,6 @@ namespace Cinemastic.Domain.Entities
         public ICollection<MovieCrew> MovieCrews { get; set; }
         public ICollection<TvShowCrew> TvShowCrews { get; set; }
         public string Surname { get; set; }
+        public string ImageUrl { get; set; }
     }
 }
