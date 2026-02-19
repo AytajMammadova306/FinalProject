@@ -13,10 +13,14 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
     internal class MovieDetailService:IMovieDetailService
     {
         private readonly IMovieService _movieService;
+        private readonly IActorService _actorService;
 
-        public MovieDetailService(IMovieService movieService)
+        public MovieDetailService(
+            IMovieService movieService,
+            IActorService actorService)
         {
             _movieService = movieService;
+            _actorService = actorService;
         }
         public async Task<MovieDetailPageVM> GetMovieDetailVMAsync(long id)
         {
