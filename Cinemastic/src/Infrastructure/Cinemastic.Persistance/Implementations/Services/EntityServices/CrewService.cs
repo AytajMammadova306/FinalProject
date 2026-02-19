@@ -1,6 +1,7 @@
 ﻿using Cinemastic.Application.Interfaces.Repositories;
 using Cinemastic.Application.Interfaces.Services.EntityServices;
 using Cinemastic.Application.ViewModel.Crew;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,17 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             _repository = repository;
             _movieService = movieService;
         }
-        public async Task<GetCrewVM> GetMovieCrewVMById()
+        public async Task<ICollection<GetCrewVM>> GetMovieCrewVMById(long id)
         {
-            
+            ICollection<GetCrewVM> crewVMs = await _repository.GetAll()
+                .Where(c => c.MovieCrews.Any(mc => mc.MovieId == id))
+                .Select(c => new GetCrewVM
+                {
+                    CrewNameAndSurname = c.Name + " " + c.Surname,
+                    ImageUrl = c.ImageUrl,
+                    Type=c.MovieCrews.Where(mc=>mc.MovieId==id).FirstOrDefault().CrewType.ToString()
+                }).ToListAsync();
+            return crewVMs;
         }
     }
 }

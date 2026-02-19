@@ -602,6 +602,7 @@ wwwroot\assets\images\media\charlie-chaplin.webp
 wwwroot\assets\images\media\charlie-chaplin-portrait.webp
 wwwroot\assets\images\media\chosfies.webp
 wwwroot\assets\images\media\chosfies-portrait.webp
+wwwroot\assets\images\media\Cooper Bradley.jpg
 wwwroot\assets\images\media\deadpool.webp
 wwwroot\assets\images\media\deadpool-portrait.webp
 wwwroot\assets\images\media\dinoosaur.webp
@@ -670,6 +671,7 @@ wwwroot\assets\images\media\Fantastic Beasts and Where to Find Them Cover.jpg
 wwwroot\assets\images\media\Fantastic Beasts and Where to Find Them.png
 wwwroot\assets\images\media\fast-furious.webp
 wwwroot\assets\images\media\fast-furious-portrait.webp
+wwwroot\assets\images\media\Frances Frances.jpg
 wwwroot\assets\images\media\frzzen.webp
 wwwroot\assets\images\media\frzzen-portrait.webp
 wwwroot\assets\images\media\gameofhero.webp
@@ -716,6 +718,9 @@ wwwroot\assets\images\media\minions-portrait.webp
 wwwroot\assets\images\media\Moana Cover.jpg
 wwwroot\assets\images\media\Moana.jpg
 wwwroot\assets\images\media\onepeoc-portrait.webp
+wwwroot\assets\images\media\Phoenix Joaquin higher quality.jpg
+wwwroot\assets\images\media\Phoenix Joaquin medium quality.jpg
+wwwroot\assets\images\media\Phoenix Joaquin.jpg
 wwwroot\assets\images\media\pirates-ofdayones-orignal.webp
 wwwroot\assets\images\media\rabbit.webp
 wwwroot\assets\images\media\rabbit-portrait.webp
@@ -726,6 +731,8 @@ wwwroot\assets\images\media\reed-dog-portrait.webp
 wwwroot\assets\images\media\revengeofthesith.webp
 wwwroot\assets\images\media\revenge-of-the-sith.webp
 wwwroot\assets\images\media\revenge-of-the-sith-portrait.webp
+wwwroot\assets\images\media\Robert De Niro medium quality.jpg
+wwwroot\assets\images\media\Robert De Niro.jpg
 wwwroot\assets\images\media\Shrek Cover.jpg
 wwwroot\assets\images\media\Shrek.jpg
 wwwroot\assets\images\media\sonil.webp
@@ -749,7 +756,9 @@ wwwroot\assets\images\media\the-first-of-us-portrait.webp
 wwwroot\assets\images\media\the-hunter.webp
 wwwroot\assets\images\media\the-hunter-portrait.webp
 wwwroot\assets\images\media\tianic.webp
+wwwroot\assets\images\media\Tillinger Koskoff Emma.jpg
 wwwroot\assets\images\media\titanic-portrait.webp
+wwwroot\assets\images\media\Todd Philips.jpg
 wwwroot\assets\images\media\toddler.webp
 wwwroot\assets\images\media\toddler-portrait.webp
 wwwroot\assets\images\media\venom.webp
@@ -762,6 +771,7 @@ wwwroot\assets\images\media\we-gare.webp
 wwwroot\assets\images\media\Wizarding World.jpg
 wwwroot\assets\images\media\yoshi.webp
 wwwroot\assets\images\media\yoshi-portrait.webp
+wwwroot\assets\images\media\Zazie Beetz.jpg
 wwwroot\assets\images\mega-menu\home.webp
 wwwroot\assets\images\mega-menu\movie.webp
 wwwroot\assets\images\mega-menu\new-home.webp

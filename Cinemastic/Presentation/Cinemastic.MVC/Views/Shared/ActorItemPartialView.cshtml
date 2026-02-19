@@ -1,0 +1,13 @@
+﻿@using Cinemastic.Application.ViewModel.Actor
+@model GetActorVM
+<li class="swiper-slide">
+    <a href="person-detail.html">
+        <img src="@Model.ImageUrl" alt="@Model.ActorNameAndSurname" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+    </a>
+    <div class="text-center">
+        <h6 class="mb-0">
+            <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">@Model.ActorNameAndSurname</a>
+        </h6>
+        <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">@Model.Role</a>
+    </div>
+</li>

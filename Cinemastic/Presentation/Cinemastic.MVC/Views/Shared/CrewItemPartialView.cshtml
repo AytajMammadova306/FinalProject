@@ -1,0 +1,13 @@
+﻿@using Cinemastic.Application.ViewModel.Crew
+@model GetCrewVM
+<li class="swiper-slide">
+    <a href="person-detail.html">
+        <img src="@Model.ImageUrl" alt="@Model.CrewNameAndSurname" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+    </a>
+    <div class="text-center">
+        <h6 class="mb-0">
+            <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">@Model.CrewNameAndSurname</a>
+        </h6>
+        <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">@Model.Type</a>
+    </div>
+</li>

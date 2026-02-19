@@ -1,4 +1,6 @@
-﻿@using Cinemastic.Application.ViewModel.Home
+﻿@using Cinemastic.Application.ViewModel.Actor
+@using Cinemastic.Application.ViewModel.Crew
+@using Cinemastic.Application.ViewModel.Home
 @model MovieDetailPageVM
 <!-- Banner Start -->
 <div class="poition-relative">
@@ -823,152 +825,13 @@
                 <div class="d-flex align-items-center justify-content-between px-1 mb-2 pb-1 mb-md-4 pb-md-0">
                     <h4 class="main-title text-capitalize mb-0">Starring</h4>
                 </div>
-                <div class="position-relative swiper swiper-card" data-slide="11" data-laptop="11" data-tab="4" data-mobile="2"
+                <div class="position-relative swiper swiper-card" data-slide="7" data-laptop="11" data-tab="4" data-mobile="2"
                      data-mobile-sm="2" data-autoplay="false" data-loop="false" data-navigation="true" data-pagination="true">
                     <ul class="p-0 swiper-wrapper m-0  list-inline personality-card">
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/olivia-foster.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Olivia Foster</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/leena-burton.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Leena Burton</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/ryan-pierce.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Ryan Pierce</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actor&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/michael-fox.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Michael Fox</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/ruby-scott.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Ruby Scott</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/maxwell-carter.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Maxwell Carter</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/mark-smith.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Mark Smith</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/ava-monroe.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Ava Monroe</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/jack-nicholson.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Jack Nicholson</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actor&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/charles-melton.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Charles Melton</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actor&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/jeff-bridges.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Jeff Bridges</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/james-stewart.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">James Stewart</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actor&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/jordan-grant.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Jordan Grant</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
+                        @foreach(GetActorVM actorVM in Model.Starring)
+                        {
+                            @Html.Partial("ActorItemPartialView",actorVM);
+                        }
                     </ul>
                     <div class="swiper-button swiper-button-next d-none d-lg-block"></div>
                     <div class="swiper-button swiper-button-prev d-none d-lg-block"></div>
@@ -981,163 +844,14 @@
                 <div class="d-flex align-items-center justify-content-between px-1 mb-2 pb-1 mb-md-4 pb-md-0">
                     <h4 class="main-title text-capitalize mb-0">Crew</h4>
                 </div>
-                <div class="position-relative swiper swiper-card" data-slide="11" data-laptop="11" data-tab="4" data-mobile="2"
+                <div class="position-relative swiper swiper-card" data-slide="7" data-laptop="11" data-tab="4" data-mobile="2"
                      data-mobile-sm="2" data-autoplay="false" data-loop="false" data-navigation="true" data-pagination="true">
                     <ul class="p-0 swiper-wrapper m-0  list-inline personality-card">
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/maria-rodriguez.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Maria Rodriguez</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/oliver-turner.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Oliver Turner</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/john-abraham.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">John Abraham</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/benjamin-hayes.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Benjamin Hayes</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;Producer</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/ethan-crawford.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Ethan Crawford</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/mark-wilson.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">mark wilson</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/jack-walker.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Jack Walker</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/angel-louis.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">angel louis</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/millar-joseph.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Millar joseph</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/kelly-reilly.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Kelly Reilly</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/smith-jonas.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">smith Jonas</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/davina-decorous.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Davina decorous</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/thomas-bailey.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Thomas bailey</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="person-detail.html">
-                                <img src="./assets/images/cast/leena-burton.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
-                            </a>
-                            <div class="text-center">
-                                <h6 class="mb-0">
-                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Leena burton</a>
-                                </h6>
-                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
-                            </div>
-                        </li>
+                        @foreach(GetCrewVM crewVM in Model.Crews)
+                        {
+                            @Html.Partial("CrewItemPartialView",crewVM);
+                            ;
+                        }
                     </ul>
                     <div class="swiper-button swiper-button-next d-none d-lg-block"></div>
                     <div class="swiper-button swiper-button-prev d-none d-lg-block"></div>

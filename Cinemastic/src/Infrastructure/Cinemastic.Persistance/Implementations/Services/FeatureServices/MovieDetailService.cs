@@ -1,5 +1,7 @@
 ﻿using Cinemastic.Application.Interfaces.Services.EntityServices;
 using Cinemastic.Application.Interfaces.Services.Feature_Services;
+using Cinemastic.Application.ViewModel.Actor;
+using Cinemastic.Application.ViewModel.Crew;
 using Cinemastic.Application.ViewModel.Home;
 using Cinemastic.Application.ViewModel.Movie;
 using System;
@@ -14,20 +16,27 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
     {
         private readonly IMovieService _movieService;
         private readonly IActorService _actorService;
+        private readonly ICrewService _crewService;
 
         public MovieDetailService(
             IMovieService movieService,
-            IActorService actorService)
+            IActorService actorService,
+            ICrewService crewService)
         {
             _movieService = movieService;
             _actorService = actorService;
+            _crewService = crewService;
         }
         public async Task<MovieDetailPageVM> GetMovieDetailVMAsync(long id)
         {
             GetMovieVM movieVM = await _movieService.GetByIdAsync(id);
+            ICollection<GetActorVM> actorVMs = await _actorService.GetMovieActorVMById(id);
+            ICollection<GetCrewVM> crewVMs = await _crewService.GetMovieCrewVMById(id);
             MovieDetailPageVM detailPageVM = new MovieDetailPageVM
             {
                 MovieVM = movieVM,
+                Starring=actorVMs,
+                Crews=crewVMs
             };
             return detailPageVM;
         } 
