@@ -52,7 +52,19 @@ namespace Cinemastic.MVC.Controllers
                 return BadRequest();
             }
             MovieDetailPageVM detailPageVM=await _movieDetailService.GetMovieDetailVMAsync(id.Value);
+            if (detailPageVM is null)
+            {
+                return NotFound();
+            }
             return View(detailPageVM);
+        }
+        public async Task<IActionResult> TvShowDetail(long? id)
+        {
+            if (id == null || id < 1)
+            {
+                return BadRequest();
+            }
+            return View();
         }
 
     }

@@ -1,0 +1,1727 @@
+﻿@using Cinemastic.Application.ViewModel.Episode
+@using Cinemastic.Application.ViewModel.Home
+<!-- Banner Start -->
+@model TvShowDetailPageVM
+
+<div class="poition-relative">
+    <div class="iq-main-slider site-video position-relative">
+        <video id="my-video" poster="./assets/images/player/player-poster.webp"
+               class="my-video video-js vjs-big-play-centered w-100" loop autoplay muted preload="auto" data-setup='{
+                  "techOrder": ["youtube"],
+                  "sources": [{
+                      "type": "video/youtube",
+                      "src": " https://i.ytimg.com/vi_webp/rKVEoyTedv4/maxresdefault.webp"
+                  }],
+                  "youtube": {
+                      "modestbranding": 1,
+                      "rel": 0,
+                      "showinfo": 0,
+                      "autoplay": 1
+                  },
+                  "fullscreen": true
+              }'>
+        </video>
+    </div>
+
+
+    <div class="movie-detail-part position-relative">
+        <div class="trending-info  pt-0 pb-0">
+            <div class="details-parts">
+                <!-- Movie Description Start-->
+                <ul class="p-0 mb-2 list-inline d-flex flex-wrap movie-tag">
+                    <li class="trending-list"><a class="" href="./view-all-movie.html">Action</a></li>
+                    <li class="trending-list"><a class="" href="./view-all-movie.html">Adventure</a></li>
+                    <li class="trending-list"><a class="" href="./view-all-movie.html">Drama</a></li>
+                </ul>
+                <div class="d-block d-lg-flex align-items-center">
+                    <h3 class="trending-text fw-bold texture-text text-uppercase my-0 fadeInLeft animated d-inline-block"
+                        data-animation-in="fadeInLeft" data-delay-in="0.6" style="opacity: 1; animation-delay: 0.6s">
+                        VIKINGS
+                    </h3>
+                </div>
+                <div class="movie-description mt-3 mb-4" id="readmore-wrapper">
+                    <p class="line-count-3 RightAnimate-two mb-0">
+                        Game of Heros is an action-packed fantasy epic where the fate of the
+                        world is decided in a battle of legendary warriors. When an ancient prophecy foretells an all-out war between the
+                        greatest heroes of all realms, champions from different eras and dimensions are summoned to fight for ultimate
+                        supremacy. Each warrior possesses unique abilities, weapons, and a past that drives them to victory—or doom.
+                    </p>
+                    <div class="iq-blog-meta-cat-tag iq-blogtag readmore-tags">
+                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#viewMoreDataModal" class="position-relative">Read More</a>
+                    </div>
+                </div>
+
+                <ul class="list-inline mb-0 mx-0 p-0 d-flex align-items-center flex-wrap gap-3 movie-metalist">
+
+                    <!-- Movie Releas data  -->
+                    <li>
+                        <span class="d-flex align-items-center gap-1">
+                            <span class="fw-medium">
+                                2025
+                            </span>
+                        </span>
+                    </li>
+
+                    <!-- Movie Runtime  -->
+                    <li>
+                        <span class="d-flex align-items-center gap-1">
+                            <span class="d-flex align-items-center justify-content-center"><i class="ph ph-clock"></i></span>
+                            1hr : 10m
+                        </span>
+                    </li>
+
+                    <!-- Movie Views  -->
+                    <li>
+                        <div class="d-flex align-items-center gap-1">
+                            <i class="ph ph-eye"></i>
+                            <span class="">141 views</span>
+                        </div>
+                    </li>
+
+                    <!-- Movie IMDP Rating  -->
+                    <li>
+                        <span class="d-flex align-items-center gap-1">
+                            <span class="fw-medium">
+                                <span>
+                                    5
+                                </span>
+                                <span class="imdb-logo ms-1">
+                                    <img src="./assets/images/pages/imdb-logo.svg" loading="lazy" decoding="async" alt="imdb logo"
+                                         class="img-fluid imdb-logo1">
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+
+                    <!-- Movie Censor Rating -->
+
+                </ul>
+
+                <div class="video-language d-flex align-items-center gap-1 mt-2">
+                    <i class="ph ph-translate"></i>
+                    <ul class="list-inline m-0 p-0 d-inline-flex align-items-center gap-3 flex-wrap">
+                        <li>
+                            <small class="text-capitalize">english (UK)</small>
+                        </li>
+
+                        <!-- Display additional languages count if applicable -->
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center flex-wrap gap-3 gap-md-4 my-5">
+                    <div class="iq-play-button iq-button">
+                        <a href="episode.html" class="btn btn-primary w-100 rounded d-flex align-items-center justify-content-center gap-2 lh-1">
+                            <span><i class="ph-fill ph-play"></i></span>
+                            <span>Start Watching</span>
+                        </a>
+                    </div>
+
+                    <div class="watchlist-button-wrapper">
+
+                        <a href="./watchlist-detail.html" class="btn btn-secondary border rounded" data-bs-toggle="tooltip"
+                           data-bs-placement="top" data-bs-original-title="Add to watchlist" data-bs-trigger="focus">
+                            <span class="d-flex align-items-center justify-content-center gap-2">
+                                <span class="fw-semibold"><i class="ph ph-plus"></i></span>
+                                <span class="fw-semibold">Watch List</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 flex-wrap">
+                        <button type="button" class="action-btn btn btn-secondary border" data-bs-toggle="modal" data-bs-target="#likeModal"
+                                id="like-toggle">
+                            <span id="like-movies">
+                                <span class="h-100 w-100 d-block" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Like">
+                                    <i class="ph ph-heart heart-icon"></i>
+                                </span>
+                            </span>
+                        </button>
+
+                        <button type="button" class="action-btn btn btn-secondary border" data-bs-toggle="modal"
+                                data-bs-target="#shareModal">
+                            <span class="h-100 w-100 d-block" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Share">
+                                <i class="ph ph-share-network"></i>
+                            </span>
+                        </button>
+
+
+
+
+                    </div>
+                </div>
+                <!-- Movie Description End -->
+                <!-- Modals -->
+                <div class="modal fade view-more-data-modal" id="playlistModal" tabindex="-1" aria-modal="true" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered share-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Select Playlist</h5>
+                                <button type="button" class="btn-close me-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body py-0">
+                                <div class="playlist-modal-content">
+                                    <div class="form-check">
+                                        <input id="26" class="st_manage_playlist form-check-input" type="checkbox"
+                                               data-playlist_id="26" data-post_id="32" data-post_type="movie"><label for="26">222</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="14" class="st_manage_playlist form-check-input" type="checkbox"
+                                               data-playlist_id="14" data-post_id="32" data-post_type="movie"><label for="14">
+                                            90s
+                                            Throwback
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="11" class="st_manage_playlist form-check-input" type="checkbox"
+                                               data-playlist_id="11" data-post_id="32" data-post_type="movie" checked=""><label for="11">Action</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="10" class="st_manage_playlist form-check-input" type="checkbox"
+                                               data-playlist_id="10" data-post_id="32" data-post_type="movie" checked=""><label for="10">Blockbuster</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="9" class="st_manage_playlist form-check-input" type="checkbox"
+                                               data-playlist_id="9" data-post_id="32" data-post_type="movie"><label for="9">Dramas</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="13" class="st_manage_playlist form-check-input" type="checkbox"
+                                               data-playlist_id="13" data-post_id="32" data-post_type="movie"><label for="13">Horror</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="15" class="st_manage_playlist form-check-input" type="checkbox"
+                                               data-playlist_id="15" data-post_id="32" data-post_type="movie"><label for="15">
+                                            Road Trip
+                                            Movies
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="12" class="st_manage_playlist form-check-input" type="checkbox"
+                                               data-playlist_id="12" data-post_id="32" data-post_type="movie"><label for="12">
+                                            Romantic
+                                            ...
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0 p-4">
+                                <button type="button" class="playlist-action-btn btn btn-secondary border" data-bs-toggle="modal"
+                                        data-bs-target="#creatplaylistModal">
+                                    Create Playlist
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade view-more-data-modal" id="creatplaylistModal" tabindex="-1" aria-modal="true" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered share-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel1">Create Playlist</h5>
+                                <button type="button" class="btn-close me-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pt-0">
+                                <form id="st_creat_playlist" action="#" method="post">
+                                    <input type="hidden" id="st_playlist_post_type" value="movie">
+                                    <div class="form-group mb-4">
+                                        <label class="form-label">Playlist Title</label>
+                                        <span class="text-danger">*</span>
+                                        <input class="form-control" type="text" id="st_playlist_title" value="">
+                                    </div>
+                                    <div class="iq-button d-flex justify-content-end">
+                                        <button type="button" class="btn btn-secondary position-relative" data-bs-toggle="modal"
+                                                data-bs-target="#addNewPlaylist">
+                                            <span class="button-text">Create Playlist</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade view-more-data-modal" id="shareModal" tabindex="-1" aria-modal="true" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered share-modal">
+                        <div class="modal-content">
+                            <div class="modal-header pb-0">
+                                <h5 class="modal-title" id="exampleModalLabelshare">Share</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="share-media-box">
+                                    <div class="media-box">
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <span class="image-icon">
+                                                <i class="icon-facebook-icon"></i>
+                                            </span>
+                                            <span class="titles">Facebook</span>
+                                        </a>
+                                    </div>
+                                    <div class="media-box">
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <span class="image-icon">
+                                                <i class="icon-twitter-icon"></i>
+                                            </span>
+                                            <span class="titles text-center">Twitter</span>
+                                        </a>
+                                    </div>
+                                    <div class="media-box">
+                                        <a href="https://www.linkedin.com" target="_blank">
+                                            <span class="image-icon">
+                                                <i class="icon-instagram-icon"></i>
+                                            </span>
+                                            <span class="titles">Instagram</span>
+                                        </a>
+                                    </div>
+                                    <div class="media-box">
+                                        <a href="https://api.whatsapp.com" target="_blank">
+                                            <span class="image-icon">
+                                                <i class="icon-whatsapp-icon"></i>
+                                            </span>
+                                            <span class="titles">Whatsapp</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="copy-link">
+                                    <h6 id="basic-addon1">Copy Link </h6>
+                                    <div class="input-group mb-0">
+                                        <input type="text" id="copyInput" class="form-control copy-post-url" placeholder="Username"
+                                               value="https://templates.iqonic.design/streamit-dist/frontend/html/index.html"
+                                               aria-label="Username" readonly="">
+                                        <button class="input-group-text copy-url-btn" id="copyButton">
+                                            <i class="ph ph-copy-simple"
+                                               id="copyIcon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade view-more-data-modal downloadModal" id="downloadModal" tabindex="-1" aria-modal="true"
+                     role="dialog">
+                    <div class="modal-dialog modal-dialog-centered share-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabeldownload">Download Quality</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pt-0">
+                                <!-- Normal download functionality -->
+                                <ul class="list-inline m-0 p-0 downloadModal-list">
+                                    <li>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mt-0 mb-1">360p</h6>
+                                                <p class="m-0 small">English,Hindi</p>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <a download="" href="https://www.youtube.com/watch?v=X8c8EXPfqkI" class="link-primary">
+                                                    <i class="ph ph-download-simple"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mt-0 mb-1">480p</h6>
+                                                <p class="m-0 small">English,Hindi</p>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <a download="" href="https://www.youtube.com/watch?v=X8c8EXPfqkI" class="link-primary">
+                                                    <i class="ph ph-download-simple"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mt-0 mb-1">720p</h6>
+                                                <p class="m-0 small">English,Hindi</p>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <a download="" href="https://www.youtube.com/watch?v=X8c8EXPfqkI" class="link-primary">
+                                                    <i class="ph ph-download-simple"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mt-0 mb-1">1080p</h6>
+                                                <p class="m-0 small">English,Hindi</p>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <a download="" href="https://www.youtube.com/watch?v=X8c8EXPfqkI" class="link-primary">
+                                                    <i class="ph ph-download-simple"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modals End -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid">
+    <div class="overflow-hidden">
+        <!-- Episode Start -->
+        <div class="show-episode section-padding-top">
+            <div class="d-flex align-items-center justify-content-between px-1 mb-2 pb-1 mb-md-4 pb-md-0">
+                <h5 class="main-title text-capitalize mb-0 fw-medium">Episodes</h5>
+            </div>
+            <ul class="nav nav-pills custom-tab-slider episode-nav-btn gap-3 mb-4 pb-2" role="tablist">
+                @foreach (int seasonid in Model.TvShowVM.SeasonIds)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link active show" data-bs-toggle="pill" href="#season-@seasonid" role="tab"
+                           aria-selected="true">
+                            Season @seasonid
+                        </a>
+                    </li>
+                }
+            </ul>
+            <div class="tab-content">
+                @foreach (int seasonid in Model.TvShowVM.SeasonIds)
+                {
+                    <div id="season-@seasonid" class="tab-pane animated fadeInUp active show" role="tabpanel">
+                        <div class="card-style-slider">
+                            <div class="position-relative swiper swiper-card overflow-hidden" data-slide="5"
+                                 data-laptop="5" data-tab="2" data-mobile="2" data-mobile-sm="1" data-autoplay="false"
+                                 data-loop="false">
+                                <div class="p-0 swiper-wrapper m-0 list-inline">
+                                    @foreach (GetEpisodeItemVM episodeItemVM in Model.TvShowVM.Episodes.Where(e => e.SeasonId ==seasonid))
+                                    {
+                                        <div class="swiper-slide">
+                                            @Html.Partial("EpisodItemPartialView", episodeItemVM);
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+            </div>
+        </div>
+        <!-- Episode End -->
+
+        <div class="recommended-block">
+            <div class="d-flex align-items-center justify-content-between px-1 mb-2 pb-1 mb-md-4 pb-md-0">
+                <h4 class="main-title text-capitalize mb-0">Recommended</h4>
+            </div>
+            <div class="card-style-slider">
+                <div class="position-relative swiper swiper-card" data-slide="6" data-laptop="6" data-tab="3"
+                     data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="false"
+                     data-navigation="true" data-pagination="true">
+                    <ul class="p-0 swiper-wrapper m-0  list-inline">
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./tv-show-detail.html" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/midnightHunter-portrait.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./tv-show-detail.html">Midnight Hunter</a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="ph ph-translate"></i>
+                                                        <small class="font-size-12">English (Canada)</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./tv-show-detail.html" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./tv-show-detail.html" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/kung-fu-panda-portrait.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./tv-show-detail.html">Masters Of Kung Fu: The Panda Legend</a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <small class="font-size-12"></small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./tv-show-detail.html" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="position-absolute z-1 primium-product d-flex align-items-center justify-content-center"
+                                         data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Premium" data-bs-original-title="Premium">
+                                        <i class="ph-fill ph-crown "></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./tv-show-detail.html" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/hanuman-portrait.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./tv-show-detail.html">
+                                                        The
+                                                        Epic Journey Of Hanuman
+                                                    </a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <small class="font-size-12"></small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./tv-show-detail.html" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./tv-show-detail.html" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/krishna-portrait.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./tv-show-detail.html">Vasudeva: The Eternal Journey</a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="ph ph-translate"></i>
+                                                        <small class="font-size-12">English (UK)</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./tv-show-detail.html" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./tv-show-detail.html" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/minions-portrait.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./tv-show-detail.html">Minions</a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="ph ph-translate"></i>
+                                                        <small class="font-size-12">English (New Zealand)</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./tv-show-detail.html" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/breaking-bad-portrait.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./">Breaking Bad</a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <small class="font-size-12"></small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-button swiper-button-next"></div>
+                    <div class="swiper-button swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="favourite-person-block">
+            <div class="overflow-hidden">
+                <div class="d-flex align-items-center justify-content-between px-1 mb-2 pb-1 mb-md-4 pb-md-0">
+                    <h4 class="main-title text-capitalize mb-0">Starring</h4>
+                </div>
+                <div class="position-relative swiper swiper-card" data-slide="11" data-laptop="11" data-tab="4" data-mobile="2"
+                     data-mobile-sm="2" data-autoplay="false" data-loop="false" data-navigation="true" data-pagination="true">
+                    <ul class="p-0 swiper-wrapper m-0  list-inline personality-card">
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/olivia-foster.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Olivia Foster</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/leena-burton.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Leena Burton</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/ryan-pierce.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Ryan Pierce</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actor&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/michael-fox.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Michael Fox</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/ruby-scott.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Ruby Scott</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/maxwell-carter.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Maxwell Carter</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/mark-smith.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Mark Smith</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/ava-monroe.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Ava Monroe</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/jack-nicholson.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Jack Nicholson</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actor&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/charles-melton.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Charles Melton</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actor&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/jeff-bridges.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Jeff Bridges</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/james-stewart.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">James Stewart</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actor&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/jordan-grant.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Jordan Grant</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">actress&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-button swiper-button-next d-none d-lg-block"></div>
+                    <div class="swiper-button swiper-button-prev d-none d-lg-block"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="favourite-person-block">
+            <div class="overflow-hidden">
+                <div class="d-flex align-items-center justify-content-between px-1 mb-2 pb-1 mb-md-4 pb-md-0">
+                    <h4 class="main-title text-capitalize mb-0">Crew</h4>
+                </div>
+                <div class="position-relative swiper swiper-card" data-slide="11" data-laptop="11" data-tab="4" data-mobile="2"
+                     data-mobile-sm="2" data-autoplay="false" data-loop="false" data-navigation="true" data-pagination="true">
+                    <ul class="p-0 swiper-wrapper m-0  list-inline personality-card">
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/maria-rodriguez.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Maria Rodriguez</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/oliver-turner.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Oliver Turner</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/john-abraham.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">John Abraham</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/benjamin-hayes.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Benjamin Hayes</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;Producer</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/ethan-crawford.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Ethan Crawford</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/mark-wilson.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">mark wilson</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/jack-walker.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Jack Walker</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/angel-louis.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">angel louis</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/millar-joseph.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Millar joseph</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/kelly-reilly.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Kelly Reilly</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/smith-jonas.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">smith Jonas</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">director&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/davina-decorous.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Davina decorous</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/thomas-bailey.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Thomas bailey</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="person-detail.html">
+                                <img src="./assets/images/cast/leena-burton.webp" alt="personality" class="img-fluid object-cover mb-3 rounded-3 personality-img">
+                            </a>
+                            <div class="text-center">
+                                <h6 class="mb-0">
+                                    <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Leena burton</a>
+                                </h6>
+                                <a href="person-detail.html" class="font-size-12 fw-semibold text-decoration-none text-capitalize text-body">producer&nbsp;&nbsp;</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-button swiper-button-next d-none d-lg-block"></div>
+                    <div class="swiper-button swiper-button-prev d-none d-lg-block"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upcoming Start -->
+        <div class="upcomimg-block">
+            <div class="d-flex align-items-center justify-content-between px-1 mb-2 pb-1 mb-md-4 pb-md-0">
+                <h4 class="main-title text-capitalize mb-0">Upcoming</h4>
+            </div>
+            <div class="card-style-slider">
+                <div class="position-relative swiper swiper-card" data-slide="6" data-laptop="6" data-tab="3"
+                     data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="false"
+                     data-navigation="true" data-pagination="true">
+                    <ul class="p-0 swiper-wrapper m-0  list-inline">
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/migration-portrait.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./">Beyond Borders</a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="ph ph-translate"></i>
+                                                        <small class="font-size-12">English</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="position-absolute z-1 primium-product d-flex align-items-center justify-content-center"
+                                         data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Premium" data-bs-original-title="Premium">
+                                        <i class="ph-fill ph-crown "></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/titanic-portrait.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./">Titanic: Lost &amp; Found</a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="ph ph-translate"></i>
+                                                        <small class="font-size-12">English</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="position-absolute z-1 primium-product d-flex align-items-center justify-content-center"
+                                         data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Premium" data-bs-original-title="Premium">
+                                        <i class="ph-fill ph-crown "></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/the-crew-portrait.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./">The Real Crew</a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="ph ph-translate"></i>
+                                                        <small class="font-size-12">English</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="position-absolute z-1 primium-product d-flex align-items-center justify-content-center"
+                                         data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Premium" data-bs-original-title="Premium">
+                                        <i class="ph-fill ph-crown "></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/pirates-ofdayones-orignal.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./">
+                                                        Pirates Of
+                                                        Day
+                                                        One
+                                                    </a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="ph ph-translate"></i>
+                                                        <small class="font-size-12">English</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/castle-rock-portrait.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./">Castle Rock</a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="ph ph-translate"></i>
+                                                        <small class="font-size-12">English</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="position-absolute z-1 primium-product d-flex align-items-center justify-content-center"
+                                         data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Premium" data-bs-original-title="Premium">
+                                        <i class="ph-fill ph-crown "></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="./" class="position-relative top-0 bottom-0 start-0 end-0">
+                                            <img src="./assets/images/media/vikings-portrait.webp" alt="movie-card"
+                                                 class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                        </a>
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                            <li class="fw-semi-bold">
+                                                <a href="./view-all-movie.html" tabindex="0" class="font-size-14 ">
+                                                    Action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="./">Vikings</a>
+                                                </h5>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <i class="ph ph-translate"></i>
+                                                        <small class="font-size-12">English</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                            <a href="./watchlist-detail.html"
+                                               class="d-flex align-items-center justify-content-center flex-shrink-0 border-0 add-to-wishlist-btn btn btn-secondary"
+                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                               data-bs-title="Add to Watchlist">
+                                                <i class="ph ph-plus font-size-18"></i>
+                                            </a>
+                                            <div class="iq-play-button iq-button">
+                                                <a href="./" class="btn btn-primary w-100">
+                                                    Play Now
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-button swiper-button-next"></div>
+                    <div class="swiper-button swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Upcoming End -->
+
+        <div class="section-padding-bottom">
+            <div class="rate-review-details">
+                <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                    <h5 class="main-title text-capitalize m-0 fw-medium">Review</h5>
+                    <div class="d-flex align-items-center gap-3">
+                        <a id="openReviewButton" class="btn btn-link p-0 custom-fs-14 openReviewButton" data-bs-toggle="offcanvas"
+                           href="#offcanvasReview" role="button" aria-controls="offcanvasReview">
+                            Add Review
+                        </a>
+                        <a class="btn btn-link p-0 custom-fs-14" href="./view-more.html">View More</a>
+                    </div>
+                </div>
+                <div class="comments-section">
+                    <div class="review-card">
+                        <div class="review-detail rounded-3">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                                <div class="d-flex align-items-center justify-content-center gap-3">
+                                    <!-- Display user avatar -->
+                                    <img src=".//assets/images/user/user.jpg" class="img-fluid user-img rounded-circle"
+                                         alt="admin">
+
+                                    <div>
+                                        <!-- Display comment author's name and date -->
+                                        <h6 class="line-count-1 m-0">Marvin McKinney</h6>
+                                        <p class="mb-0 mt-1 small-date-font">2025-02-04 05:14:19</p>
+                                    </div>
+                                </div>
+
+                                <!-- Display star rating -->
+                                <div class="star-rating" data-rating="5">
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                </div>
+                            </div>
+
+                            <!-- Display comment content -->
+                            <p class="mb-0 mt-3 pt-3 border-top fw-medium">
+                                A spectacular visual treat with a heartfelt story at its
+                                core.
+                            </p>
+
+                            <!-- actions  -->
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-detail rounded-3">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                                <div class="d-flex align-items-center justify-content-center gap-3">
+                                    <!-- Display user avatar -->
+                                    <img src="./assets/images/user/user2.jpg" class="img-fluid user-img rounded-circle"
+                                         alt="admin">
+
+                                    <div>
+                                        <!-- Display comment author's name and date -->
+                                        <h6 class="line-count-1 m-0">freya</h6>
+                                        <p class="mb-0 mt-1 small-date-font">2025-01-17 06:51:59</p>
+                                    </div>
+                                </div>
+
+                                <!-- Display star rating -->
+                                <div class="star-rating" data-rating="5">
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                </div>
+                            </div>
+
+                            <!-- Display comment content -->
+                            <p class="mb-0 mt-3 pt-3 border-top fw-medium">Cinematography was stunning!</p>
+
+                            <!-- actions  -->
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-detail rounded-3">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                                <div class="d-flex align-items-center justify-content-center gap-3">
+                                    <!-- Display user avatar -->
+                                    <img src="./assets/images/user/robert.jpg" class="img-fluid user-img rounded-circle"
+                                         alt="admin">
+
+                                    <div>
+                                        <!-- Display comment author's name and date -->
+                                        <h6 class="line-count-1 m-0">robert</h6>
+                                        <p class="mb-0 mt-1 small-date-font">2025-02-04 05:14:19</p>
+                                    </div>
+                                </div>
+
+                                <!-- Display star rating -->
+                                <div class="star-rating" data-rating="5">
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                    <i class="ph-fill ph-star text-warning" aria-hidden="true"></i>
+                                </div>
+                            </div>
+
+                            <!-- Display comment content -->
+                            <p class="mb-0 mt-3 pt-3 border-top fw-medium">Loved every second of it!</p>
+
+                            <!-- actions  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas overflow-y-auto widget-shopping-cart-content offcanvas-end offcanvas-sidebar sidebar-container on-rtl end border-left-0"
+                 tabindex="-1" id="offcanvasReview" aria-modal="true" role="dialog">
+                <div class="offcanvas-header position-relative border-bottom">
+                    <h5 class="offcanvas-title fw-500" id="offcanvasReviewLabel">
+                        Add Review
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form>
+                        <!-- Add Nonce for security -->
+                        <input type="hidden" id="st_ajax_nonce" name="st_ajax_nonce" value="a19cf1e628"><input type="hidden"
+                                                                                                               name="_wp_http_referer" value="/product/wp/streamit/tvshows/vikings/"> <input id="cm_id" type="hidden"
+                                                                                                                                                                                             name="comment_id" value="">
+
+                        <!-- Hidden fields for post type and post ID -->
+                        <input id="cm_post_type" type="hidden" name="post_type" value="tvshow">
+                        <input id="cm_post_id" type="hidden" name="post_id" value="1">
+
+                        <!-- User ID for logged-in users -->
+                        <input id="cm_user_id" type="hidden" name="user_id" value="12">
+
+                        <!-- Display logged-in user's name -->
+                        <div class="form-group">
+                            <input id="cm_name" name="cm_name" type="hidden" value="Marvin McKinney">
+                            <input id="cm_email" name="cm_email" type="hidden" value="marvin@demo.com">
+                            <p class="mt-0 text-heading">Logged in as: Marvin McKinney</p>
+                        </div>
+
+                        <!-- Rating section -->
+                        <div class="form-group mb-4">
+                            <label class="form-label mb-3">Your Rating</label>
+                            <div class="star-rating" id="starRating">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5" title="5 stars"><i class="ph-fill ph-star" aria-hidden="true"></i></label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4" title="4 stars"><i class="ph-fill ph-star" aria-hidden="true"></i></label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3" title="3 stars"><i class="ph-fill ph-star" aria-hidden="true"></i></label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2" title="2 stars"><i class="ph-fill ph-star" aria-hidden="true"></i></label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1" title="1 star"><i class="ph-fill ph-star" aria-hidden="true"></i></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label flex-grow-1" for="Description">
+                                Your Review
+                            </label>
+                            <textarea id="Description" class="form-control review-text-area" rows="8" cols="45"></textarea>
+                        </div>
+
+                        <!-- Submit button -->
+                        <div class="iq-button">
+                            <a href="javascript:void()" class="btn btn-primary text-capitalize">
+                                <span class="button-text">Submit Review</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="streamit-mobile-footer-menu" aria-label="Mobile Footer Navigation">
+    <ul class="footer-menu list-inline d-flex align-items-center justify-content-between m-0">
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-film-reel d-block  text-center "></i>
+                Movies
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-monitor-play d-block  text-center "></i>
+                Videos
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu- font-size-12">
+                <i class="ph ph-magnifying-glass d-block  text-center "></i>
+                Search
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-television d-block  text-center "></i>
+                TV Shows
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./profile-marvin.html" class="menu-link font-size-12">
+                <i class="ph ph-user d-block  text-center "></i>
+                Profile
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="modal fade view-more-data-modal trending-info" id="viewMoreDataModal" tabindex="-1" aria-modal="true"
+     role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header pb-0">
+                <h3 class="text-uppercase m-0 texture-text texture-text-modal fw-bold">Vikings</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-1">
+                <ul class="list-inline d-flex align-items-center flex-wrap gap-3 mt-4">
+                    <li>
+                        <span class="fw-medium">2025</span>
+                    </li>
+                    <li>
+                        <span class="d-flex align-items-center gap-1">
+                            <i class="icon-eye-2"></i> 141 views
+                        </span>
+                    </li>
+                    <li>
+                        <span class="d-flex align-items-center gap-1">
+                            <span class="fw-medium">5</span>
+                            <span class="imdb-logo ms-1">
+                                <img src="./assets/images/pages/imdb-logo.svg" loading="lazy" decoding="async"
+                                     alt="imdb logo" class="img-fluid imdb-logo1">
+                            </span>
+                        </span>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-baseline flex-wrap gap-2 mt-md-1 mt-2">
+                    <h6 class="m-0">Genres:</h6>
+                    <ul class="p-0 mb-0 list-inline d-flex flex-wrap movie-tag">
+                        <li class="trending-list"><a href="./view-all-movie.html">Adventure</a></li>
+                        <li class="trending-list">
+                            <a href="./view-all-movie.html">Animation</a>
+                        </li>
+                        <li class="trending-list">
+                            <a href="./view-all-movie.html">Crime</a>
+                        </li>
+                        <li class="trending-list">
+                            <a href="./view-all-movie.html">Horror</a>
+                        </li>
+                        <li class="trending-list">
+                            <a href="./view-all-movie.html">Romance</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-baseline flex-wrap gap-2 mt-3">
+                    <h6 class="m-0">Tags:</h6>
+                    <ul class="iq-blog-meta-cat-tag iq-blogtag mb-0 list-inline d-flex flex-wrap align-items-center gap-1 gap-md-3 mt-2 mt-md-3  tvshow-tags">
+                        <li>
+                            <a href=".//blog/blog-tag.html" class="position-relative">Agents</a>
+                        </li>
+                        <li>
+                            <a href=".//blog/blog-tag.html" class="position-relative">Brother</a>
+                        </li>
+                        <li>
+                            <a href=".//blog/blog-tag.html" class="position-relative">Cricket</a>
+                        </li>
+                        <li>
+                            <a href=".//blog/blog-tag.html" class="position-relative">Drama</a>
+                        </li>
+                        <li>
+                            <a href=".//blog/blog-tag.html" class="position-relative">Guns</a>
+                        </li>
+                        <li>
+                            <a href=".//blog/blog-tag.html" class="position-relative">Kings</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-4">
+                    <div class="d-flex align-items-center gap-1">
+                        <i class="icon-translate"></i>
+                        <ul class="list-inline m-0 d-inline-flex align-items-center gap-2">
+                            <li><small>English (UK)</small></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="mt-4 mb-0">
+                    Game of Heros is an action-packed fantasy epic where the fate of the world is decided in a battle of legendary warriors. When an ancient prophecy foretells an all-out war between the greatest heroes of all realms, champions from different eras and dimensions are summoned to fight for ultimate supremacy. Each warrior possesses unique abilities, weapons, and a past that drives them to victory—or doom.
+                </p>
+
+                <div class="d-flex align-items-baseline row-gap-1 column-gap-2 mt-4">
+                    <h6 class="m-0">Cast:</h6>
+                    <ul class="list-inline m-0 p-0 d-flex align-items-center flex-wrap row-gap-1 column-gap-2 cast-crew-list">
+                        <li><a href="#" class="color-inherit">Olivia Foster</a></li>
+                        <li><a href="#" class="color-inherit">Leena Burton</a></li>
+                        <li><a href="#" class="color-inherit">Ryan Pierce</a></li>
+                        <li><a href="#" class="color-inherit">Michael Fox</a></li>
+                        <li><a href="#" class="color-inherit">Ruby Scott</a></li>
+                        <li><a href="#" class="color-inherit">Maxwell Carter</a></li>
+                        <li><a href="#" class="color-inherit">Mark Smith</a></li>
+                        <li><a href="#" class="color-inherit">Ava Monroe</a></li>
+                        <li><a href="#" class="color-inherit">Charles Melton</a></li>
+                        <li><a href="#" class="color-inherit">Jack Nicholson</a></li>
+                        <li><a href="#" class="color-inherit">James Stewart</a></li>
+                        <li><a href="#" class="color-inherit">Jeff Bridges</a></li>
+                        <li><a href="#" class="color-inherit">Jordan Grant</a></li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-baseline row-gap-1 column-gap-2 mt-4">
+                    <h6 class="m-0">Crew:</h6>
+                    <ul class="list-inline m-0 p-0 d-flex align-items-center flex-wrap row-gap-1 column-gap-2 cast-crew-list">
+                        <li><a href="#" class="color-inherit">Maria Rodriguez</a></li>
+                        <li><a href="#" class="color-inherit">Oliver Turner</a></li>
+                        <li><a href="#" class="color-inherit">Ethan Crawford</a></li>
+                        <li><a href="#" class="color-inherit">Benjamin Hayes</a></li>
+                        <li><a href="#" class="color-inherit">Jack Walker</a></li>
+                        <li><a href="#" class="color-inherit">Mark Smith</a></li>
+                        <li><a href="#" class="color-inherit">Millar Joseph</a></li>
+                        <li><a href="#" class="color-inherit">Angel Louis</a></li>
+                        <li><a href="#" class="color-inherit">Smith Jonas</a></li>
+                        <li><a href="#" class="color-inherit">Kelly Reilly</a></li>
+                        <li><a href="#" class="color-inherit">Thomas Bailey</a></li>
+                        <li><a href="#" class="color-inherit">Davina Decorous</a></li>
+                        <li><a href="#" class="color-inherit">John Abraham</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>

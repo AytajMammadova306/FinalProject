@@ -48,6 +48,7 @@ namespace Cinemastic.Persistance
             services.AddScoped<IAllTvShowsService, AllTvShowsService>();
             services.AddScoped<IAllFranchisesService, AllFranchisesService>();
             services.AddScoped<IMovieDetailService, MovieDetailService>();
+            services.AddScoped<ITvShowDetailService, TvShowDetailService>();
             
             
 

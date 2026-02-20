@@ -32,5 +32,9 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             ICollection<GetTvShowItemVM> showVMs = _mapper.Map<ICollection<GetTvShowItemVM>>(shows);
             return showVMs;
         }
+        public async Task<GetTvShowVM> GetByIdAsync(long id)
+        {
+            
+        }
     }
 }

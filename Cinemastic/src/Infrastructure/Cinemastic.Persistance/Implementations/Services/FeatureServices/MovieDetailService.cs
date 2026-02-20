@@ -4,6 +4,7 @@ using Cinemastic.Application.ViewModel.Actor;
 using Cinemastic.Application.ViewModel.Crew;
 using Cinemastic.Application.ViewModel.Home;
 using Cinemastic.Application.ViewModel.Movie;
+using Cinemastic.MVC.ViewModel.Movie;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,13 +31,19 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
         public async Task<MovieDetailPageVM> GetMovieDetailVMAsync(long id)
         {
             GetMovieVM movieVM = await _movieService.GetByIdAsync(id);
+            ICollection<GetMovieItemVM> movieItemVMs = await _movieService.GetAllItemAsync();
             ICollection<GetActorVM> actorVMs = await _actorService.GetMovieActorVMById(id);
             ICollection<GetCrewVM> crewVMs = await _crewService.GetMovieCrewVMById(id);
             MovieDetailPageVM detailPageVM = new MovieDetailPageVM
             {
                 MovieVM = movieVM,
                 Starring=actorVMs,
-                Crews=crewVMs
+                Crews=crewVMs,
+                ComingMovieItemVMs = movieItemVMs
+                .Where(cVM => cVM.ReleaseDate > DateTime.UtcNow &&cVM.Id!=id)
+                .OrderBy(cVM => cVM.ReleaseDate)
+                .Take(15)
+                .ToList(),
             };
             return detailPageVM;
         } 

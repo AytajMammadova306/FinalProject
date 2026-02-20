@@ -1,0 +1,25 @@
+﻿@using Cinemastic.Application.ViewModel.Episode
+@model GetEpisodeItemVM
+<div class="episode-block rounded-3">
+    <div class="block-image position-relative z-1">
+        <a href="./episode.html">
+            <img src="@Model.ImageUrl" class="img-fluid img-zoom" alt="@Model.Name" loading="lazy">
+        </a>
+    </div>
+
+    <h6 class="episode-title fw-medium position-absolute"> @Model.EpisodNumber: @Model.Name</h6>
+    <div class="episode-detail fw-medium position-absolute">
+        <h6 class="mt-2 mb-0">@Model.EpisodNumber: @Model.Name</h6>
+        <span class="mb-0 line-count-2 mt-2 small lh-base">@Model.Description</span>
+    </div>
+    <div class="position-absolute episode-time font-size-12 fw-bold px-1 rounded-1 d-flex align-items-center z-2 gap-1">
+        <i class="ph ph-clock"></i>
+        <p class="mb-0">
+        @{
+            int hour = Model.DurationInMinutes / 60;
+            int minute = Model.DurationInMinutes - hour * 60;
+        }
+            @(hour >= 1 ? $"{hour}hr : {minute}m" : $"{minute}m")
+        </p>
+    </div>
+</div>

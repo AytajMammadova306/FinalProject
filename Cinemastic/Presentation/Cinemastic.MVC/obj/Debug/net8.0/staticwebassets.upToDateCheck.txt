@@ -592,6 +592,7 @@ wwwroot\assets\images\media\Beauty and Beast cover.jpg
 wwwroot\assets\images\media\Beauty and Beast.jpg
 wwwroot\assets\images\media\Black Panter Cover.jpg
 wwwroot\assets\images\media\Black Panter.webp
+wwwroot\assets\images\media\Bradley Cooper medium quality.jpg
 wwwroot\assets\images\media\breaking-bad.webp
 wwwroot\assets\images\media\breaking-bad-portrait.webp
 wwwroot\assets\images\media\Bumblebee.webp
@@ -671,6 +672,7 @@ wwwroot\assets\images\media\Fantastic Beasts and Where to Find Them Cover.jpg
 wwwroot\assets\images\media\Fantastic Beasts and Where to Find Them.png
 wwwroot\assets\images\media\fast-furious.webp
 wwwroot\assets\images\media\fast-furious-portrait.webp
+wwwroot\assets\images\media\Frances Conroy.jpg
 wwwroot\assets\images\media\Frances Frances.jpg
 wwwroot\assets\images\media\frzzen.webp
 wwwroot\assets\images\media\frzzen-portrait.webp
@@ -756,8 +758,10 @@ wwwroot\assets\images\media\the-first-of-us-portrait.webp
 wwwroot\assets\images\media\the-hunter.webp
 wwwroot\assets\images\media\the-hunter-portrait.webp
 wwwroot\assets\images\media\tianic.webp
+wwwroot\assets\images\media\Tillinger Koskoff Emma medium.jpg
 wwwroot\assets\images\media\Tillinger Koskoff Emma.jpg
 wwwroot\assets\images\media\titanic-portrait.webp
+wwwroot\assets\images\media\Todd Philips medium quality.jpg
 wwwroot\assets\images\media\Todd Philips.jpg
 wwwroot\assets\images\media\toddler.webp
 wwwroot\assets\images\media\toddler-portrait.webp
