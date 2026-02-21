@@ -10,5 +10,6 @@ namespace Cinemastic.Application.Interfaces.Services.EntityServices
     public interface IActorService
     {
         Task<ICollection<GetActorVM>> GetMovieActorVMById(long id);
+        Task<ICollection<GetActorVM>> GetTvShowActorVMById(long id);
     }
 }

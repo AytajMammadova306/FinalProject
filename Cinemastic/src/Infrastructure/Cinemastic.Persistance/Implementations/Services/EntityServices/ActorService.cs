@@ -34,5 +34,19 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
                 }).ToListAsync();
             return actorVMs;
         }
+        public async Task<ICollection<GetActorVM>> GetTvShowActorVMById(long id)
+        {
+            ICollection<GetActorVM> actorVMs = await _repository.GetAll(
+                includes:"MovieCasts.Movie")
+                .Where(a=>a.TvShowCasts.Any(mc => mc.TvShowId == id))
+                .Select(a=>new GetActorVM
+                {
+                    ActorNameAndSurname=a.Name+" "+a.Surname,
+                    ImageUrl=a.ImageUrl,
+                    Role=a.TvShowCasts
+                        .Where(mc => mc.TvShowId == id).FirstOrDefault().Role.ToString()
+                }).ToListAsync();
+            return actorVMs;
+        }
     }
 }

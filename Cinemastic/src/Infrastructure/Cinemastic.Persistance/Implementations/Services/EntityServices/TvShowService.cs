@@ -34,7 +34,14 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
         }
         public async Task<GetTvShowVM> GetByIdAsync(long id)
         {
-            
+            TvShow tvShow= await _repository.GetByIdAsync(id,
+                "Franchise",
+                "TvShowCasts.Actor",
+                "TvShowCrews.Crew",
+                "TvShowGenres.Genre",
+                "TvShowTags.Tag",
+                "Seasons.Episodes");
+            return _mapper.Map<GetTvShowVM>(tvShow);
         }
     }
 }

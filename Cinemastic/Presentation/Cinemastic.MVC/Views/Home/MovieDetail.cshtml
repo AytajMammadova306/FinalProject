@@ -72,7 +72,7 @@
                                 int hour = Model.MovieVM.DurationMinutes.Value / 60;
                                 int minute = Model.MovieVM.DurationMinutes.Value - hour * 60;
                             }
-                            @(hour)hr : @(minute)mins
+                            @(hour >= 1 ? $"{hour}hr : {minute}m" : $"{minute}m")
                         </span>
                     </li>
 
@@ -336,8 +336,7 @@
                     <ul class="p-0 swiper-wrapper m-0  list-inline personality-card">
                         @foreach(GetCrewVM crewVM in Model.Crews)
                         {
-                            @Html.Partial("CrewItemPartialView",crewVM);
-                            ;
+                            @Html.Partial("CrewItemPartialView",crewVM)
                         }
                     </ul>
                     @if(Model.Crews.Count()>7)

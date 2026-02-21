@@ -16,7 +16,6 @@ namespace Cinemastic.Application.ViewModel.TvShow
         public string ImageUrl { get; set; }
         public string CoverUrl { get; set; }
         public string TrailerUrl { get; set; }
-        public string VideoUrl { get; set; }
         public long? FranchiseId { get; set; }
         public string FranchiseName { get; set; }
         public ICollection<string> Genres { get; set; }

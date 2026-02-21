@@ -11,7 +11,6 @@ namespace Cinemastic.Domain.Entities
     {
         public DateTime? ReleaseDate { get; set; }
         public string Description { get; set; }
-        public int EpisodeCount { get; set; }
         public long? FranchiseId {  get; set; }
         public Franchise? Franchise { get; set; }
         public ICollection<Season> Seasons { get; set; }
@@ -21,6 +20,8 @@ namespace Cinemastic.Domain.Entities
         public ICollection<TvShowTag> TvShowTags { get; set; }
         public TvShowAgeRating AgeRating { get; set; }
         public string ImageUrl {  get; set; }
+        public string CoverUrl { get; set; }
+        public string TrailerUrl { get; set; }
         public Slide? Slide { get; set; }
 
 

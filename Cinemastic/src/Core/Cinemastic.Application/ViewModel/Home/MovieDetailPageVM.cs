@@ -1,6 +1,7 @@
 ﻿using Cinemastic.Application.ViewModel.Actor;
 using Cinemastic.Application.ViewModel.Crew;
 using Cinemastic.Application.ViewModel.Movie;
+using Cinemastic.Application.ViewModel.TvShow;
 using Cinemastic.MVC.ViewModel.Movie;
 using System;
 using System.Collections.Generic;
@@ -16,5 +17,6 @@ namespace Cinemastic.Application.ViewModel.Home
         public ICollection<GetActorVM> Starring {  get; set; }
         public ICollection<GetCrewVM> Crews {  get; set; }
         public ICollection<GetMovieItemVM> ComingMovieItemVMs { get; set; }
+        public ICollection<GetTvShowItemVM> ComingTvShowItemVMs { get; set; }
     }
 }

@@ -11,19 +11,22 @@ namespace Cinemastic.MVC.Controllers
         private readonly IAllTvShowsService _allTvShowsService;
         private readonly IAllFranchisesService _allFranchisesService;
         private readonly IMovieDetailService _movieDetailService;
+        private readonly ITvShowDetailService _tvShowDetailService;
 
         public HomeController(
             IHomeService homeService,
             IAllMoviesService allMoviesService,
             IAllTvShowsService allTvShowsService,
             IAllFranchisesService allFranchisesService,
-            IMovieDetailService movieDetailService)
+            IMovieDetailService movieDetailService,
+            ITvShowDetailService tvShowDetailService)
         {
             _homeService=homeService;
             _allMoviesService = allMoviesService;
             _allTvShowsService = allTvShowsService;
             _allFranchisesService = allFranchisesService;
             _movieDetailService = movieDetailService;
+            _tvShowDetailService = tvShowDetailService;
         }
         public async Task<IActionResult> Index()
         {
@@ -64,7 +67,12 @@ namespace Cinemastic.MVC.Controllers
             {
                 return BadRequest();
             }
-            return View();
+            TvShowDetailPageVM detailPageVM = await _tvShowDetailService.GetTvShowDetailVMAsync(id.Value);
+            if (detailPageVM is null)
+            {
+                return NotFound();
+            }
+            return View(detailPageVM);
         }
 
     }

@@ -10,5 +10,6 @@ namespace Cinemastic.Application.Interfaces.Services.EntityServices
     public interface ICrewService
     {
         Task<ICollection<GetCrewVM>> GetMovieCrewVMById(long id);
+        Task<ICollection<GetCrewVM>> GetTvShowCrewVMById(long id);
     }
 }

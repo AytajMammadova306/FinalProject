@@ -13,14 +13,11 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
     internal class CrewService:ICrewService
     {
         private readonly ICrewRepository _repository;
-        private readonly IMovieService _movieService;
 
         public CrewService(
-            ICrewRepository repository,
-            IMovieService movieService)
+            ICrewRepository repository)
         {
             _repository = repository;
-            _movieService = movieService;
         }
         public async Task<ICollection<GetCrewVM>> GetMovieCrewVMById(long id)
         {
@@ -31,6 +28,18 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
                     CrewNameAndSurname = c.Name + " " + c.Surname,
                     ImageUrl = c.ImageUrl,
                     Type=c.MovieCrews.Where(mc=>mc.MovieId==id).FirstOrDefault().CrewType.ToString()
+                }).ToListAsync();
+            return crewVMs;
+        }
+        public async Task<ICollection<GetCrewVM>> GetTvShowCrewVMById(long id)
+        {
+            ICollection<GetCrewVM> crewVMs = await _repository.GetAll()
+                .Where(c => c.TvShowCrews.Any(mc => mc.TvShowId == id))
+                .Select(c => new GetCrewVM
+                {
+                    CrewNameAndSurname = c.Name + " " + c.Surname,
+                    ImageUrl = c.ImageUrl,
+                    Type=c.TvShowCrews.Where(mc=>mc.TvShowId==id).FirstOrDefault().CrewType.ToString()
                 }).ToListAsync();
             return crewVMs;
         }
