@@ -1,4 +1,5 @@
-﻿using Cinemastic.Application.Interfaces.Services.Feature_Services;
+﻿using Cinemastic.Application.Interfaces.Services.EntityServices;
+using Cinemastic.Application.Interfaces.Services.Feature_Services;
 using Cinemastic.Application.ViewModel.Home;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,7 @@ namespace Cinemastic.MVC.Controllers
         private readonly IAllFranchisesService _allFranchisesService;
         private readonly IMovieDetailService _movieDetailService;
         private readonly ITvShowDetailService _tvShowDetailService;
+        private readonly IPlanPageService _planPageService;
 
         public HomeController(
             IHomeService homeService,
@@ -19,7 +21,8 @@ namespace Cinemastic.MVC.Controllers
             IAllTvShowsService allTvShowsService,
             IAllFranchisesService allFranchisesService,
             IMovieDetailService movieDetailService,
-            ITvShowDetailService tvShowDetailService)
+            ITvShowDetailService tvShowDetailService,
+            IPlanPageService planPageService)
         {
             _homeService=homeService;
             _allMoviesService = allMoviesService;
@@ -27,29 +30,50 @@ namespace Cinemastic.MVC.Controllers
             _allFranchisesService = allFranchisesService;
             _movieDetailService = movieDetailService;
             _tvShowDetailService = tvShowDetailService;
+            _planPageService = planPageService;
         }
         public async Task<IActionResult> Index()
         {
-            HomePageVM HomeVM =await _homeService.GetHomePageVMAsync();
+            if (!User.Identity.IsAuthenticated)
+            {
+                return View("Preview");
+            }
+            HomePageVM HomeVM = await _homeService.GetHomePageVMAsync();
             return View(HomeVM);
         }
         public async Task<IActionResult> AllMovies()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return View("Preview");
+            }
             AllMoviesVM allMoviesVM = await _allMoviesService.GetAllMoviesVMAsync();
             return View(allMoviesVM);
         }
         public async Task<IActionResult> AllTvShows()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return View("Preview");
+            }
             AllTvShowsVM allTvShowsVM = await _allTvShowsService.GetAllTvShowsAsync();
             return View(allTvShowsVM);
         }
         public async Task<IActionResult> AllFranchises()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return View("Preview");
+            }
             AllFranchisesVM allFranchises = await _allFranchisesService.GetAllFranchisesVMAsync();
             return View(allFranchises);
         }
         public async Task<IActionResult> MovieDetail(long? id)
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return View("Preview");
+            }
             if (id == null || id < 1)
             {
                 return BadRequest();
@@ -63,6 +87,10 @@ namespace Cinemastic.MVC.Controllers
         }
         public async Task<IActionResult> TvShowDetail(long? id)
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return View("Preview");
+            }
             if (id == null || id < 1)
             {
                 return BadRequest();
@@ -73,6 +101,10 @@ namespace Cinemastic.MVC.Controllers
                 return NotFound();
             }
             return View(detailPageVM);
+        }
+        public async Task<IActionResult> Pricing()
+        {
+            return View(await _planPageService.GetPlanPageVM());
         }
 
     }

@@ -1,0 +1,440 @@
+﻿@using Cinemastic.Application.Interfaces.Services.Feature_Services
+@using Cinemastic.Application.ViewModel.Home
+@using Cinemastic.MVC.ViewModel.Movie
+@inject IPreviewService previewService
+@{
+    Layout = null;
+    PreviewPageVM Model =await previewService.GetPreviewAsync();
+}
+@model PreviewPageVM
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>StreamIT | Responsive Bootstrap 5 Template</title>
+    <!-- Google Font Api KEY-->
+    <meta name="google_font_api" content="AIzaSyBG58yNdAjc20_8jAvLNSVi9E4Xhwjau_k">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/assets/images/favicon.ico" />
+
+    <!-- Library / Plugin Css Build -->
+    <link rel="stylesheet" href="~/assets/css/core/libs.min.css" />
+
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="~/assets/vendor/font-awesome/css/all.min.css" />
+
+    <!-- Iconly css -->
+    <link rel="stylesheet" href="~/assets/vendor/iconly/css/style.css" />
+
+    <!-- Animate css -->
+    <link rel="stylesheet" href="~/assets/vendor/animate.min.css" />
+
+    <!-- SwiperSlider css -->
+    <link rel="stylesheet" href="~/assets/vendor/swiperSlider/swiper.min.css">
+
+
+    <!-- Sweetlaert2 css -->
+    <link rel="stylesheet" href="~/assets/vendor/sweetalert2/sweetalert2.min.css" />
+
+
+
+    <!-- Streamit Design System Css -->
+    <link rel="stylesheet" href="~/assets/css/streamit.min.css?v=5.4.0" />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="~/assets/css/custom.min.css?v=5.4.0" />
+
+    <!-- Rtl Css -->
+    <link rel="stylesheet" href="~/assets/css/rtl.min.css?v=5.4.0" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Phosphor icons  -->
+    <link rel="stylesheet" href="~/assets/vendor/phosphor-icons/Fonts/regular/style.css">
+    <link rel="stylesheet" href="~/assets/vendor/phosphor-icons/Fonts/duotone/style.css">
+
+    <link rel="stylesheet" href="~/assets/vendor/phosphor-icons/Fonts/fill/style.css">
+
+
+    <link rel="stylesheet" href="~/assets/vendor/streamit-font/iconly.css">
+</head>
+
+<body class=" custom-header-relative ">
+    <section class="about-section-padding-bottom">
+        <div class="streaming-section text-center"
+             style="background-image: url(@Model.Settings["background"]); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+            <div class="container">
+                <div class="streaming-section-spacing">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-xl-6 col-md-8">
+                            <!-- Title -->
+                            <div class="">
+                                <h3 class="mt-0 streaming-title">
+                                    Your Ultimate Streaming Experience Begins Here. Join Now
+                                </h3>
+                            </div>
+
+                            <!-- Subtitle -->
+                            <div class="">
+                                <p class="description-trail mb-0 fw">
+                                    Enjoy Unlimited Streaming for <strong>$@Model.Settings["price"]/Month</strong>—No
+                                    Commitment!
+                                </p>
+                            </div>
+                            <!-- CTA Button -->
+                            <div class="streaming-section-btn">
+                                <div class="iq-button">
+                                    <a asp-controller="home" asp-action="Pricing" class="btn btn-primary rounded-3">
+                                        <span class="d-flex align-items-center justify-content-center gap-2 fw-semibold">
+                                            See Plans
+                                            <i class="ph-fill ph-play fs-6 ms-0"></i>
+                                        </span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<section class="custom-site-main">
+    <div class="e-con-inner">
+        <div class="container px-3 px-sm-0">
+            <div class="row justify-content-center">
+                <!-- Text Content -->
+                <div class="col-md-12 text-center">
+                    <h3 class="about-title">About Cinemastic OTT Platform</h3>
+                    <p>
+                        @Model.Settings["about1"]
+                    </p>
+                </div>
+            </div>
+
+            <!-- Additional Text Section -->
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <p class="custom-about-decs">
+                        @Model.Settings["about2"]
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class="about-section-padding-bottom mt-0">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Image Section -->
+                <div class="col-xl-6">
+                    <img class="img-fluid rounded mb-4 mb-xl-0 about-content-image"
+                         src="@Model.Settings["whyImage"]" alt="content-image">
+                </div>
+
+                <!-- Text and Features Section -->
+                <div class="col-xl-6">
+                    <h3 class="about-title">Why Choose Streamit</h3>
+                    <p class="text-light">
+                        @Model.Settings["why"]
+                    </p>
+
+                    <div class="divider"></div>
+                    <div class="d-flex flex-column flex-wrap w-100 gap-3 mt-3">
+                        <div class="feature-box mb-3 d-flex align-items-center flex-column flex-md-row">
+                            <div class="feature-content">
+                                <h5 class="feature-title">
+                                    <span class="text-primary">10,000+</span> Movies and Shows Across All
+                                    Genres
+                                </h5>
+                                <p class="mb-0 font-size-14">
+                                    Dive into a diverse library of top-rated content, from blockbuster
+                                    hits to
+                                    exclusive originals.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-box mb-3 d-flex align-items-center flex-column flex-md-row">
+                            <div class="feature-content">
+                                <h5 class="feature-title">99.9% Uptime and Buffer-Free Streaming</h5>
+                                <p class="mb-0 font-size-14">
+                                    Built for speed and reliability, Streamit ensures uninterrupted
+                                    entertainment.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-box d-flex align-items-center flex-column flex-md-row">
+                            <div class="feature-content">
+                                <h5 class="feature-title">Secure Payment & Hassle-Free Subscriptions</h5>
+                                <p class="mb-0 font-size-14">Get started in seconds with 100% secure transactions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+    <div class="overflow-hidden">
+        <div class="continue-watching-block home-continue-watch section-padding-top">
+
+    <div class="latest-block section-wraper">
+        <div class="d-flex align-items-center justify-content-between px-1 mb-2 pb-1 mb-md-4 pb-md-0">
+            <h4 class="main-title text-capitalize mb-0 fw-medium">latest Movies</h4>
+        </div>
+    <div class="card-style-slider">
+        <div class="position-relative swiper swiper-card" data-slide="6" data-laptop="4" data-tab="3"
+             data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true"
+             data-pagination="true">
+            <ul class="p-0 swiper-wrapper m-0  list-inline">
+                @foreach (GetMovieItemVM movieItemVM in Model.LatestMovies)
+                {
+                    <li class="swiper-slide">
+                                        <div class="iq-card card-hover">
+                                            <div class="block-images position-relative w-100">
+                                                <div class="img-box w-100">
+                                                    <div class="position-relative top-0 bottom-0 start-0 end-0">
+                                                        <img src="@movieItemVM.ImageUrl" alt="@movieItemVM.Name"
+                                                             class="img-fluid object-cover w-100 d-block border-0 rounded-3">
+                                                    </div>
+                                                </div>
+                                                <div class="card-description with-transition">
+                                                    <ul class="genres-list p-0 mb-2 d-flex align-items-center flex-wrap list-inline">
+                                                        @foreach (string genre in movieItemVM.Genres)
+                                                        {
+                                                            <li class="fw-semi-bold">
+                                                                <div tabindex="0" class="font-size-14 ">
+                                                                    @genre
+                                                                </div>
+                                                            </li>
+                                                        }
+                                                        @if (movieItemVM.GenresCount > 2)
+                                                        {
+                                                            <li class="fw-semi-bold">
+                                                                <span>+@(movieItemVM.GenresCount - 2)</span>
+                                                            </li>
+                                                        }
+                                                    </ul>
+                                                    <div class="cart-content">
+                                                        <div class="content-left">
+                                                            <h5 class="iq-title text-capitalize">
+                                                                @movieItemVM.Name
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                    </li>
+                }
+            </ul>
+            <div class="d-none d-lg-block">
+                <div class="swiper-button swiper-button-next"></div>
+                <div class="swiper-button swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
+<div class="section-padding" style="background-color: var(--bs-gray-900);">
+    <div class="container">
+        <div class="row about-us-row align-items-center">
+            <div class="col-lg-6 col-md-5">
+                <div class="text-center">
+                    <img width="497" height="477" src="@Model.Settings["map"]"
+                         class=" img-fluid attachment-large size-large" alt="map" loading="lazy">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-7">
+                <h3 class="text-capitalize text-start mb-4">Connect with Us</h3>
+                <p class="mb-0 text-start">
+                        Cinemastic is located in Los Angeles city and you can contact us at  <a href="mailto:info@medyapim.com">@Model.Settings["email"]</a> for any tech-related support and assistance. We love to hear from our Cinemastic users.
+
+
+                </p>
+                <div class="mt-4">
+                    <div class="text-capitalize mb-1 d-flex gap-2">
+                        <h6>Company:</h6>
+                        <h6 class="text-decoration-none ms-1">@Model.Settings["company"]</h6>
+                    </div>
+                    <div class="text-capitalize mb-1 d-flex gap-2">
+                        <h6>Product:</h6>
+                        <h6 class="text-decoration-none ms-1">@Model.Settings["product"] </h6>
+                    </div>
+                    <div>
+                        Contact Us:
+                        <a href="#" class="text-decoration-none ms-1">@Model.Settings["tel"]</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="streamit-mobile-footer-menu" aria-label="Mobile Footer Navigation">
+    <ul class="footer-menu list-inline d-flex align-items-center justify-content-between m-0">
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-film-reel d-block  text-center "></i>
+                Movies
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-monitor-play d-block  text-center "></i>
+                Videos
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu- font-size-12">
+                <i class="ph ph-magnifying-glass d-block  text-center "></i>
+                Search
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-television d-block  text-center "></i>
+                TV Shows
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./profile-marvin.html" class="menu-link font-size-12">
+                <i class="ph ph-user d-block  text-center "></i>
+                Profile
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    <script src="~/assets/js/core/libs.min.js"></script>
+    <!-- Plugin Scripts -->
+    <!-- Sweet-alert Script -->
+    <script src="~/assets/vendor/sweetalert2/sweetalert2.min.js" async></script>
+    <script src="~/assets/js/plugins/sweet-alert.js" defer></script>
+
+    <!-- SwiperSlider Script -->
+    <script src="~/assets/vendor/swiperSlider/swiper.min.js"></script>
+
+
+    <!-- Select2 Script -->
+    <script src="~/assets/js/plugins/select2.js" defer></script>
+
+
+    <!-- fslightbox Script -->
+    <script src="~/assets/js/plugins/fslightbox.js" defer></script>
+    <!-- Lodash Utility -->
+    <script src="~/assets/vendor/lodash/lodash.min.js"></script>
+    <!-- External Library Bundle Script -->
+    <script src="~/assets/js/core/external.min.js"></script>
+    <!-- countdown Script -->
+    <script src="~/assets/js/plugins/countdown.js"></script>
+    <!-- utility Script -->
+    <script src="~/assets/js/utility.js"></script>
+    <!-- Setting Script -->
+    <script src="~/assets/js/setting.js"></script>
+    <script src="~/assets/js/setting-init.js" defer></script>
+    <!-- Streamit Script -->
+    <script src="~/assets/js/streamit.js" defer></script>
+    <script src="~/assets/js/swiper.js" defer></script>
+    <!-- NAVIGATION SCRIPT FOR FRONTEND LAYOUT - SAME LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== FRONTEND NAVIGATION START ===');
+
+            // Get current URL path
+            const currentPath = window.location.pathname.toLowerCase();
+            console.log('Current URL:', currentPath);
+
+            // Remove all active classes first
+            document.querySelectorAll('#header-menu .nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Collect all links with their hrefs
+            const links = [];
+            document.querySelectorAll('#header-menu .nav-link').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && !href.startsWith('#')) {
+                    links.push({
+                        element: link,
+                        href: href.toLowerCase(),
+                        length: href.length
+                    });
+                }
+            });
+
+            // Sort by length (longest first) to match most specific routes first
+            links.sort((a, b) => b.length - a.length);
+
+            console.log('Checking links (longest to shortest):');
+            let matchFound = false;
+
+            for (const linkData of links) {
+                const link = linkData.element;
+                const href = linkData.href;
+
+                // EXACT match only - current path must exactly equal the href
+                const isMatch = currentPath === href;
+
+                const linkText = link.textContent.trim();
+                console.log(`  "${linkText}": ${href} ${isMatch ? '✅ MATCH' : '❌'}`);
+
+                if (isMatch && !matchFound) {
+                    console.log(`  ✅✅✅ ACTIVATING: "${linkText}"`);
+
+                    // Add active class
+                    link.classList.add('active');
+                    matchFound = true;
+
+                    // If inside a collapsible menu, expand parent
+                    const parentCollapse = link.closest('.sub-nav');
+                    if (parentCollapse) {
+                        console.log('    📂 Expanding parent menu...');
+                        parentCollapse.classList.add('show');
+
+                        // Find and activate parent toggle
+                        const collapseId = parentCollapse.getAttribute('id');
+                        const parentToggle = document.querySelector(`[data-bs-toggle="collapse"][href="#${collapseId}"]`);
+                        if (parentToggle) {
+                            parentToggle.classList.add('active');
+                            parentToggle.setAttribute('aria-expanded', 'true');
+                        }
+                    }
+
+                    break; // Stop after first match
+                }
+            }
+
+            if (!matchFound) {
+                console.warn('❌ No exact match found for:', currentPath);
+            } else {
+                console.log('✅ Navigation activated successfully!');
+            }
+
+            console.log('=== FRONTEND NAVIGATION END ===');
+        });
+    </script>
+</body>
+
+</html>

@@ -38,6 +38,7 @@ namespace Cinemastic.Persistance
             services.AddScoped<ISeasonRepository, SeasonRepository>();
             services.AddScoped<IEpisodeRepository, EpisodeRepository>();
             services.AddScoped<ISlideRepository, SlideRepository>();
+            services.AddScoped<IPlanRepository, PlanRepository>();
 
 
             services.AddIdentity<AppUser, IdentityRole>(opt =>
@@ -56,6 +57,8 @@ namespace Cinemastic.Persistance
             services.AddScoped<IFranchiseService, FranchiseService>();
             services.AddScoped<IActorService, ActorService>();
             services.AddScoped<ICrewService, CrewService>();
+            services.AddScoped<IPlanService, PlanService>();
+            services.AddScoped<IPlanPageService, PlanPageService>();
             services.AddScoped<IHomeService, HomeService>();
             services.AddScoped<IAllMoviesService, AllMoviesService>();
             services.AddScoped<IAllTvShowsService, AllTvShowsService>();
@@ -63,6 +66,7 @@ namespace Cinemastic.Persistance
             services.AddScoped<IMovieDetailService, MovieDetailService>();
             services.AddScoped<ITvShowDetailService, TvShowDetailService>();
             services.AddScoped<IRegisterService, RegisterService>();
+            services.AddScoped<IPreviewService, PreviewService>();
             
             
 

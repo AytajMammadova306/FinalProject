@@ -58,7 +58,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Actors", (string)null);
+                    b.ToTable("Actors");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.AppUser", b =>
@@ -172,7 +172,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Crews", (string)null);
+                    b.ToTable("Crews");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Episode", b =>
@@ -222,7 +222,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("SeasonId");
 
-                    b.ToTable("Episodes", (string)null);
+                    b.ToTable("Episodes");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Franchise", b =>
@@ -266,7 +266,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("Franchises", (string)null);
+                    b.ToTable("Franchises");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Genre", b =>
@@ -300,7 +300,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Genres", (string)null);
+                    b.ToTable("Genres");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Movie", b =>
@@ -365,7 +365,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("FranchiseId");
 
-                    b.ToTable("Movies", (string)null);
+                    b.ToTable("Movies");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.MovieCast", b =>
@@ -383,7 +383,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("ActorId");
 
-                    b.ToTable("MovieCasts", (string)null);
+                    b.ToTable("MovieCasts");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.MovieCrew", b =>
@@ -401,7 +401,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("CrewId");
 
-                    b.ToTable("MovieCrews", (string)null);
+                    b.ToTable("MovieCrews");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.MovieGenre", b =>
@@ -416,7 +416,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("MovieGenres", (string)null);
+                    b.ToTable("MovieGenres");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.MovieTag", b =>
@@ -431,7 +431,69 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("MovieTags", (string)null);
+                    b.ToTable("MovieTags");
+                });
+
+            modelBuilder.Entity("Cinemastic.Domain.Entities.Plan", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<bool>("AdFree")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DurationValue")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Interval")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("MaxQuality")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(8,2)");
+
+                    b.Property<bool>("TvorLaptop")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("Updated")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Plans");
+                });
+
+            modelBuilder.Entity("Cinemastic.Domain.Entities.PreviewSetting", b =>
+                {
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Key");
+
+                    b.ToTable("PreviewSettings");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Season", b =>
@@ -473,7 +535,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("TvShowId");
 
-                    b.ToTable("Seasons", (string)null);
+                    b.ToTable("Seasons");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Slide", b =>
@@ -521,7 +583,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                         .IsUnique()
                         .HasFilter("[TvShowId] IS NOT NULL");
 
-                    b.ToTable("Slides", (string)null);
+                    b.ToTable("Slides");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Tag", b =>
@@ -555,7 +617,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Tags", (string)null);
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShow", b =>
@@ -613,7 +675,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("FranchiseId");
 
-                    b.ToTable("TvShows", (string)null);
+                    b.ToTable("TvShows");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShowCast", b =>
@@ -631,7 +693,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("ActorId");
 
-                    b.ToTable("TvShowCasts", (string)null);
+                    b.ToTable("TvShowCasts");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShowCrew", b =>
@@ -649,7 +711,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("CrewId");
 
-                    b.ToTable("TvShowCrews", (string)null);
+                    b.ToTable("TvShowCrews");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShowGenre", b =>
@@ -664,7 +726,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("TvShowGenres", (string)null);
+                    b.ToTable("TvShowGenres");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShowTag", b =>
@@ -679,7 +741,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("TvShowTags", (string)null);
+                    b.ToTable("TvShowTags");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

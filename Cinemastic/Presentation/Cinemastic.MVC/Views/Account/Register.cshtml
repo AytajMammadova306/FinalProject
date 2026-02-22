@@ -12,22 +12,22 @@
                     <div class="col pb-3">
                         <label asp-for="Name" class="mb-2 custom-form-label">First Name</label>
                         <input asp-for="Name" class="form-control mb-0" required="">
-                        <span class="text-danger" asp-validation-for="Name"></span>
+                        <span class="text-primary" asp-validation-for="Name"></span>
                     </div>
                     <div class="col">
                         <label asp-for="Surname" class="mb-2 custom-form-label">Last Name</label>
                         <input asp-for="Surname" class="form-control mb-0" required="">
-                        <span class="text-danger" asp-validation-for="Surname"></span>
+                        <span class="text-primary" asp-validation-for="Surname"></span>
                     </div>
                     <div class="col">
                         <label asp-for="UserName" class="mb-2 custom-form-label">Username *</label>
                         <input asp-for="UserName" class="form-control mb-0" required="">
-                        <span class="text-danger" asp-validation-for="UserName"></span>
+                        <span class="text-primary" asp-validation-for="UserName"></span>
                     </div>
                     <div class="col">
                         <label asp-for="Email" class="mb-2 custom-form-label">Email *</label>
                         <input asp-for="Email" class="form-control mb-0" required="">
-                        <span class="text-danger" asp-validation-for="Email"></span>
+                        <span class="text-primary" asp-validation-for="Email"></span>
                     </div>
                     <div class="col">
                         <label asp-for="Password" class="mb-2 custom-form-label">Password *</label>
@@ -39,7 +39,7 @@
                                    data-target="passwordInput"></i>
                             </span>
                         </div>
-                        <span class="text-danger" asp-validation-for="Password"></span>
+                        <span class="text-primary" asp-validation-for="Password"></span>
                     </div>
                     <div class="col">
                         <label asp-for="ConfirmPassword" class="mb-2 custom-form-label">Confirm Password *</label>
@@ -51,11 +51,11 @@
                                    data-target="confirmPasswordInput"></i>
                             </span>
                         </div>
-                        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                        <span class="text-primary" asp-validation-for="ConfirmPassword"></span>
                     </div>
                     
                 </div>
-                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                <div class="text-primary" asp-validation-summary="ModelOnly"></div>
                 
                 <label class="list-group-item d-flex align-items-center mt-5 mb-3 text-white">
                     <input class="form-check-input m-0 me-2" type="checkbox">I've read and accept the <a href="terms-of-use.html"

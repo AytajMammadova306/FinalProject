@@ -71,6 +71,8 @@ namespace Cinemastic.Persistance.Context
         public DbSet<TvShowGenre> TvShowGenres { get; set; }
         public DbSet<TvShowTag> TvShowTags { get; set; }
         public DbSet<Slide> Slides { get; set; }
+        public DbSet<PreviewSetting> PreviewSettings { get; set; }
+        public DbSet<Plan> Plans { get; set; }
 
     }
 }
