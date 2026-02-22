@@ -1,10 +1,12 @@
 ﻿using Cinemastic.Application.Interfaces.Repositories;
 using Cinemastic.Application.Interfaces.Services.EntityServices;
 using Cinemastic.Application.Interfaces.Services.Feature_Services;
+using Cinemastic.Domain.Entities;
 using Cinemastic.Persistance.Context;
 using Cinemastic.Persistance.Implementations.Repositories;
 using Cinemastic.Persistance.Implementations.Services.EntityServices;
 using Cinemastic.Persistance.Implementations.Services.FeatureServices;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,7 +23,10 @@ namespace Cinemastic.Persistance
         public static IServiceCollection AddPersistanceServices(this IServiceCollection services, IConfiguration config)
         {
 
-            services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("default")));//cloude u qosmaqa calisiram 3 gundu
+            services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("default")));//cloude u qosmaqa calisiram 3 gundu.     qosa bilmedim azurun free trial ne vaxsa aktivlesib deye qurtarib
+
+            
+
 
             services.AddScoped<IActorRepository, ActorRepository>();
             services.AddScoped<IMovieRepository, MovieRepository>();
@@ -34,8 +39,16 @@ namespace Cinemastic.Persistance
             services.AddScoped<IEpisodeRepository, EpisodeRepository>();
             services.AddScoped<ISlideRepository, SlideRepository>();
 
-            
 
+            services.AddIdentity<AppUser, IdentityRole>(opt =>
+            {
+                opt.User.RequireUniqueEmail = true;
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequiredLength = 8;
+                opt.Lockout.AllowedForNewUsers = true;
+                opt.Lockout.MaxFailedAccessAttempts = 3;
+                opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
+            }).AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
 
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<ITvShowService, TvShowService>();
@@ -49,6 +62,7 @@ namespace Cinemastic.Persistance
             services.AddScoped<IAllFranchisesService, AllFranchisesService>();
             services.AddScoped<IMovieDetailService, MovieDetailService>();
             services.AddScoped<ITvShowDetailService, TvShowDetailService>();
+            services.AddScoped<IRegisterService, RegisterService>();
             
             
 

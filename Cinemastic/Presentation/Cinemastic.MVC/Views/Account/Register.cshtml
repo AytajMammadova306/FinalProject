@@ -1,0 +1,105 @@
+﻿@using Cinemastic.Application.ViewModel.Account
+@model RegisterVM
+        <div class="col-lg-8 col-md-12 align-self-center">
+        <div class="user-login-card rounded-3">
+            <a href="./index.html">
+                <img class="img-fluid logo" src="~/assets/images/logo.png" alt="#">
+            </a>
+            <div class="sign-in-page-data">
+                <h4 class="text-center mb-5">Create Your Account</h4>
+                <form method="post">
+                <div class="row row-cols-1 row-cols-lg-2 g-2 g-lg-5">
+                    <div class="col pb-3">
+                        <label asp-for="Name" class="mb-2 custom-form-label">First Name</label>
+                        <input asp-for="Name" class="form-control mb-0" required="">
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="Surname" class="mb-2 custom-form-label">Last Name</label>
+                        <input asp-for="Surname" class="form-control mb-0" required="">
+                        <span class="text-danger" asp-validation-for="Surname"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="UserName" class="mb-2 custom-form-label">Username *</label>
+                        <input asp-for="UserName" class="form-control mb-0" required="">
+                        <span class="text-danger" asp-validation-for="UserName"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="Email" class="mb-2 custom-form-label">Email *</label>
+                        <input asp-for="Email" class="form-control mb-0" required="">
+                        <span class="text-danger" asp-validation-for="Email"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="Password" class="mb-2 custom-form-label">Password *</label>
+                        <div class="input-group custom-input-group mb-3">
+                            <input asp-for="Password" placeholder="Password" required type="password"
+                                   id="passwordInput" class="mb-0 form-control">
+                            <span class="input-group-text">
+                                <i class="ph ph-eye-slash"
+                                   data-target="passwordInput"></i>
+                            </span>
+                        </div>
+                        <span class="text-danger" asp-validation-for="Password"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="ConfirmPassword" class="mb-2 custom-form-label">Confirm Password *</label>
+                        <div class="input-group custom-input-group mb-3">
+                            <input asp-for="ConfirmPassword" placeholder="Password" required type="password"
+                                   id="confirmPasswordInput" class="mb-0 form-control">
+                            <span class="input-group-text">
+                                <i class="ph ph-eye-slash"
+                                   data-target="confirmPasswordInput"></i>
+                            </span>
+                        </div>
+                        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                    </div>
+                    
+                </div>
+                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                
+                <label class="list-group-item d-flex align-items-center mt-5 mb-3 text-white">
+                    <input class="form-check-input m-0 me-2" type="checkbox">I've read and accept the <a href="terms-of-use.html"
+                                                                                                         class="ms-1">terms & conditions*</a>
+                </label>
+                <div class="row text-center">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <div class="full-button">
+                            <button type="submit" class="btn btn-primary text-capitalize position-relative w-100 my-3 rounded-3">
+                                <span class="button-text">Sign Up</span>
+                            </button>
+                            <p class="mt-2 mb-0 fw-normal">
+                                Already have an account?<a href="login.html" class="ms-1">Login</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+        document.querySelectorAll('.ph-eye-slash').forEach(icon => {
+        const targetId = icon.getAttribute('data-target');
+        const input = document.getElementById(targetId);
+
+        icon.addEventListener('mousedown', () => {
+            input.type = 'text';
+            icon.classList.replace('ph-eye-slash', 'ph-eye');
+        });
+
+        icon.addEventListener('mouseup', () => {
+            input.type = 'password';
+            icon.classList.replace('ph-eye', 'ph-eye-slash');
+        });
+
+        icon.addEventListener('mouseleave', () => {
+            input.type = 'password';
+            icon.classList.replace('ph-eye', 'ph-eye-slash');
+        });
+    });
+</script>
+    

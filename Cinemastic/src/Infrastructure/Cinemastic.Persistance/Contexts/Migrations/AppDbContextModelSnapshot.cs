@@ -58,7 +58,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Actors");
+                    b.ToTable("Actors", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.AppUser", b =>
@@ -172,7 +172,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Crews");
+                    b.ToTable("Crews", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Episode", b =>
@@ -222,7 +222,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("SeasonId");
 
-                    b.ToTable("Episodes");
+                    b.ToTable("Episodes", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Franchise", b =>
@@ -266,7 +266,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("Franchises");
+                    b.ToTable("Franchises", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Genre", b =>
@@ -300,7 +300,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Genres");
+                    b.ToTable("Genres", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Movie", b =>
@@ -365,7 +365,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("FranchiseId");
 
-                    b.ToTable("Movies");
+                    b.ToTable("Movies", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.MovieCast", b =>
@@ -383,7 +383,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("ActorId");
 
-                    b.ToTable("MovieCasts");
+                    b.ToTable("MovieCasts", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.MovieCrew", b =>
@@ -401,7 +401,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("CrewId");
 
-                    b.ToTable("MovieCrews");
+                    b.ToTable("MovieCrews", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.MovieGenre", b =>
@@ -416,7 +416,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("MovieGenres");
+                    b.ToTable("MovieGenres", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.MovieTag", b =>
@@ -431,7 +431,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("MovieTags");
+                    b.ToTable("MovieTags", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Season", b =>
@@ -473,7 +473,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("TvShowId");
 
-                    b.ToTable("Seasons");
+                    b.ToTable("Seasons", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Slide", b =>
@@ -521,7 +521,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                         .IsUnique()
                         .HasFilter("[TvShowId] IS NOT NULL");
 
-                    b.ToTable("Slides");
+                    b.ToTable("Slides", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Tag", b =>
@@ -555,7 +555,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Tags");
+                    b.ToTable("Tags", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShow", b =>
@@ -613,7 +613,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("FranchiseId");
 
-                    b.ToTable("TvShows");
+                    b.ToTable("TvShows", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShowCast", b =>
@@ -631,7 +631,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("ActorId");
 
-                    b.ToTable("TvShowCasts");
+                    b.ToTable("TvShowCasts", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShowCrew", b =>
@@ -649,7 +649,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("CrewId");
 
-                    b.ToTable("TvShowCrews");
+                    b.ToTable("TvShowCrews", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShowGenre", b =>
@@ -664,7 +664,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("TvShowGenres");
+                    b.ToTable("TvShowGenres", (string)null);
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.TvShowTag", b =>
@@ -679,7 +679,7 @@ namespace Cinemastic.Persistance.Contexts.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("TvShowTags");
+                    b.ToTable("TvShowTags", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

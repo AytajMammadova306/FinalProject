@@ -40,6 +40,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/Desktop/FinalProject/Cinemastic/Presentation/Cinemastic.MVC/Views/Account/LogIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dJbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/FinalProject/Cinemastic/Presentation/Cinemastic.MVC/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/FinalProject/Cinemastic/Presentation/Cinemastic.MVC/Views/Account/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Desktop/FinalProject/Cinemastic/Presentation/Cinemastic.MVC/Views/Home/AllFranchises.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGxGcmFuY2hpc2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -86,6 +98,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User/Desktop/FinalProject/Cinemastic/Presentation/Cinemastic.MVC/Views/Shared/TvShowItemPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFR2U2hvd0l0ZW1QYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/FinalProject/Cinemastic/Presentation/Cinemastic.MVC/Views/Shared/_AccountLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BY2NvdW50TGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/Desktop/FinalProject/Cinemastic/Presentation/Cinemastic.MVC/Views/Shared/_Layout.cshtml]

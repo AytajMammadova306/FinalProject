@@ -1,6 +1,9 @@
-using Cinemastic.Persistance;
-using Cinemastic.Infrastructure;
 using Cinemastic.Application;
+using Cinemastic.Domain.Entities;
+using Cinemastic.Infrastructure;
+using Cinemastic.Persistance;
+using Microsoft.AspNetCore.Identity;
+using System;
 namespace Cinemastic.MVC
 {
     public class Program
@@ -15,7 +18,13 @@ namespace Cinemastic.MVC
                 .AddInfrastructureServices(builder.Configuration)
                 .AddApplicationServices();
 
+
+
             var app = builder.Build();
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+
             app.UseStaticFiles();
 
             app.MapControllerRoute(

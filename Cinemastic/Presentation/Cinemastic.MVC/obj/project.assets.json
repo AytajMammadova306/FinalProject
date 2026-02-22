@@ -2479,7 +2479,10 @@
         },
         "runtime": {
           "bin/placeholder/Cinemastic.Application.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Cinemastic.Domain/1.0.0": {
         "type": "project",
@@ -2522,7 +2525,10 @@
         },
         "runtime": {
           "bin/placeholder/Cinemastic.Persistance.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
