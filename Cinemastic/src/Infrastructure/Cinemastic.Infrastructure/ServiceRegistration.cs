@@ -1,7 +1,6 @@
 ﻿using Cinemastic.Application.Interfaces.Services.Feature_Services;
 using Cinemastic.Infrastructure.Implementations;
 using Cinemastic.Infrastructure.OptionClasses;
-using Cinemastic.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;

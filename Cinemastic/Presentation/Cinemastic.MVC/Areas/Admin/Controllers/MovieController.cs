@@ -23,10 +23,11 @@ namespace Cinemastic.MVC.Areas.Admin.Controllers
 
             return View(pageVM);
         }
-        //public async Task<IActionResult> Create()
-        //{
-        //    return View();
-        //}
+        public async Task<IActionResult> Create()
+        {
+            
+            return View();
+        }
         //public async Task<IActionResult> Update()
         //{
         //    return View();

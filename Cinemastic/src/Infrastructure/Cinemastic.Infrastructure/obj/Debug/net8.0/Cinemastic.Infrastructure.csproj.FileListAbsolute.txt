@@ -11,3 +11,8 @@ C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infr
 C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\obj\Debug\net8.0\Cinemastic.Infrastructure.pdb
 C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\obj\Debug\net8.0\ref\Cinemastic.Infrastructure.dll
 C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\obj\Debug\net8.0\Cinemastic.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\bin\Debug\net8.0\Cinemastic.Application.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\bin\Debug\net8.0\Cinemastic.Domain.dll
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\bin\Debug\net8.0\Cinemastic.Application.pdb
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\bin\Debug\net8.0\Cinemastic.Domain.pdb
+C:\Users\User\Desktop\FinalProject\Cinemastic\src\Infrastructure\Cinemastic.Infrastructure\obj\Debug\net8.0\Cinemast.7C3B69CB.Up2Date

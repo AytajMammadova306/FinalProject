@@ -10,7 +10,7 @@ namespace Cinemastic.Application.Interfaces.Services.EntityServices
 {
     public interface IMovieService
     {
-        Task<ICollection<GetMovieItemVM>> GetAllItemAsync(int page = 0, int take = 0);
+        Task<ICollection<GetMovieItemVM>> GetAllItemAsync(int page = 0, int take = 0, int key = 0);
         Task<GetMovieVM> GetByIdAsync(long id);
         Task<int> GetTotalCountAsync();
         Task<ICollection<GetMovieItemVM>> GetByFranchiseAsync(long id);

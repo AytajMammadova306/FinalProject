@@ -2,8 +2,9 @@
 using Cinemastic.Application.Interfaces.Repositories;
 using Cinemastic.Application.Interfaces.Services.EntityServices;
 using Cinemastic.Application.ViewModel.Movie;
-using Cinemastic.Domain.Entities;
 using Cinemastic.Application.ViewModel.Movie;
+using Cinemastic.Domain.Entities;
+using Cinemastic.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,7 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             _mapper=mapper;
         }
         
-        public async Task<ICollection<GetMovieItemVM>> GetAllItemAsync(int page = 0, int take = 0)
+        public async Task<ICollection<GetMovieItemVM>> GetAllItemAsync(int page = 0, int take = 0, int key=0)
         {
             IReadOnlyList<Movie> movies = await _repository.GetAll(
                 includes: "MovieGenres.Genre",
@@ -35,6 +36,15 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
                 take: take
                 )
                 .ToListAsync();
+            if (key== (int)SortType.Date)
+            {
+				movies = movies.OrderBy(m => m.ReleaseDate).ToList();
+			}
+            else
+            {
+				movies = movies.OrderBy(m => m.Name).ToList();
+			}
+                
             ICollection<GetMovieItemVM> movieVms = _mapper.Map<ICollection<GetMovieItemVM>>(movies);
             return movieVms;
         }
@@ -54,6 +64,7 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
                 func:(m=>m.FranchiseId==id),
                 includes: "MovieGenres.Genre")
                 .ToListAsync();
+            
             ICollection<GetMovieItemVM> movieVms = _mapper.Map<ICollection<GetMovieItemVM>>(movies);
             return movieVms;
         }

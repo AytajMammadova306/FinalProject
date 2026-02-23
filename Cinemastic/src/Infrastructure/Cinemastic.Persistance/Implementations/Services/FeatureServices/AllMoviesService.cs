@@ -19,16 +19,18 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
         {
             _movieService = movieService;
         }
-        public async Task<AllMoviesVM> GetAllMoviesVMAsync(int page = 0, int take = 0)
+        public async Task<AllMoviesVM> GetAllMoviesVMAsync(int page = 0, int take = 0, int key = 1)
         {
             int totalCount = await _movieService.GetTotalCountAsync();
-            ICollection<GetMovieItemVM> movieItemVMs = await _movieService.GetAllItemAsync(page, take);
+            ICollection<GetMovieItemVM> movieItemVMs = await _movieService.GetAllItemAsync(page, take,key);
             AllMoviesVM movieVMs = new AllMoviesVM
             {
                 Movies = movieItemVMs,
                 CurrentPage = page,
                 TotalPages = (int)Math.Ceiling((double)totalCount / take),
-                Take = take
+                Take = take,
+                Key=key
+                
             };
             return movieVMs;
         }

@@ -21,7 +21,7 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
         }
         public async Task<AllTvShowsVM> GetAllTvShowsAsync(int page=1, int take=10)
         {
-            ICollection<GetTvShowItemVM> tvShowItemVMs = await _tvShowService.GetAllItemAsync();
+            ICollection<GetTvShowItemVM> tvShowItemVMs = await _tvShowService.GetAllItemAsync(page,take);
             int totalCount = await _tvShowService.GetTotalCountAsync();
             AllTvShowsVM allTvShowsVM = new AllTvShowsVM
             {

@@ -22,7 +22,7 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
         }
         public async Task<AllFranchisesVM> GetAllFranchisesVMAsync(int page = 1, int take = 10)
         {
-            ICollection<GetFranchiseItemVM> franchiseItemVMs = await _franchiseService.GetAllItemAsync();
+            ICollection<GetFranchiseItemVM> franchiseItemVMs = await _franchiseService.GetAllItemAsync(page,take);
             int totalCount = await _franchiseService.GetTotalCountAsync();
             AllFranchisesVM franchisesVM = new AllFranchisesVM
             {

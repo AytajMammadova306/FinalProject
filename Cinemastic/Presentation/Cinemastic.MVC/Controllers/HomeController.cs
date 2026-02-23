@@ -44,13 +44,14 @@ namespace Cinemastic.MVC.Controllers
             HomePageVM HomeVM = await _homeService.GetHomePageVMAsync();
             return View(HomeVM);
         }
-        public async Task<IActionResult> AllMovies(int page = 1, int take = 10)
+        public async Task<IActionResult> AllMovies(int page = 1, int take = 10, int key = 1)
         {
             if (!User.Identity.IsAuthenticated)
             {
                 return View("Preview");
             }
-            AllMoviesVM allMoviesVM = await _allMoviesService.GetAllMoviesVMAsync(page, take);
+            AllMoviesVM allMoviesVM = await _allMoviesService.GetAllMoviesVMAsync(page, take, key);
+            
             return View(allMoviesVM);
         }
         public async Task<IActionResult> AllTvShows(int page = 1, int take = 10)

@@ -1,5 +1,6 @@
 ﻿@using Cinemastic.Application.ViewModel.Home
 @using Cinemastic.Application.ViewModel.Movie
+@using Cinemastic.Domain.Enums
 @model AllMoviesVM
 <!--bread-crumb-->
 <div class="iq-breadcrumb">
@@ -15,12 +16,34 @@
             </div>
         </div>
     </div>
-</div>    <!--bread-crumb-->
+</div>  
 
+<!--bread-crumb-->
 
 <div class="section-padding view-all-movies">
     <div class="container-fluid">
         <div class="card-style-grid">
+            <div class="btn-group mb-3">
+                <form asp-action="allmovies" asp-controller="home" asp-route-page="@Model.CurrentPage" asp-route-take="@Model.Take">
+                    <button type="submit" class="btn btn-danger">Sort By</button>
+                    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <button type="submit" name="key" value="@((int)SortType.Name)" class="dropdown-item @(Model.Key == (int)SortType.Name ? "active" : "")">
+                                Name
+                            </button>
+                        </li>
+                        <li>
+                            <button type="submit" name="key" value="@((int)SortType.Date)" class="dropdown-item @(Model.Key == (int)SortType.Date ? "active" : "")">
+                                Date
+                            </button>
+                        </li>
+                    </ul>
+                </form>
+            </div><!-- /btn-group -->
+
             <div class="row gy-4 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 data-listing">
 
                 @foreach (GetMovieItemVM movieItemVM in Model.Movies)

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cinemastic.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23054b7a7a236d0473b60b5ef3bb0ef77268bd28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2759e2e2ead695fa0e02c610269b28b0c1175dd6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cinemastic.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cinemastic.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
