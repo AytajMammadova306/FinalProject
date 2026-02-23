@@ -1,4 +1,7 @@
-﻿using Cinemastic.Infrastructure.Services;
+﻿using Cinemastic.Application.Interfaces.Services.Feature_Services;
+using Cinemastic.Infrastructure.Implementations;
+using Cinemastic.Infrastructure.OptionClasses;
+using Cinemastic.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -13,7 +16,8 @@ namespace Cinemastic.Infrastructure
     {
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration config)
         {
-            services.AddSingleton<CloudinaryService>();
+            services.Configure<CloudinarySettings>(config.GetSection("CloudinarySettings"));
+            services.AddScoped<IFileService, FileService>();
             return services;
         }
     }
