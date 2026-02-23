@@ -15,28 +15,42 @@
             </div>
         </div>
     </div>
-</div>    <!--bread-crumb-->
-
-
+</div>
 <div class="section-padding view-all-movies">
     <div class="container-fluid">
         <div class="card-style-grid">
             <div class="row gy-4 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 data-listing">
-
                 @foreach (GetTvShowItemVM tvShowItemVM in Model.TvShows)
                 {
                     <div class="col">
                         @Html.Partial("TvShowItemPartialView", tvShowItemVM)
                     </div>
                 }
-
-
             </div>
-            <!-- Static Load More -->
-            <div class="text-center mt-4">
-                <button type="button" class="btn btn-primary position-relative load-more-btn">
-                    <span class="button-text">Load More</span>
-                </button>
+            <!-- Pagination -->
+            <div class="bd-example mt-5 mb-4">
+                <nav aria-label="Standard pagination example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
+                            <a class="page-link" asp-controller="home" asp-action="alltvshows" asp-route-page="@(Model.CurrentPage - 1)" asp-route-take="@Model.Take" aria-label="Previous">
+                                <span aria-hidden="true">«</span>
+                            </a>
+                        </li>
+
+                        @for (int i = 1; i <= Model.TotalPages; i++)
+                        {
+                            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                                <a class="page-link" asp-controller="home" asp-action="alltvshows" asp-route-page="@(i)" asp-route-take="@Model.Take">@i</a>
+                            </li>
+                        }
+
+                        <li class="page-item @(Model.CurrentPage == Model.TotalPages ? "disabled" : "")">
+                            <a class="page-link" asp-controller="home" asp-action="alltvshows" asp-route-page="@(Model.CurrentPage + 1)" asp-route-take="@Model.Take" aria-label="Next">
+                                <span aria-hidden="true">»</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
@@ -45,33 +59,4 @@
     <ul class="footer-menu list-inline d-flex align-items-center justify-content-between m-0">
         <li class="footer-menu-item">
             <a href="./view-all-movie.html" class="menu-link font-size-12">
-                <i class="ph ph-film-reel d-block  text-center "></i>
-                Movies
-            </a>
-        </li>
-        <li class="footer-menu-item">
-            <a href="./view-all-movie.html" class="menu-link font-size-12">
-                <i class="ph ph-monitor-play d-block  text-center "></i>
-                Videos
-            </a>
-        </li>
-        <li class="footer-menu-item">
-            <a href="./view-all-movie.html" class="menu- font-size-12">
-                <i class="ph ph-magnifying-glass d-block  text-center "></i>
-                Search
-            </a>
-        </li>
-        <li class="footer-menu-item">
-            <a href="./view-all-movie.html" class="menu-link font-size-12">
-                <i class="ph ph-television d-block  text-center "></i>
-                TV Shows
-            </a>
-        </li>
-        <li class="footer-menu-item">
-            <a href="./profile-marvin.html" class="menu-link font-size-12">
-                <i class="ph ph-user d-block  text-center "></i>
-                Profile
-            </a>
-        </li>
-    </ul>
-</div>  </main>
+                <i class="ph ph-film-reel d-block text-center"></i>

@@ -73,6 +73,8 @@ namespace Cinemastic.Persistance.Context
         public DbSet<Slide> Slides { get; set; }
         public DbSet<PreviewSetting> PreviewSettings { get; set; }
         public DbSet<Plan> Plans { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        
 
     }
 }

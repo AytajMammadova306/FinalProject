@@ -1,7 +1,7 @@
 ﻿using Cinemastic.Application.Interfaces.Services.EntityServices;
 using Cinemastic.Application.Interfaces.Services.Feature_Services;
 using Cinemastic.Application.ViewModel.Home;
-using Cinemastic.MVC.ViewModel.Movie;
+using Cinemastic.Application.ViewModel.Movie;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,14 +19,18 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
         {
             _movieService = movieService;
         }
-        public async Task<AllMoviesVM> GetAllMoviesVMAsync()
+        public async Task<AllMoviesVM> GetAllMoviesVMAsync(int page = 0, int take = 0)
         {
-            ICollection<GetMovieItemVM> movieItemVMs = await _movieService.GetAllItemAsync();
-            AllMoviesVM movies = new AllMoviesVM
+            int totalCount = await _movieService.GetTotalCountAsync();
+            ICollection<GetMovieItemVM> movieItemVMs = await _movieService.GetAllItemAsync(page, take);
+            AllMoviesVM movieVMs = new AllMoviesVM
             {
-                Movies = movieItemVMs
+                Movies = movieItemVMs,
+                CurrentPage = page,
+                TotalPages = (int)Math.Ceiling((double)totalCount / take),
+                Take = take
             };
-            return movies;
+            return movieVMs;
         }
     }
 }

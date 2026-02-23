@@ -1,6 +1,6 @@
 ﻿@using Cinemastic.Application.Interfaces.Services.Feature_Services
 @using Cinemastic.Application.ViewModel.Home
-@using Cinemastic.MVC.ViewModel.Movie
+@using Cinemastic.Application.ViewModel.Movie
 @inject IPreviewService previewService
 @{
     Layout = null;
@@ -69,9 +69,17 @@
 
 <body class=" custom-header-relative ">
     <section class="about-section-padding-bottom">
-        <div class="streaming-section text-center"
+        <div class="streaming-section text-center position-relative"
              style="background-image: url(@Model.Settings["background"]); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-            <div class="container">
+            <div class="position-absolute top-0 end-0 mt-4 me-4">
+                <a asp-controller="account" asp-action="login" class="btn btn-outline-primary rounded-3">
+                    <span class="d-flex align-items-center gap-2 fw-semibold">
+                        Member Login
+                        <i class="ph ph-user-circle fs-5"></i>
+                    </span>
+                </a>
+            </div>
+             <div class="container">
                 <div class="streaming-section-spacing">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-xl-6 col-md-8">
@@ -98,6 +106,7 @@
                                             <i class="ph-fill ph-play fs-6 ms-0"></i>
                                         </span>
                                     </a>
+
                                 </div>
 
                             </div>

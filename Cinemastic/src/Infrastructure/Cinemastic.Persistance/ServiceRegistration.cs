@@ -65,10 +65,22 @@ namespace Cinemastic.Persistance
             services.AddScoped<IAllFranchisesService, AllFranchisesService>();
             services.AddScoped<IMovieDetailService, MovieDetailService>();
             services.AddScoped<ITvShowDetailService, TvShowDetailService>();
+            services.AddScoped<IFranchiseDetailService, FranchiseDetailService>();
             services.AddScoped<IRegisterService, RegisterService>();
+            services.AddScoped<ILogService, LogService>();
+            services.AddScoped<ILogService, LogService>();
             services.AddScoped<IPreviewService, PreviewService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IGenrePageService, GenrePageService>();
+            services.AddScoped<IGenreService, GenreService>();
+            services.AddScoped<ITagService, TagService>();
+            services.AddScoped<ITagPageService, TagPageService>();
+            services.AddScoped<ILayoutService, LayoutService>();
             
-            
+            services.AddScoped<IAdminMovieService, AdminMovieService>();
+
+
+
 
             return services;
 

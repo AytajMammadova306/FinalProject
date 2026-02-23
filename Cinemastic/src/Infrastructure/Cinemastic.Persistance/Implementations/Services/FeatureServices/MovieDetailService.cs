@@ -5,7 +5,7 @@ using Cinemastic.Application.ViewModel.Crew;
 using Cinemastic.Application.ViewModel.Home;
 using Cinemastic.Application.ViewModel.Movie;
 using Cinemastic.Application.ViewModel.TvShow;
-using Cinemastic.MVC.ViewModel.Movie;
+using Cinemastic.Application.ViewModel.Movie;
 using System;
 using System.Collections.Generic;
 using System.Linq;

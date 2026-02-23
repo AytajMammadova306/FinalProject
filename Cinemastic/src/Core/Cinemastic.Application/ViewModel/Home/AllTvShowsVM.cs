@@ -10,5 +10,8 @@ namespace Cinemastic.Application.ViewModel.Home
     public class AllTvShowsVM
     {
         public ICollection<GetTvShowItemVM> TvShows { get; set; }
+        public int CurrentPage { get; set; }
+        public int TotalPages { get; set; }
+        public int Take { get; set; }
     }
 }

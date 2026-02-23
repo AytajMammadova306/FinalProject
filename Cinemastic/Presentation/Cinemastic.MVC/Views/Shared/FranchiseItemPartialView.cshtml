@@ -3,7 +3,7 @@
 <div class="iq-card card-hover">
     <div class="block-images position-relative w-100">
         <div class="img-box w-100">
-            <a href="./tv-show-detail.html" class="position-relative top-0 bottom-0 start-0 end-0">
+            <a asp-controller="home" asp-action="franchisedetail" asp-route-id="@Model.Id" class="position-relative top-0 bottom-0 start-0 end-0">
                 <img src="@Model.ImageUrl" alt="@Model.Name"
                      class="img-fluid object-cover w-100 d-block border-0 rounded-3">
             </a>
@@ -36,7 +36,7 @@
                     <i class="ph ph-plus font-size-18"></i>
                 </a>
                 <div class="iq-play-button iq-button">
-                    <a href="./tv-show-detail.html" class="btn btn-primary w-100">
+                    <a asp-controller="home" asp-action="franchisedetail" asp-route-id="@Model.Id" class="btn btn-primary w-100">
                         Go Check
                     </a>
                 </div>

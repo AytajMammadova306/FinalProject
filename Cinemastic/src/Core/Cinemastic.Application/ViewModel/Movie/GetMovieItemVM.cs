@@ -1,7 +1,7 @@
 ﻿using Cinemastic.Domain.Entities;
 using Cinemastic.Domain.Enums;
 
-namespace Cinemastic.MVC.ViewModel.Movie
+namespace Cinemastic.Application.ViewModel.Movie
 {
     public class GetMovieItemVM
     {

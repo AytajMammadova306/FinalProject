@@ -9,6 +9,6 @@ namespace Cinemastic.Application.Interfaces.Services.Feature_Services
 {
     public interface IAllMoviesService
     {
-        Task<AllMoviesVM> GetAllMoviesVMAsync();
+        Task<AllMoviesVM> GetAllMoviesVMAsync(int page = 0, int take = 0);
     }
 }

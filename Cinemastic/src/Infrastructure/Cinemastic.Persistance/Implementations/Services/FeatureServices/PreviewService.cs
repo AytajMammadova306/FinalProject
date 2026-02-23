@@ -1,7 +1,7 @@
 ﻿using Cinemastic.Application.Interfaces.Services.EntityServices;
 using Cinemastic.Application.Interfaces.Services.Feature_Services;
 using Cinemastic.Application.ViewModel.Home;
-using Cinemastic.MVC.ViewModel.Movie;
+using Cinemastic.Application.ViewModel.Movie;
 using Cinemastic.Persistance.Context;
 using Microsoft.EntityFrameworkCore;
 using System;

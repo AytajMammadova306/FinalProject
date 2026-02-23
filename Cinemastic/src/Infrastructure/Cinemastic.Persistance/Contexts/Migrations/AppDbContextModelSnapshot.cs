@@ -80,6 +80,10 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -232,6 +236,10 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                         .HasColumnType("bigint");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("CoverUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -536,6 +544,20 @@ namespace Cinemastic.Persistance.Contexts.Migrations
                     b.HasIndex("TvShowId");
 
                     b.ToTable("Seasons");
+                });
+
+            modelBuilder.Entity("Cinemastic.Domain.Entities.Setting", b =>
+                {
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Key");
+
+                    b.ToTable("Settings");
                 });
 
             modelBuilder.Entity("Cinemastic.Domain.Entities.Slide", b =>

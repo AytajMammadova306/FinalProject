@@ -1,38 +1,53 @@
-﻿<div class="col-lg-5 col-md-12 align-self-center">
+﻿@using Cinemastic.Application.ViewModel.Account
+
+@model LogInVM
+<div class="col-lg-5 col-md-12 align-self-center">
     <div class="user-login-card rounded-3">
         <a href="./index.html">
             <img class="img-fluid logo" src="~/assets/images/logo.png" alt="#">
         </a>
         <div class="sign-in-page-data">
             <div class="sign-in-from w-100 m-auto">
-                <form>
+                <form method="post">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="mb-2 custom-form-label">
+                        <label asp-for="UserNameOrEmail" class="mb-2 custom-form-label">
                             Username or Email Address
                         </label>
-                        <input placeholder="Enter email" autocomplete="off" required type="email"
-                               id="exampleInputEmail1" class="mb-0 form-control" />
+                        <input asp-for="UserNameOrEmail" placeholder="Enter email" autocomplete="off" required 
+                                class="mb-0 form-control" />
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword2" class="mb-2 custom-form-label">
+                        <label asp-for="Password" " class="mb-2 custom-form-label">
                             Password
                         </label>
                         <div class="input-group custom-input-group mb-3">
                             <input placeholder="Password" required type="password"
-                                   id="exampleInputPassword2" class="mb-0 form-control">
+                                   asp-for="Password" class="mb-0 form-control">
                             <span class="input-group-text">
                                 <i class="ph ph-eye-slash"
                                    id="togglePassword"></i>
                             </span>
                         </div>
                     </div>
-                    <a href="./index.html"
+                    <div class="mb-3 d-flex justify-content-between align-items-center">
+                        <div class="form-check custom-form-check">
+                            <input asp-for="IsPersistance" type="checkbox" class="form-check-input rounded-0" id="rememberMe">
+                            <label class="form-check-label font-size-14" for="rememberMe">
+                                Remember Me
+                            </label>
+                        </div>
+                        <a asp-controller="account" asp-action="ForgotPassword" class="text-primary font-size-14">
+                            Forgot Password?
+                        </a>
+                    </div>
+                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                    <button type="submit"
                        class="btn btn-primary text-capitalize position-relative w-100 my-3 rounded-3">
                         <span class="button-text">login</span>
-                    </a>
+                    </button>
                     <div class="d-flex justify-content-center align-items-center gap-2 links my-3">
                         If You are new?
-                        <a href="./register.html" class="st-sub-card setting-dropdown">
+                        <a asp-controller="account" asp-action="register" class="st-sub-card setting-dropdown">
                             <h6 class="m-0 text-primary">
                                 Sign Up
                             </h6>
@@ -54,3 +69,22 @@
         </div>
     </div>
 </div>
+<script>
+        const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.querySelector('input[type="password"]');
+
+    togglePassword.addEventListener('mousedown', () => {
+        passwordInput.type = 'text';
+        togglePassword.classList.replace('ph-eye-slash', 'ph-eye');
+    });
+
+    togglePassword.addEventListener('mouseup', () => {
+        passwordInput.type = 'password';
+        togglePassword.classList.replace('ph-eye', 'ph-eye-slash');
+    });
+
+    togglePassword.addEventListener('mouseleave', () => {
+        passwordInput.type = 'password';
+        togglePassword.classList.replace('ph-eye', 'ph-eye-slash');
+    });
+</script>

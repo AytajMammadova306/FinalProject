@@ -9,6 +9,6 @@ namespace Cinemastic.Application.Interfaces.Services.Feature_Services
 {
     public interface IAllFranchisesService
     {
-        Task<AllFranchisesVM> GetAllFranchisesVMAsync();
+        Task<AllFranchisesVM> GetAllFranchisesVMAsync(int page = 1, int take = 10);
     }
 }

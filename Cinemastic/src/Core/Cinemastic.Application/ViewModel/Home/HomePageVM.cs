@@ -1,6 +1,6 @@
 ﻿using Cinemastic.Application.ViewModel.Slide;
 using Cinemastic.Application.ViewModel.TvShow;
-using Cinemastic.MVC.ViewModel.Movie;
+using Cinemastic.Application.ViewModel.Movie;
 using System;
 using System.Collections.Generic;
 using System.Linq;

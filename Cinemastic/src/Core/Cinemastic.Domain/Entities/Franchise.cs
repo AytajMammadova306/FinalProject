@@ -14,6 +14,7 @@ namespace Cinemastic.Domain.Entities
         public ICollection<Movie> Movies { get; set; }
         public ICollection<TvShow> TvShows { get; set; }
         public string ImageUrl { get; set; }
+        public string CoverUrl { get; set; }
 
     }
 }

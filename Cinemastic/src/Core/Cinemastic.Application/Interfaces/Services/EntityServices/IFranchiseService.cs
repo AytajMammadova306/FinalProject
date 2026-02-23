@@ -9,6 +9,8 @@ namespace Cinemastic.Application.Interfaces.Services.EntityServices
 {
     public interface IFranchiseService
     {
-        Task<ICollection<GetFranchiseItemVM>> GetAllItemAsync();
+        Task<ICollection<GetFranchiseItemVM>> GetAllItemAsync(int page = 0, int take = 0);
+        Task<GetFranchiseVM> GetByIdAsync(long id);
+        Task<int> GetTotalCountAsync();
     }
 }

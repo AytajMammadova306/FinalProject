@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cinemastic.Application.ViewModel.Featured
+{
+    public class GenreCardVM
+    {
+        public long GenreId { get; set; }
+        public string Name { get; set; }
+    }
+}

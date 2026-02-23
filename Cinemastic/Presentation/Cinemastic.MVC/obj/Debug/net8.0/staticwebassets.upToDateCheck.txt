@@ -709,6 +709,7 @@ wwwroot\assets\images\media\kung-fu-panda-portrait.webp
 wwwroot\assets\images\media\lost-in-space.webp
 wwwroot\assets\images\media\lost-in-space-portrait.webp
 wwwroot\assets\images\media\Marvel Cinematic Universe.jpg
+wwwroot\assets\images\media\Marvel Cover.jpg
 wwwroot\assets\images\media\midnightHunter-portrait.webp
 wwwroot\assets\images\media\migration.webp
 wwwroot\assets\images\media\migration-portrait.webp
@@ -739,6 +740,7 @@ wwwroot\assets\images\media\Shrek Cover.jpg
 wwwroot\assets\images\media\Shrek.jpg
 wwwroot\assets\images\media\sonil.webp
 wwwroot\assets\images\media\sonil-portrait.webp
+wwwroot\assets\images\media\Spiderman cover.jpg
 wwwroot\assets\images\media\spiderman.webp
 wwwroot\assets\images\media\spiderman-portrait.webp
 wwwroot\assets\images\media\StangerSthings Cover.jpg
@@ -772,6 +774,7 @@ wwwroot\assets\images\media\vikings-portrait.webp
 wwwroot\assets\images\media\war-for-the-planet.webp
 wwwroot\assets\images\media\war-for-the-planet-portrait.webp
 wwwroot\assets\images\media\we-gare.webp
+wwwroot\assets\images\media\Wizarding World cover.jpg
 wwwroot\assets\images\media\Wizarding World.jpg
 wwwroot\assets\images\media\yoshi.webp
 wwwroot\assets\images\media\yoshi-portrait.webp

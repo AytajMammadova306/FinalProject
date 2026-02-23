@@ -25,14 +25,25 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             _repository = repository;
             _mapper = mapper;
         }
-        public async Task<ICollection<GetFranchiseItemVM>> GetAllItemAsync()
+        public async Task<ICollection<GetFranchiseItemVM>> GetAllItemAsync(int page = 0, int take = 0)
         {
             IReadOnlyList<Franchise> franchises = await _repository.GetAll(
-                includes: [nameof(Genre),"Movies","TvShows"])
+                includes: [nameof(Genre),"Movies","TvShows"],
+                page: page,
+                take: take)
                 .ToListAsync();
             ICollection<GetFranchiseItemVM> franchiseVms = _mapper.Map<ICollection<GetFranchiseItemVM>>(franchises);
             return franchiseVms;
         }
-
+        public async Task<GetFranchiseVM> GetByIdAsync(long id)
+        {
+            Franchise franchise = await _repository.GetByIdAsync(id,
+                includes: ["Genre", "Movies", "TvShows"]);
+            return _mapper.Map<GetFranchiseVM>(franchise);
+        }
+        public async Task<int> GetTotalCountAsync()
+        {
+            return await _repository.GetAll().CountAsync();
+        }
     }
 }

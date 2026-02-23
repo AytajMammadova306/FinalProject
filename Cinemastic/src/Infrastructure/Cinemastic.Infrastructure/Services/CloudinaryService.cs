@@ -21,6 +21,7 @@ namespace Cinemastic.Infrastructure.Services
                 config["CloudinarySettings:CloudName"],
                 config["CloudinarySettings:ApiKey"],
                 config["CloudinarySettings:ApiSecret"]
+
             );
 
             _cloudinary = new Cloudinary(account);

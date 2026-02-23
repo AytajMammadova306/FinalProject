@@ -1,4 +1,9 @@
-﻿<!doctype html>
+﻿@using Cinemastic.Application.Interfaces.Services.Feature_Services
+@inject ILayoutService service
+@{
+    Dictionary<string, string> settings =await service.GetSettingAsync();
+}
+<!doctype html>
 <html lang="en" data-bs-theme="dark">
 
 <head>
@@ -78,32 +83,28 @@
                             <div class="d-flex align-items-center gap-2 gap-md-3">
                                 <div class="logo-default">
                                     <a class="navbar-brand text-primary me-0" href="./index.html">
-                                        <img class="img-fluid logo" src="~/assets/images/logo.png" loading="lazy" alt="streamit" />
+                                        <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                             style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                     </a>
                                 </div>
                                 <div class="logo-hotstar">
                                     <a class="navbar-brand text-primary me-0" href="./index.html">
-                                        <img class="img-fluid logo" src="~/assets/images/logo-hotstar.webp" loading="lazy" alt="streamit" />
+                                        <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                             style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                     </a>
                                 </div>
                                 <div class="logo-prime">
                                     <a class="navbar-brand text-primary me-0" href="./index.html">
-                                        <img class="img-fluid logo" src="~/assets/images/logo-prime.webp" loading="lazy" alt="streamit" />
+                                        <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                             style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                     </a>
                                 </div>
                                 <div class="logo-hulu">
                                     <a class="navbar-brand text-primary me-0" href="./index.html">
-                                        <img class="img-fluid logo" src="~/assets/images/logo-hulu.webp" loading="lazy" alt="streamit" />
+                                        <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                             style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                     </a>
-                                </div>                  <div>
-                                    <a href="./pricing-plan.html"
-                                       class="subscribe-btn btn btn-warning-subtle py-1 py-md-2 px-2 px-ms-3">
-                                        <span class="d-flex align-items-center gap-2 text-warning">
-                                            <i class="ph-fill ph-crown align-middle fs-6"></i>
-                                            <span class="d-xl-block d-none">Subscribe</span>
-                                        </span>
-                                    </a>
-                                </div>
+                                </div>                  
                             </div>
 
                         </div>
@@ -115,22 +116,26 @@
                                     <div class="navbar-brand ms-3">
                                         <div class="logo-default">
                                             <a class="navbar-brand text-primary me-0" href="./index.html">
-                                                <img class="img-fluid logo" src="~/assets/images/logo.png" loading="lazy" alt="streamit" />
+                                                <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                                     style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                             </a>
                                         </div>
                                         <div class="logo-hotstar">
                                             <a class="navbar-brand text-primary me-0" href="./index.html">
-                                                <img class="img-fluid logo" src="~/assets/images/logo-hotstar.webp" loading="lazy" alt="streamit" />
+                                                <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                                     style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                             </a>
                                         </div>
                                         <div class="logo-prime">
                                             <a class="navbar-brand text-primary me-0" href="./index.html">
-                                                <img class="img-fluid logo" src="~/assets/images/logo-prime.webp" loading="lazy" alt="streamit" />
+                                                <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                                     style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                             </a>
                                         </div>
                                         <div class="logo-hulu">
                                             <a class="navbar-brand text-primary me-0" href="./index.html">
-                                                <img class="img-fluid logo" src="~/assets/images/logo-hulu.webp" loading="lazy" alt="streamit" />
+                                                <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                                     style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                             </a>
                                         </div>
                                     </div>
@@ -165,10 +170,7 @@
                                             <li class="nav-item">
                                                 <a class="nav-link " asp-controller="home" asp-action="allfranchises" > All Franchises </a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link "
-                                                   href="./merchandise-store.html"> Merchandise Stores </a>
-                                            </li>
+                                            
                                         </ul>
                                     </li>
                                     <li class="nav-item">
@@ -183,26 +185,12 @@
                                         </a>
                                         <ul class="sub-nav collapse  list-unstyled border rounded-3" id="features">
                                             <li class="nav-item">
-                                                <a class="nav-link "
-                                                   href="./download-movie.html">
-                                                    Download Movie
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link "
-                                                   href="./restricted-content.html"> Restricted Content </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link "
-                                                   href="./related-merchandise.html"> Related Merchandise </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="./geners.html">
+                                                <a class="nav-link " asp-controller="feature" asp-action="genre">
                                                     Genres
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link " href="./tags.html"> Tags </a>
+                                                <a class="nav-link " asp-controller="feature" asp-action="tag"> Tags </a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link " href="./cast.html"> Cast </a>
@@ -240,16 +228,6 @@
                                             <li class="nav-item">
                                                 <a class="nav-link "
                                                    href="./pricing-plan.html"> Pricing Plan </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link "
-                                                   href="./coming-soon.html"> Coming Soon </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link "
-                                                   href="./error-page-one.html">
-                                                    Error 404
-                                                </a>
                                             </li>
                                         </ul>
                                     </li>
@@ -386,47 +364,6 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-bs-toggle="collapse" href="#shop" role="button" aria-expanded="false"
-                                           aria-controls="shop">
-                                            <div class="d-flex justify-content-between">
-                                                <span class="item-name">Shop</span>
-                                                <span class="menu-icon">
-                                                    <i class="ph ph-caret-down align-middle"></i>
-                                                </span>
-                                            </div>
-                                        </a>
-                                        <ul class="sub-nav collapse  list-unstyled border rounded-3" id="shop">
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="./shop/shop.html">
-                                                    Shop
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link "
-                                                   href="./shop/my-account.html"> My Account </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="./shop/cart.html">
-                                                    Cart
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="./shop/wishlist.html">
-                                                    Wishlist
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="./shop/checkout.html">
-                                                    Checkout
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link "
-                                                   href="./shop/order-tracking.html"> Order Tracking </a>
-                                            </li>
-                                        </ul>
-                                    </li>
                                 </ul>
                             </div>
                         </nav>
@@ -453,81 +390,7 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link shoping-cart-button text-white" href="javascript:void(0);" data-bs-toggle="offcanvas"
-                                       data-bs-target="#shoping-cart-toggle" aria-controls="shoping-cart-toggle"
-                                       aria-label="Open shopping cart">
-                                        <i class="ph ph-bag p-0"></i>
-                                        <span class="bg-primary text-white shopping-badge">1</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown cust-itemdropdown1" id="itemdropdown1">
-                                    <a class="nav-link d-flex align-items-center p-0" href="#" id="navbarDropdown" role="button"
-                                       data-bs-toggle="dropdown" aria-expanded="false">
-                                        <div class="st-avatar style-1">
-                                            <img src="~/assets/images/user/user6.jpg" alt="user"
-                                                 class="img-fluid rounded-circle dropdown-user-menu-image header-user-image">
-                                        </div>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-user-menu dropdown-menu-end border border-gray-900 rounded-3"
-                                         data-popper-placement="bottom-end"
-                                         style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 74px);">
-                                        <div class="user-dropdown-inner">
-                                            <!-- User Info -->
-                                            <div class="d-flex align-items-center gap-3 rounded mb-4">
-                                                <div class="image flex-shrink-0">
-                                                    <img src="~/assets/images/user/user6.jpg"
-                                                         class="img-fluid rounded-3 dropdown-user-menu-image" alt="Marvin McKinney">
-                                                </div>
-                                                <div class="content">
-                                                    <h6 class="mb-1">Marvin McKinney</h6>
-                                                </div>
-                                            </div>
-
-                                            <!-- Menu Items -->
-                                            <ul class="d-flex flex-column gap-3 list-inline m-0 p-0">
-                                                <li>
-                                                    <a href="./profile-marvin.html"
-                                                       class="link-body-emphasis font-size-14 d-flex align-items-center gap-2">
-                                                        <i class="ph ph-user"></i>
-                                                        <span class="fw-medium">Profile</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="./watchlist-detail.html"
-                                                       class="link-body-emphasis font-size-14 d-flex align-items-center gap-2">
-                                                        <i class="ph ph-plus"></i>
-                                                        <span class="fw-medium">Watch List</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="./archive-playlist.html"
-                                                       class="link-body-emphasis font-size-14 d-flex align-items-center gap-2">
-                                                        <i class="ph ph-playlist"></i>
-                                                        <span class="fw-medium">Playlist</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="./profile-marvin.html"
-                                                       class="link-body-emphasis font-size-14 d-flex align-items-center gap-2">
-                                                        <i class="ph ph-bell"></i>
-                                                        <span class="fw-medium">Notification</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <!-- Logout -->
-                                        <a href="./login.html"
-                                           class="btn btn-link p-3 d-block font-size-14 text-center text-decoration-none border-top">
-                                            <span class="d-flex align-items-center justify-content-center gap-2 fw-medium">
-                                                <i class="ph ph-sign-out"></i>
-                                                Logout
-                                            </span>
-                                        </a>
-                                    </div>
-
-                                </li>
+                                <partial name="LogInPartialView" />
                             </ul>
                             <button class="navbar-toggler d-block d-xl-none text-white" type="button" data-bs-toggle="offcanvas"
                                     data-bs-target="#navbar_main" aria-controls="navbar_main">
@@ -539,81 +402,7 @@
             </nav>
         </header>
 
-        <div class="offcanvas overflow-y-auto widget-shopping-cart-content offcanvas-end offcanvas-sidebar sidebar-container on-rtl end border-0"
-             tabindex="-1" id="shoping-cart-toggle">
-            <div class="offcanvas-header position-relative">
-                <h5 class="offcanvas-title fw-500" id="offcanvasExampleLabel">
-                    Shopping cart ( <span class="streamit-cart-count" aria-live="polite">1</span> )
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div class="product-list-content">
-                    <ul class="list-unstyled mb-0">
-                        <li class="mini-cart-item d-flex align-items-start gap-3">
-                            <div class="cart-img">
-                                <a href="./shop/cart.html" aria-label="Bag Pack">
-                                    <img src="~/assets/images/shop/product/01.webp" class="img-fluid" width="300" height="400"
-                                         alt="Bag Pack">
-                                </a>
-                            </div>
-                            <div class="cart-content flex-grow-1">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a class="d-block" href="./shop/product-detail.html" aria-label="Bag Pack">
-                                        <h6 class="fw-500">Bag Pack</h6>
-                                    </a>
-                                    <a href="javascript:void(0)" class="delete-btn">
-                                        <i class="ph ph-trash text-primary"></i>
-                                    </a>
-                                </div>
-                                <div class="product-price text-muted">
-                                    <span class="woocommerce-Price-amount amount">
-                                        <span class="woocommerce-Price-amount amount">
-                                            <span class="woocommerce-Price-currencySymbol">₹</span>11.05
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="btn-group iq-qty-btn custom-qty-btn rounded-3" data-qty="btn" role="group">
-                                    <button type="button" class="btn btn-sm btn-outline-light iq-quantity-minus text-white border-0">
-                                        <i class="ph ph-minus"></i>
-                                    </button>
-                                    <input type="text" class="btn btn-sm btn-outline-light input-display border-0" data-qty="input"
-                                           pattern="^(0|[1-9][0-9]*)$" minlength="1" maxlength="2" value="2" title="Qty">
-                                    <button type="button" class="btn btn-sm btn-outline-light iq-quantity-plus text-white border-0">
-                                        <i class="ph ph-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="offcanvas-footer border-top py-3 px-3">
-                <div class="d-flex align-items-center justify-content-between gap-3">
-                    <strong>Subtotal:</strong>
-                    <span class="st-woocommerce-Price-amount amount">
-                        <span class="woocommerce-Price-amount amount">
-                            <span class="woocommerce-Price-currencySymbol">₹</span>11.05
-                        </span>
-                    </span>
-                </div>
-                <div class="mini-cart-buttons d-flex flex-column align-items-center gap-3 mt-4">
-                    <div class="iq-button w-100">
-                        <a href="./shop/checkout.html" class="btn btn-primary text-capitalize w-100 rounded-3">
-                            <span class="button-text">Checkout</span>
-                        </a>
-                    </div>
-                    <div class="w-100">
-                        <a href="./shop/cart.html" class="btn btn-secondary text-capitalize w-100 rounded-3">
-                            <span class="button-text">
-                                View
-                                Cart
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>    <!--Nav End-->
+        
 
         @RenderBody()
 
@@ -626,30 +415,34 @@
                                 <!--Logo -->
                                 <div class="logo-default">
                                     <a class="navbar-brand text-primary me-0" href="./index.html">
-                                        <img class="img-fluid logo" src="~/assets/images/logo.png" loading="lazy" alt="streamit" />
+                                        <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                             style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                     </a>
                                 </div>
                                 <div class="logo-hotstar">
                                     <a class="navbar-brand text-primary me-0" href="./index.html">
-                                        <img class="img-fluid logo" src="~/assets/images/logo-hotstar.webp" loading="lazy" alt="streamit" />
+                                        <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                             style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                     </a>
                                 </div>
                                 <div class="logo-prime">
                                     <a class="navbar-brand text-primary me-0" href="./index.html">
-                                        <img class="img-fluid logo" src="~/assets/images/logo-prime.webp" loading="lazy" alt="streamit" />
+                                        <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                             style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                     </a>
                                 </div>
                                 <div class="logo-hulu">
                                     <a class="navbar-brand text-primary me-0" href="./index.html">
-                                        <img class="img-fluid logo" src="~/assets/images/logo-hulu.webp" loading="lazy" alt="streamit" />
+                                        <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
+                                             style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                     </a>
                                 </div>
                             </div>
                             <div>
-                                Email us: <span class="text-white">customer@streamit.com</span>
+                                Email us: <span class="text-white">@settings["email"]</span>
                             </div>
                             <p class="mt-0 mb-2">Helpline Number</p>
-                            <a href="tel:+4805550103" class="helpline">+(480) 555-0103</a>
+                            <a href="tel:@settings["tel"]" class="helpline">@settings["tel"]</a>
                         </div>
                         <div class="col-lg-2 col-sm-6">
                             <h4 class="footer-link-title text-capitalize">Movies to Watch</h4>
@@ -745,16 +538,16 @@
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <p class="font-size-14 mb-0">
-                                © <span class="currentYear"></span> <span class="text-primary">STREAMIT.</span>
+                                © <span class="currentYear"></span> <span class="text-primary">@settings["company"]</span>
                                 All
                                 Rights Reserved. All videos and shows on this platform are trademarks of, and all related images and
                                 content
-                                are the property of, Streamit Inc. Duplication and copy of this is strictly prohibited.
+                                are the property of, @settings["company"] Duplication and copy of this is strictly prohibited.
                             </p>
                         </div>
                         <div class="col-md-6 mt-md-0 mt-5">
                             <div class="d-flex flex-column align-items-start align-items-md-end widget-iq-download-app">
-                                <h6 class="mb-3 fw-bold">Download Streamit App </h6>
+                                <h6 class="mb-3 fw-bold">Download @settings["product"] App </h6>
                                 <div>
                                     <ul class="d-inline-flex flex-wrap align-items-center list-inline m-0 p-0 gap-3">
                                         <li class="m-0 p-0">

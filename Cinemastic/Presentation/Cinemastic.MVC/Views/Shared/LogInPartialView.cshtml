@@ -1,0 +1,53 @@
+﻿@using Cinemastic.Application.Interfaces.Services.Feature_Services
+@using Cinemastic.Application.ViewModel.Account
+@inject ILogService service
+@{
+    InPageLogedInVM inPageLogedInVM =await service.GetLogedInVM();
+}
+<li class="nav-item dropdown cust-itemdropdown1" id="itemdropdown1">
+    <a class="nav-link d-flex align-items-center p-0" href="#" id="navbarDropdown" role="button"
+       data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="st-avatar style-1">
+            <img src="@inPageLogedInVM.ImageUrl" alt="@inPageLogedInVM.Name"
+                 class="img-fluid rounded-circle header-user-image" style="width:40px;height:40px;object-fit:cover;">
+        </div>
+    </a>
+    <div class="dropdown-menu dropdown-menu-end border border-secondary rounded-3 p-0 overflow-hidden"
+         style="min-width: 220px;">
+
+        <!-- User Info Header -->
+        <div class="d-flex align-items-center gap-3 p-3" style="background-color: var(--bs-gray-900);">
+            <img src="@inPageLogedInVM.ImageUrl"
+                 class="img-fluid rounded-circle flex-shrink-0"
+                 style="width:48px;height:48px;object-fit:cover;"
+                 alt="@(inPageLogedInVM.Name + " " + inPageLogedInVM.Surname)">
+            <div>
+                <h6 class="mb-0 fw-semibold">@(inPageLogedInVM.Name + " " + inPageLogedInVM.Surname)</h6>
+            </div>
+        </div>
+
+        <div class="p-2">
+            <a href="./profile-marvin.html" class="dropdown-item rounded-2 d-flex align-items-center gap-2 py-2">
+                <i class="ph ph-user"></i>
+                <span class="font-size-14 fw-medium">Profile</span>
+            </a>
+            <a href="./watchlist-detail.html" class="dropdown-item rounded-2 d-flex align-items-center gap-2 py-2">
+                <i class="ph ph-plus"></i>
+                <span class="font-size-14 fw-medium">Watch List</span>
+            </a>
+            <a href="./profile-marvin.html" class="dropdown-item rounded-2 d-flex align-items-center gap-2 py-2">
+                <i class="ph ph-bell"></i>
+                <span class="font-size-14 fw-medium">Notification</span>
+            </a>
+        </div>
+
+        <!-- Logout -->
+        <div class="border-top">
+            <a asp-controller="account" asp-action="logout"
+               class="dropdown-item rounded-0 d-flex align-items-center justify-content-center gap-2 py-2 text-danger fw-medium">
+                <i class="ph ph-sign-out"></i>
+                Logout
+            </a>
+        </div>
+    </div>
+</li>

@@ -9,7 +9,6 @@ namespace Cinemastic.Application.ViewModel.Franchise
     public class GetFranchiseItemVM
     {
         public string Name { get; set; }
-        public DateTime? ReleaseDate { get; set; }
         public string Genre { get; set; }
         public int ContentCount { get; set; } = 0;
         public int Id { get; set; }

@@ -1,0 +1,143 @@
+﻿<!--bu view tamamam ai genereatedi-->
+@using Cinemastic.Application.ViewModel.Home
+@using Cinemastic.Application.ViewModel.Movie
+@using Cinemastic.Application.ViewModel.TvShow
+@model FranchiseDetailPageVM
+
+
+<!-- Franchise Hero Banner -->
+<!-- Franchise Hero Banner -->
+<!-- Franchise Hero Banner -->
+<div class="franchise-hero position-relative mb-5">
+    <div class="franchise-banner w-100" style="height: 500px; overflow: hidden;">
+        <img src="@Model.FranchiseVM.CoverUrl" alt="@Model.FranchiseVM.Name"
+             class="w-100 h-100 object-fit-cover"
+             style="object-position: top;" />
+        <!-- Dark overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+             style="background: rgba(0, 0, 0, 0.5);"></div>
+        <!-- Gradient fade at bottom -->
+        <div class="position-absolute bottom-0 start-0 w-100"
+             style="height: 220px; background: linear-gradient(to bottom, transparent, #000);"></div>
+    </div>
+
+    <!-- Breadcrumb over the image -->
+    <div class="position-absolute start-0 w-100" style="top: 20px;">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="text-center">
+                <ol class="breadcrumb justify-content-center text-white mt-0">
+                    <li class="breadcrumb-item"><a asp-controller="home" asp-action="index">Home</a></li>
+                    <li class="breadcrumb-item"><a asp-controller="home" asp-action="allfranchises">All Franchises</a></li>
+                    <li class="breadcrumb-item active">@Model.FranchiseVM.Name</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Franchise info at bottom -->
+    <div class="franchise-hero-content position-absolute bottom-0 start-0 w-100 p-4 p-md-5">
+        <div class="container-fluid">
+            <div class="row align-items-end">
+                <div class="col-auto">
+                    <div class="franchise-thumb shadow-lg rounded-3 overflow-hidden"
+                         style="width: 160px; height: 220px; border: 3px solid rgba(255,255,255,0.15);">
+                        <img src="@Model.FranchiseVM.ImageUrl" alt="@Model.FranchiseVM.Name"
+                             class="w-100 h-100 object-fit-cover" />
+                    </div>
+                </div>
+                <div class="col ps-3 ps-md-4">
+                    <h1 class="text-white fw-bold mb-2">@Model.FranchiseVM.Name</h1>
+                    <div class="mb-2">
+                        <span class="badge bg-primary px-3 py-2 fs-6">@Model.FranchiseVM.Genre</span>
+                    </div>
+                    <p class="text-white-50 mb-0 d-none d-md-block" style="max-width: 700px; font-size: 0.95rem;">
+                        @Model.FranchiseVM.Description
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Description mobile -->
+<div class="container-fluid d-md-none mb-4">
+    <p class="text-white-50">@Model.FranchiseVM.Description</p>
+</div>
+
+<!-- Description (mobile only, shown below hero) -->
+<div class="container-fluid d-md-none mb-4">
+    <p class="text-white-50">@Model.FranchiseVM.Description</p>
+</div>
+<!-- Franchise Movies -->
+@if (Model.Movies != null && Model.Movies.Any())
+{
+    <div class="container-fluid">
+        <div class="overflow-hidden">
+            <div class="upcomimg-block section-wraper">
+                <div class="d-flex align-items-center justify-content-between px-1 mb-2 pb-1 mb-md-4 pb-md-0">
+                    <h4 class="main-title text-capitalize mb-0 fw-medium">
+                        @(Model.Movies.Count == 1 ? "Movie" : "Movies")
+                    </h4>
+                </div>
+                <div class="card-style-slider">
+                    <div class="position-relative swiper swiper-card"
+                         data-slide="6" data-laptop="4" data-tab="3"
+                         data-mobile="2" data-mobile-sm="2"
+                         data-autoplay="false" data-loop="false"
+                         data-navigation="true" data-pagination="true">
+                        <ul class="p-0 swiper-wrapper m-0 list-inline">
+                            @foreach (GetMovieItemVM movieItemVM in Model.Movies)
+                            {
+                                <li class="swiper-slide">
+                                    @Html.Partial("MovieItemPartialView", movieItemVM)
+                                </li>
+                            }
+                        </ul>
+                        @if (Model.Movies.Count > 6)
+                        {
+                            <div class="swiper-button swiper-button-next"></div>
+                            <div class="swiper-button swiper-button-prev"></div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Franchise TV Shows -->
+@if (Model.TvShows != null && Model.TvShows.Any())
+{
+    <div class="container-fluid mt-4">
+        <div class="overflow-hidden">
+            <div class="upcomimg-block section-wraper">
+                <div class="d-flex align-items-center justify-content-between px-1 mb-2 pb-1 mb-md-4 pb-md-0">
+                    <h4 class="main-title text-capitalize mb-0 fw-medium">
+                        @(Model.TvShows.Count == 1 ? "TV Show" : "TV Shows")
+                    </h4>
+                </div>
+                <div class="card-style-slider">
+                    <div class="position-relative swiper swiper-card"
+                         data-slide="6" data-laptop="4" data-tab="3"
+                         data-mobile="2" data-mobile-sm="2"
+                         data-autoplay="false" data-loop="false"
+                         data-navigation="true" data-pagination="true">
+                        <ul class="p-0 swiper-wrapper m-0 list-inline">
+                            @foreach (GetTvShowItemVM tvShowItemVM in Model.TvShows)
+                            {
+                                <li class="swiper-slide">
+                                    @Html.Partial("TvShowItemPartialView", tvShowItemVM)
+                                </li>
+                            }
+                        </ul>
+                        @if (Model.TvShows.Count > 6)
+                        {
+                            <div class="swiper-button swiper-button-next"></div>
+                            <div class="swiper-button swiper-button-prev"></div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

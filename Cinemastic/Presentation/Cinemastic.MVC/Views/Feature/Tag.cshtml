@@ -1,0 +1,113 @@
+﻿@using Cinemastic.Application.ViewModel.Featured
+@model TagPageVM
+
+@{
+    var tagColors = new[]
+    {
+        "linear-gradient(135deg, #e74c3c, #8e44ad)",
+        "linear-gradient(135deg, #8e44ad, #e74c3c)",
+        "linear-gradient(135deg, #2980b9, #1abc9c)",
+        "linear-gradient(135deg, #1abc9c, #2980b9)",
+        "linear-gradient(135deg, #f39c12, #e67e22)",
+        "linear-gradient(135deg, #e67e22, #f39c12)",
+        "linear-gradient(135deg, #e74c3c, #2980b9)",
+        "linear-gradient(135deg, #27ae60, #1abc9c)",
+    };
+    int i = 0;
+    int j = 0;
+}
+
+<div class="iq-breadcrumb">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-12">
+                <nav aria-label="breadcrumb" class="text-center">
+                    <ol class="breadcrumb justify-content-center text-white mt-0">
+                        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Tags</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="section-padding">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h4 class="main-title text-capitalize mb-0">Movie Tags</h4>
+        </div>
+        <div class="row g-3 g-lg-4 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6">
+            @foreach (TagCardVM cardVM in Model.MovieTags)
+            {
+                <div class="col">
+                    <a href="view-all-movie.html" class="text-decoration-none">
+                        <div class="tag-card d-flex align-items-center justify-content-center text-white fw-semibold"
+                             style="background: @tagColors[i % tagColors.Length]; border-radius: 12px; padding: 1rem; min-height: 70px;">
+                            # @cardVM.Name
+                        </div>
+                    </a>
+                </div>
+                i++;
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section-padding-bottom">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h4 class="main-title text-capitalize mb-0">Tv-Show Tags</h4>
+        </div>
+        <div class="row g-3 g-lg-4 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6">
+            @foreach (TagCardVM cardVM in Model.TvShowTags)
+            {
+                <div class="col">
+                    <a href="view-all-movie.html" class="text-decoration-none">
+                        <div class="tag-card d-flex align-items-center justify-content-center text-white fw-semibold"
+                             style="background: @tagColors[j % tagColors.Length]; border-radius: 12px; padding: 1rem; min-height: 70px;">
+                            # @cardVM.Name
+                        </div>
+                    </a>
+                </div>
+                j++;
+            }
+        </div>
+    </div>
+</section>
+
+
+<div class="streamit-mobile-footer-menu" aria-label="Mobile Footer Navigation">
+    <ul class="footer-menu list-inline d-flex align-items-center justify-content-between m-0">
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-film-reel d-block  text-center "></i>
+                Movies
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-monitor-play d-block  text-center "></i>
+                Videos
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu- font-size-12">
+                <i class="ph ph-magnifying-glass d-block  text-center "></i>
+                Search
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./view-all-movie.html" class="menu-link font-size-12">
+                <i class="ph ph-television d-block  text-center "></i>
+                TV Shows
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a href="./profile-marvin.html" class="menu-link font-size-12">
+                <i class="ph ph-user d-block  text-center "></i>
+                Profile
+            </a>
+        </li>
+    </ul>
+</div>  </main>

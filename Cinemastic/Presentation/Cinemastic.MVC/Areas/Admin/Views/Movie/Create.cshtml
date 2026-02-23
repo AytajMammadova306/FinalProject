@@ -1,0 +1,329 @@
+﻿@* @using Cinemastic.Application.ViewModel.Featured
+<!--view full ai di-->
+
+@model CreateMovieVM
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center mb-2">
+                <h2 class="episode-playlist-title wp-heading-inline">
+                    <span class="position-relative">Add New Movie</span>
+                </h2>
+                <a class="btn btn-outline-secondary" asp-controller="Movie" asp-action="Index">
+                    <i class="ph ph-caret-double-left me-1"></i>Back to Movies
+                </a>
+            </div>
+
+            <div class="card-body">
+                <form asp-controller="Movie" asp-action="Create" method="post" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    <div class="section-form">
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-label" asp-for="Title">Title</label>
+                                    <input class="form-control" asp-for="Title"
+                                           placeholder="Enter title of the movie." />
+                                    <span asp-validation-for="Title" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-label" asp-for="Author">Author</label>
+                                    <select asp-for="Author" class="form-control select2-basic-single">
+                                        <option>admin</option>
+                                        <option>user</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-label" asp-for="Status">Status</label>
+                                    <select asp-for="Status" class="form-control select2-basic-single">
+                                        <option>Published</option>
+                                        <option>Draft</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-5">
+                            <label class="form-label">Content</label>
+                            <div class="col-lg-12">
+                                <div id="editor" style="height:200px"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="streamit-upload form-group position-relative tvshow_genre_thumbnail_id_field">
+                                    <label class="form-label">Thumbnail</label>
+                                    <div>
+                                        <a href="#" class="d-flex align-items-center flex-column justify-content-center gap-4 button streamit_upload_video_button tips">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                                 fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round" class="img-icon d-block">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                                <polyline points="21 15 16 10 5 21"></polyline>
+                                            </svg>
+                                            <span class="d-block">Choose Media to Upload</span>
+                                        </a>
+                                    </div>
+                                    <input type="file" class="file_upload" style="display:none;" accept="image/*" />
+                                    <div class="streamit_media_preview-wrap">
+                                        <div class="streamit_media_preview">
+                                            <img class="tvshow_genre_thumbnail_preview" src="" alt="preview"
+                                                 style="display:none; max-width:150px; max-height:150px; object-fit:cover;" />
+                                            <button class="button remove_tvshow_genre_thumbnail_button streamit_remove_video_button position-absolute"
+                                                    style="display:none;" type="button">
+                                                <span class="remove-media-icon">X</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="form-group">
+                                    <label class="form-label" asp-for="Excerpt">Excerpt</label>
+                                    <textarea asp-for="Excerpt" class="form-control" rows="7"
+                                              placeholder="Enter excerpt content of the movie."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card streamit-tabs-card mt-4">
+                            <div class="card-body">
+                                <div class="row gy-4">
+                                    <div class="col-lg-3">
+                                        <div class="streamit-verticle-tab">
+                                            <div class="nav flex-column nav-pills me-0 me-lg-3 mb-3 mb-md-0 list-inline streamit-tabs"
+                                                 role="tablist" aria-orientation="vertical">
+                                                <button class="nav-link active" data-bs-toggle="pill" type="button" data-bs-target="#general_tab" role="tab"><span>General</span></button>
+                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#recommendedMovies_tab" role="tab"><span>Recommended Movies</span></button>
+                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#relatedVideos_tab" role="tab"><span>Related Videos</span></button>
+                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#cast_tab" role="tab"><span>Cast</span></button>
+                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#crew_tab" role="tab"><span>Crew</span></button>
+                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#sources_tab" role="tab"><span>Sources</span></button>
+                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#genres_tab" role="tab"><span>Genres</span></button>
+                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#tags_tab" role="tab"><span>Tags</span></button>
+                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#additionData_tab" role="tab"><span>Additional Data</span></button>
+                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#membershipLevel_tab" role="tab"><span>Membership Level</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-9 edit-tab-content">
+                                        <div class="tab-content" id="streamit-tabs-content">
+
+                                            <div class="tab-pane fade show active" id="general_tab" role="tabpanel">
+                                                <div class="p-4 px-2">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Choose Movie Method</label>
+                                                                <select class="form-select select2-basic-single">
+                                                                    <option>Upload movie</option>
+                                                                    <option>Embed movie</option>
+                                                                    <option>Movie URL</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Upload movie <span class="text-danger">*</span></label>
+                                                                <input type="file" class="form-control" accept="video/*" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Movie Release Date</label>
+                                                                <input class="form-control flatpickr_humandate" type="text"
+                                                                       placeholder="Enter the release date of the movie." />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <label class="form-label">Movie Time Duration</label>
+                                                                <div class="col-lg-6">
+                                                                    <input type="number" class="form-control" name="hours" value="0" placeholder="Hours" min="0" />
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <input type="number" class="form-control" name="minutes" value="0" placeholder="Minutes" min="0" max="59" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Movie Censor Rating</label>
+                                                                <input type="text" class="form-control" placeholder="Enter the movie censor rating." />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Language</label>
+                                                                <select class="form-select select2-basic-single" asp-for="Language" asp-items="Model.LanguageOptions"></select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="recommendedMovies_tab" role="tabpanel">
+                                                <div class="p-4 px-2">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Recommended Movies</label>
+                                                        <select class="form-select select2-basic-multiple" multiple
+                                                                asp-for="RecommendedMovieIds" asp-items="Model.AllMoviesOptions"></select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="relatedVideos_tab" role="tabpanel">
+                                                <div class="p-4 px-2">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Related Videos</label>
+                                                        <select class="form-control select2-basic-multiple" multiple
+                                                                asp-for="RelatedVideoIds" asp-items="Model.AllVideosOptions"></select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="cast_tab" role="tabpanel">
+                                                <div class="p-4 px-2">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Choose Cast</label>
+                                                                <div class="d-flex gap-2">
+                                                                    <select class="form-control select2-basic-multiple" multiple
+                                                                            asp-for="CastIds" asp-items="Model.AllCastOptions"></select>
+                                                                    <button type="button" class="btn btn-primary">Add</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="crew_tab" role="tabpanel">
+                                                <div class="p-4 px-2">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Choose Crew Member</label>
+                                                                <div class="d-flex gap-2">
+                                                                    <select class="form-control select2-basic-multiple" multiple
+                                                                            asp-for="CrewIds" asp-items="Model.AllCrewOptions"></select>
+                                                                    <button type="button" class="btn btn-primary">Add</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="sources_tab" role="tabpanel">
+                                                <div class="p-4 px-2">
+                                                    <button id="add-movie-source" type="button" class="btn btn-primary">Add Source</button>
+                                                    <div id="source-container" class="source-container mt-3"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="genres_tab" role="tabpanel">
+                                                <div class="p-4 px-2">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Choose Movie Genres</label>
+                                                        <select class="form-control select2-basic-multiple" multiple
+                                                                asp-for="GenreIds" asp-items="Model.AllGenresOptions"></select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="tags_tab" role="tabpanel">
+                                                <div class="p-4 px-2">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Choose Movie Tags</label>
+                                                        <select class="form-control select2-basic-multiple" multiple
+                                                                asp-for="TagIds" asp-items="Model.AllTagsOptions"></select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="additionData_tab" role="tabpanel">
+                                                <div class="p-4 px-2">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Trailer Link</label>
+                                                                <input type="text" class="form-control" asp-for="TrailerLink"
+                                                                       placeholder="Enter the trailer link." />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <label class="d-block form-label">Upcoming</label>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" asp-for="IsUpcoming" />
+                                                                <label class="form-check-label" asp-for="IsUpcoming">This Is Upcoming Movie</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt-3">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Upload Portrait Image</label>
+                                                                <input type="file" class="form-control" accept="image/*" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt-3">
+                                                            <div class="form-group">
+                                                                <label class="form-label">IMDb Rating</label>
+                                                                <input type="number" class="form-control" asp-for="ImdbRating"
+                                                                       min="0" max="10" step="0.1" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt-3">
+                                                            <label class="d-block form-label">Notification</label>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" asp-for="NotifyUser" />
+                                                                <label class="form-check-label" asp-for="NotifyUser">Notify User</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="membershipLevel_tab" role="tabpanel">
+                                                <div class="p-4 px-2">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Choose PMP Levels</label>
+                                                        <select class="form-control select2-basic-multiple" multiple
+                                                                asp-for="MembershipLevelIds" asp-items="Model.AllMembershipOptions"></select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3 mt-4">
+                            <button type="submit" class="btn btn-primary d-flex align-items-center gap-2">
+                                <i class="ph-fill ph-floppy-disk-back"></i>Save Movie
+                            </button>
+                            <a asp-controller="Movie" asp-action="Index"
+                               class="btn btn-outline-primary d-flex align-items-center gap-2">
+                                <i class="ph ph-caret-double-left"></i>Cancel
+                            </a>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> *@

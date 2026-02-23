@@ -1,4 +1,11 @@
-﻿
+﻿@using Cinemastic.Application.Interfaces.Services.Feature_Services
+@using Cinemastic.Application.ViewModel.Account
+@inject ILogService service
+@inject ILayoutService _LayoutService
+@{
+    InPageLogedInVM inPageLogedInVM = await service.GetLogedInVM();
+    Dictionary<string, string> settings = await _LayoutService.GetSettingAsync();
+}
 <!doctype html>
 <html lang="en" data-bs-theme="dark" data-bs-theme-color="default" dir="ltr">
 
@@ -85,10 +92,8 @@
             <a href="./index.html" class="navbar-brand">
 
                 <!--Logo start-->
-                <img class="logo-normal" src="~/admin/images/logo.png" alt="#">
-                <img class="logo-normal logo-white" src="~/admin/images/logo-white.png" alt="#">
-                <img class="logo-full" src="~/admin/images/logo-full.png" alt="#">
-                <img class="logo-full logo-full-white" src="~/admin/images/logo-full-white.png" alt="#">
+                <img class="img-fluid logo p-2" src="@settings["logo"]" loading="lazy" alt="streamit"
+                     style="height: auto; width: auto;" />
                 <!--logo End-->
             </a>
             <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
@@ -1241,21 +1246,11 @@
                             <li class="nav-item dropdown">
                                 <a class="py-0 nav-link d-flex align-items-center ps-3" href="#" id="profile-setting" role="button"
                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="~/admin/images/user/01.jpg" alt="User-Profile"
+                                    <img src="@inPageLogedInVM.ImageUrl" alt="@inPageLogedInVM.Name"
                                          class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded" loading="lazy">
-                                    <img src="~/admin/images/user/01.jpg" alt="User-Profile"
-                                         class="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded" loading="lazy">
-                                    <img src="~/admin/images/user/02.jpg" alt="User-Profile"
-                                         class="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded" loading="lazy">
-                                    <img src="~/admin/images/user/03.jpg" alt="User-Profile"
-                                         class="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded" loading="lazy">
-                                    <img src="~/admin/images/user/04.jpg" alt="User-Profile"
-                                         class="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded" loading="lazy">
-                                    <img src="~/admin/images/user/05.jpg" alt="User-Profile"
-                                         class="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded" loading="lazy">
                                     <div class="caption ms-3 d-none d-md-block ">
-                                        <h6 class="mb-0 caption-title">Austin Robertson</h6>
-                                        <p class="mb-0 caption-sub-title">Administrator</p>
+                                        <h6 class="mb-0 caption-title">@(inPageLogedInVM.Name+" "+inPageLogedInVM.Surname)</h6>
+                                        
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-setting">
@@ -1781,7 +1776,7 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('=== NAVIGATION START ===');
+            console.log(' NAVIGATION START ');
 
             const currentPath = window.location.pathname.toLowerCase();
             console.log('Current URL:', currentPath);
@@ -1814,17 +1809,17 @@
                 const isMatch = currentPath === href;
 
                 const linkText = link.querySelector('.item-name')?.textContent || 'Unknown';
-                console.log(`  "${linkText}": ${href} ${isMatch ? '✅ MATCH' : '❌'}`);
+                console.log(`  "${linkText}": ${href} ${isMatch ? ' MATCH' : 'no'}`);
 
                 if (isMatch && !matchFound) {
-                    console.log(`  ✅✅✅ ACTIVATING: "${linkText}"`);
+                    console.log(`  ACTIVATING: "${linkText}"`);
 
                     link.classList.add('active');
                     matchFound = true;
 
                     const parentCollapse = link.closest('.sub-nav');
                     if (parentCollapse) {
-                        console.log('    📂 Expanding parent menu...');
+                        console.log('     Expanding parent menu...');
                         parentCollapse.classList.add('show');
 
                         const collapseId = parentCollapse.getAttribute('id');
@@ -1846,8 +1841,8 @@
             }
 
             if (!matchFound) {
-                console.warn('❌ No exact match found for:', currentPath);
-                console.log('💡 Trying with /Index appended...');
+                console.warn(' No exact match found for:', currentPath);
+                console.log(' Trying with /Index appended...');
 
                 const pathWithIndex = currentPath + '/index';
 
@@ -1857,7 +1852,7 @@
 
                     if (pathWithIndex === href) {
                         const linkText = link.querySelector('.item-name')?.textContent || 'Unknown';
-                        console.log(`  ✅ Match found with /Index: "${linkText}"`);
+                        console.log(`   Match found with /Index: "${linkText}"`);
 
                         link.classList.add('active');
                         matchFound = true;
@@ -1885,12 +1880,12 @@
             }
 
             if (matchFound) {
-                console.log('✅ Navigation activated successfully!');
+                console.log(' Navigation activated successfully!');
             } else {
-                console.error('❌ Still no match found!');
+                console.error(' Still no match found!');
             }
 
-            console.log('=== NAVIGATION END ===');
+            console.log('NAVIGATION END ');
         });
     </script>
 

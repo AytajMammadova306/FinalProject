@@ -9,6 +9,6 @@ namespace Cinemastic.Application.Interfaces.Services.Feature_Services
 {
     public interface IAllTvShowsService
     {
-        Task<AllTvShowsVM> GetAllTvShowsAsync();
+        Task<AllTvShowsVM> GetAllTvShowsAsync(int page = 1, int take = 10);
     }
 }

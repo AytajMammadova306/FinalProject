@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Cinemastic.Application.ViewModel.Movie;
 using Cinemastic.Domain.Entities;
-using Cinemastic.MVC.ViewModel.Movie;
+using Cinemastic.Application.ViewModel.Movie;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +48,12 @@ namespace Cinemastic.Application.MappingProfiles
                     opt => opt.MapFrom(m => m.MovieCrews
                     .Select(mc => mc.Crew.Name+ " "+ mc.Crew.Surname)));
 
+			CreateMap<Movie, GetMovieAdminVM>()
+	            .ForMember(dest => dest.Id,
+		            opt => opt.MapFrom(src => src.Id))
+	            .ForMember(dest => dest.Date,
+		            opt => opt.MapFrom(src => src.ReleaseDate ?? DateTime.MinValue));
 
-        }
+		}
     }
 }

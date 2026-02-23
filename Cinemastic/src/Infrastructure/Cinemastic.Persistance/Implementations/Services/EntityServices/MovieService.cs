@@ -3,7 +3,7 @@ using Cinemastic.Application.Interfaces.Repositories;
 using Cinemastic.Application.Interfaces.Services.EntityServices;
 using Cinemastic.Application.ViewModel.Movie;
 using Cinemastic.Domain.Entities;
-using Cinemastic.MVC.ViewModel.Movie;
+using Cinemastic.Application.ViewModel.Movie;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -27,10 +27,13 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             _mapper=mapper;
         }
         
-        public async Task<ICollection<GetMovieItemVM>> GetAllItemAsync()
+        public async Task<ICollection<GetMovieItemVM>> GetAllItemAsync(int page = 0, int take = 0)
         {
             IReadOnlyList<Movie> movies = await _repository.GetAll(
-                includes: "MovieGenres.Genre")
+                includes: "MovieGenres.Genre",
+                page: page,
+                take: take
+                )
                 .ToListAsync();
             ICollection<GetMovieItemVM> movieVms = _mapper.Map<ICollection<GetMovieItemVM>>(movies);
             return movieVms;
@@ -44,6 +47,27 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
                 "MovieGenres.Genre",
                 "MovieTags.Tag");
             return _mapper.Map<GetMovieVM>(movie);
+        }
+        public async Task<ICollection<GetMovieItemVM>> GetByFranchiseAsync(long id)
+        {
+            IReadOnlyList<Movie> movies = await _repository.GetAll(
+                func:(m=>m.FranchiseId==id),
+                includes: "MovieGenres.Genre")
+                .ToListAsync();
+            ICollection<GetMovieItemVM> movieVms = _mapper.Map<ICollection<GetMovieItemVM>>(movies);
+            return movieVms;
+        }
+        public async Task<int> GetTotalCountAsync()
+        {
+            return await _repository.GetAll().CountAsync();
+        }
+        public async Task<ICollection<GetMovieAdminVM>> GetAllMovieVMs(int page=0, int take=0)
+        {
+            IReadOnlyList<Movie> movie = await _repository.GetAll(
+                page: page,
+                take: take).ToListAsync();
+            ICollection<GetMovieAdminVM> adminVMs = _mapper.Map<ICollection<GetMovieAdminVM>>(movie);
+            return adminVMs;
         }
     }
 }
