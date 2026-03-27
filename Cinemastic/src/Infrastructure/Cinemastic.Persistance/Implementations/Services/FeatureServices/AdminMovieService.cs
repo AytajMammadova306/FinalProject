@@ -100,6 +100,13 @@ namespace Cinemastic.Persistance.Implementations.Services.FeatureServices
                 model.AddModelError(nameof(CreateMovieVM.FranchiseId), "Franchise is wrong");
             }
             string imageUrl = (await _fileService.AddImageAsync(movieVM.ImageFile)).Url;
+            string imageIublicId = (await _fileService.AddImageAsync(movieVM.ImageFile)).PublicId;
+            string CoverUrl = (await _fileService.AddImageAsync(movieVM.CoverFile)).Url;
+            string CoverpublicId = (await _fileService.AddImageAsync(movieVM.CoverFile)).PublicId;
+            string VideoUrl = (await _fileService.AddImageAsync(movieVM.VideoFile)).Url;
+            string VideoPublicId = (await _fileService.AddImageAsync(movieVM.VideoFile)).PublicId;
+            
+
 
             return true;
             

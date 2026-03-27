@@ -107,14 +107,14 @@
                     <div class="iq-play-button iq-button">
                         @if (Model.MovieVM.ReleaseDate <= DateTime.UtcNow)
                         {
-                            <a href="movie-player.html" class="btn btn-primary w-100 rounded d-flex align-items-center justify-content-center gap-2 lh-1">
+                            <a asp-controller="home" asp-action="player" asp-route-coverUrl="@Model.MovieVM.CoverUrl" asp-route-videoUrl="@Model.MovieVM.VideoUrl" asp-route-returnUrl="@Context.Request.Path" class="btn btn-primary w-100 rounded d-flex align-items-center justify-content-center gap-2 lh-1">
                                 <span><i class="ph-fill ph-play"></i></span>
                                 <span>Start Watching</span>
                             </a>
                         }
                         else
                         {
-                            <a href="@Model.MovieVM.TrailerUrl" class="btn btn-primary w-100 rounded d-flex align-items-center justify-content-center gap-2 lh-1">
+                            <a asp-controller="home" asp-action="player" asp-route-videoUrl="@(System.Text.RegularExpressions.Regex.Match(Model.MovieVM.TrailerUrl, @"(?:v=|youtu\.be/)([a-zA-Z0-9_-]{11})").Groups[1].Value)" asp-route-returnUrl="@Context.Request.Path" class="btn btn-primary w-100 rounded d-flex align-items-center justify-content-center gap-2 lh-1">
                                 <span><i class="ph-fill ph-play"></i></span>
                                 <span>Watch Trailer</span>
                             </a>

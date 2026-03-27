@@ -9,6 +9,7 @@
          data-pagination="true" data-loop="true">
          <div class="slider m-0 p-0 swiper-wrapper home-slider">
             @foreach(GetSlideVM slideVM in Model.HeroSlideVMs){
+
                 <div class="swiper-slide slide s-bg-1 p-0">
                <div class="banner-home-swiper-image"
                   style="background-image: url(@slideVM.CoverUrl)">
@@ -113,9 +114,22 @@
                            </div>
                         </div>
                         <div class="col-xl-7 col-lg-6 col-md-12 trailor-video iq-slider d-none d-lg-block">
-                           <a data-fslightbox="html5-video"
-                              href="@slideVM.TrailerUrl"
-                              class="video-open playbtn text-decoration-none" tabindex="0">
+                                        @{
+                                            var trailerEmbedUrl = "";
+                                            if (!string.IsNullOrEmpty(slideVM.TrailerUrl))
+                                            {
+                                                var match = System.Text.RegularExpressions.Regex.Match(
+                                                slideVM.TrailerUrl, @"(?:v=|youtu\.be/)([a-zA-Z0-9_-]{11})");
+                                                if (match.Success)
+                                                    trailerEmbedUrl = $"https://www.youtube.com/embed/{match.Groups[1].Value}?autoplay=1";
+                                                else
+                                                    trailerEmbedUrl = slideVM.TrailerUrl;
+                                            }
+                                        }
+                                        <a data-fslightbox="trailers"
+                                           data-type="youtube"
+                                           href="@trailerEmbedUrl"
+                                           class="video-open playbtn text-decoration-none" tabindex="0">
                               <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="80px"
                                  viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
@@ -129,22 +143,7 @@
                               </svg>
                               <span class="w-trailor text-uppercase"> Watch Trailer </span>
                            </a>
-                           <video id="my-video" class="my-video video-js vjs-big-play-centered w-100 d-none" loop
-                              autoplay muted preload="auto" data-setup='{
-      "techOrder": ["youtube"],
-      "sources": [{
-        "type": "video/youtube",
-        "src": "@slideVM.TrailerUrl"
-      }],
-      "youtube": {         
-        "modestbranding": 1,
-        "rel": 0,
-        "showinfo": 0,
-        "autoplay": 1
-      },
-      "fullscreen": true
-    }'>
-                           </video>
+                           
                         </div>
                      </div>
                   </div>

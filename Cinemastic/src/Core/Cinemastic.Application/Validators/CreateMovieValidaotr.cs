@@ -36,7 +36,9 @@ namespace Cinemastic.Application.Validators
                 RuleFor(x => x.Description)
                     .NotEmpty();
                 RuleFor(x => x.VideoFile)
-                    .Must(f => f == null || f.Length > 0)
+                    .NotNull()
+                    .WithMessage("Video file is required.")
+                    .Must(f => f.Length > 0)
                     .WithMessage("Video file cannot be empty.");
             }
         }

@@ -1,0 +1,78 @@
+﻿@using Cinemastic.Application.ViewModel.Home
+@{
+    Layout = null;
+}
+@model PlayerVM;
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cinemastic | Player</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./assets/css/core/libs.min.css" />
+    <link rel="stylesheet" href="./assets/vendor/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/vendor/phosphor-icons/Fonts/regular/style.css">
+    <link rel="stylesheet" href="./assets/css/streamit.min.css?v=5.4.0" />
+    <link rel="stylesheet" href="./assets/css/custom.min.css?v=5.4.0" />
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #000 !important;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .video-container {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .video-js {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <a href="@(string.IsNullOrEmpty(Model.ReturnUrl) ? Url.Action("Index", "Home") : Model.ReturnUrl)"
+       style="position:fixed; top:16px; right:16px; z-index:99999; width:42px; height:42px; background:rgba(255,255,255,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; text-decoration:none; font-size:1.2rem;">
+        &#x2715;
+    </a>
+
+    <!-- Video -->
+    <div class="video-container">
+        @if (Model.IsYouTube)
+        {
+            <iframe src="@Model.YouTubeEmbedUrl"
+                    style="width:100vw; height:100vh; border:none;"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+            </iframe>
+        }
+        else
+        {
+            <video id="my-video"
+                   class="video-js vjs-big-play-centered"
+                   controls
+                   preload="auto"
+                   poster="@(string.IsNullOrEmpty(Model.CoverUrl) ? "https://res.cloudinary.com/dsj3z9go5/image/upload/v1774607363/Red_play_button_with__Play_Trailer__plcnit.png" : Model.CoverUrl)"
+                   data-setup='{}'>
+                <source src="@Model.VideoUrl" type="video/mp4" />
+            </video>
+        }
+    </div>
+
+    <script src="./assets/js/core/libs.min.js"></script>
+    <script src="./assets/vendor/lodash/lodash.min.js"></script>
+    <script src="./assets/js/core/external.min.js"></script>
+    <script src="./assets/js/utility.js"></script>
+    <script src="./assets/js/setting.js"></script>
+    <script src="./assets/js/setting-init.js" defer></script>
+    <script src="./assets/js/streamit.js" defer></script>
+</body>
+</html>

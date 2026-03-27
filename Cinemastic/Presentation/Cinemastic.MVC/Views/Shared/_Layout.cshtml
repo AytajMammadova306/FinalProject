@@ -82,7 +82,7 @@
                         <div class="d-flex gap-3 gap-xl-0 align-items-center">
                             <div class="d-flex align-items-center gap-2 gap-md-3">
                                 <div class="logo-default">
-                                    <a class="navbar-brand text-primary me-0" href="./index.html">
+                                    <a class="navbar-brand text-primary me-0" asp-controller="home" asp-action="index">
                                         <img class="img-fluid logo" src="@settings["logo"]" loading="lazy" alt="streamit"
                                              style="height: 180px; width: auto; margin-top: -60px; margin-bottom: -60px;" />
                                     </a>
@@ -686,7 +686,7 @@
 
 
         <!-- fslightbox Script -->
-        <script src="~/assets/js/plugins/fslightbox.js" defer></script>
+        <script src="~/assets/js/plugins/fslightbox.js"></script>
         <!-- Lodash Utility -->
         <script src="~/assets/vendor/lodash/lodash.min.js"></script>
         <!-- External Library Bundle Script -->
@@ -703,6 +703,37 @@
         <script src="~/assets/js/swiper.js" defer></script>
         <!-- NAVIGATION SCRIPT FOR FRONTEND LAYOUT - SAME LOGIC -->
         <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                const interval = setInterval(function () {
+                    const swiperEl = document.querySelector('#home-banner-slider');
+                    if (swiperEl && swiperEl.swiper) {
+                        clearInterval(interval);
+
+                        function fixClones() {
+                            document.querySelectorAll('.swiper-slide-duplicate .video-open')
+                                .forEach(function(el) {
+                                    el.removeAttribute('data-fslightbox');
+                                    el.removeAttribute('data-type');
+                                    // manually trigger lightbox on click instead
+                                    el.addEventListener('click', function(e) {
+                                        e.preventDefault();
+                                        const href = this.getAttribute('href');
+                                        // find the matching REAL slide button and click it
+                                        const realBtn = document.querySelector(
+                                            `.swiper-slide:not(.swiper-slide-duplicate) .video-open[href="${href}"]`
+                                        );
+                                        if (realBtn) realBtn.click();
+                                    });
+                                });
+                        }
+
+                        fixClones();
+                        setTimeout(fixClones, 500);
+
+                        swiperEl.swiper.on('slideChange', fixClones);
+                    }
+                }, 300);
+            });
             document.addEventListener('DOMContentLoaded', function() {
                 console.log('=== FRONTEND NAVIGATION START ===');
 

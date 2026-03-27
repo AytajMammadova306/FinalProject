@@ -15,9 +15,12 @@ namespace Cinemastic.Domain.Entities
         public string Description {  get; set; }
         public AgeRating AgeRating { get; set; }
         public string ImageUrl { get; set; }
+        public string ImagePublicId { get; set; }
         public string CoverUrl { get; set; }
+        public string CoverPublicId { get; set; }
         public string TrailerUrl { get; set; }
         public string VideoUrl { get; set; }
+        public string VideoPublicId { get; set; }
         //relational
         public long? FranchiseId {  get; set; }
         public Franchise? Franchise { get; set; }

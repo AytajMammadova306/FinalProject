@@ -106,6 +106,17 @@ namespace Cinemastic.MVC.Controllers
             }
             return View(detailPageVM);
         }
+        public async Task<IActionResult> Player(string coverUrl, string videoUrl, string? returnUrl)
+        {
+            if(string.IsNullOrEmpty(videoUrl)) return BadRequest();
+            PlayerVM player = new PlayerVM
+            {
+                CoverUrl = coverUrl,
+                VideoUrl = videoUrl,
+                ReturnUrl=returnUrl,
+            };
+            return View(player);
+        }
         public async Task<IActionResult> FranchiseDetail(long? id)
         {
             if (!User.Identity.IsAuthenticated)
