@@ -15,6 +15,7 @@ namespace Cinemastic.Infrastructure.Implementations
 {
     internal class FileService : IFileService
     {
+        private static readonly string[] AllowedVideoTypes = { "video/mp4", "video/mkv", "video/avi" };
         public readonly Cloudinary _cloudinary;
         public FileService(IOptions<CloudinarySettings> cloudConfig)
         {
@@ -47,7 +48,32 @@ namespace Cinemastic.Infrastructure.Implementations
                 PublicId = result.PublicId,
             };
         }
+        public async Task<FileVM> AddVideoAsync(IFormFile file)
+        {
+            if (!AllowedVideoTypes.Contains(file.ContentType))
+                throw new Exception($"Invalid video type. Allowed: mp4, mkv, avi.");
 
+            
+
+            string fileName = Guid.NewGuid() + file.FileName;
+            VideoUploadResult result = new VideoUploadResult();
+
+            using (var stream = file.OpenReadStream())
+            {
+                VideoUploadParams videoParams = new VideoUploadParams
+                {
+                    File = new FileDescription(fileName, stream)
+                };
+                result = await _cloudinary.UploadAsync(videoParams);
+            }
+
+            return new FileVM
+            {
+                FileName = fileName,
+                Url = result.SecureUrl.ToString(),
+                PublicId = result.PublicId,
+            };
+        }
         public async Task DeleteAsync(string publicId)
         {
             DeletionParams deletion = new DeletionParams(publicId);

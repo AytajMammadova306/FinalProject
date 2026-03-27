@@ -36,7 +36,7 @@ namespace Cinemastic.MVC.Controllers
         public async Task<IActionResult> LogOut()
         {
             await _logService.LogOutAsync();
-            return RedirectToAction("Preview", "Home");
+            return RedirectToAction("Index", "Home");
         }
         public IActionResult LogIn()
         {

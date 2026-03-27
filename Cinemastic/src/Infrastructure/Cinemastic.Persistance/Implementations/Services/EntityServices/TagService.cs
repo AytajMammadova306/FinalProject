@@ -34,5 +34,10 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             IReadOnlyList<Tag> tags = await _repository.GetAll(func: t => t.TvShowTags.Count() > 0).ToListAsync();
             return _mapper.Map<ICollection<TagCardVM>>(tags);
         }
+        public async Task<ICollection<Tag>> GetAllTagsAsync()
+        {
+            ICollection<Tag> tags = await _repository.GetAll().ToListAsync();
+            return tags;
+        }
     }
 }

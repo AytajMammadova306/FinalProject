@@ -1,6 +1,7 @@
 ﻿using Cinemastic.Application.Interfaces.Repositories;
 using Cinemastic.Application.Interfaces.Services.EntityServices;
 using Cinemastic.Application.ViewModel.Crew;
+using Cinemastic.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -42,6 +43,11 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
                     Type=c.TvShowCrews.Where(mc=>mc.TvShowId==id).FirstOrDefault().CrewType.ToString()
                 }).ToListAsync();
             return crewVMs;
+        }
+        public async Task<ICollection<Crew>> GetAllCrewsAsync()
+        {
+            ICollection<Crew> crews = await _repository.GetAll().ToListAsync();
+            return crews;
         }
     }
 }

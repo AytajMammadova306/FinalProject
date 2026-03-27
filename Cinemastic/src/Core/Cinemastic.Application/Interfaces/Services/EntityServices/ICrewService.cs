@@ -1,4 +1,5 @@
 ﻿using Cinemastic.Application.ViewModel.Crew;
+using Cinemastic.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace Cinemastic.Application.Interfaces.Services.EntityServices
     {
         Task<ICollection<GetCrewVM>> GetMovieCrewVMById(long id);
         Task<ICollection<GetCrewVM>> GetTvShowCrewVMById(long id);
+        Task<ICollection<Crew>> GetAllCrewsAsync();
     }
 }

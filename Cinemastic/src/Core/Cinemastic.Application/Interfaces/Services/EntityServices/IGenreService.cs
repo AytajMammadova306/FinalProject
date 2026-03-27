@@ -1,4 +1,5 @@
 ﻿using Cinemastic.Application.ViewModel.Featured;
+using Cinemastic.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace Cinemastic.Application.Interfaces.Services.EntityServices
     {
         Task<ICollection<GenreCardVM>> GetMovieGenreCardVMs();
         Task<ICollection<GenreCardVM>> GetTvShowGenreCardVMs();
+        Task<ICollection<Genre>> GetAllGenresAsync();
     }
 }

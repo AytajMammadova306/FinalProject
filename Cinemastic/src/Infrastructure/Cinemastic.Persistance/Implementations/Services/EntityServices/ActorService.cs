@@ -48,5 +48,11 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
                 }).ToListAsync();
             return actorVMs;
         }
+        public async Task<ICollection<Actor>> GetAllActorsAsync()
+        {
+            ICollection<Actor> actors = await _repository.GetAll().ToListAsync();
+            return actors;
+        }
+
     }
 }

@@ -1,5 +1,8 @@
-﻿@* @using Cinemastic.Application.ViewModel.Featured
-<!--view full ai di-->
+﻿<!--front u ai ile duzeltmisem-->
+
+
+@using Cinemastic.Application.ViewModel.Movie
+@using Cinemastic.Domain.Enums
 
 @model CreateMovieVM
 
@@ -17,49 +20,42 @@
 
             <div class="card-body">
                 <form asp-controller="Movie" asp-action="Create" method="post" enctype="multipart/form-data">
-                    @Html.AntiForgeryToken()
                     <div class="section-form">
 
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label class="form-label" asp-for="Title">Title</label>
-                                    <input class="form-control" asp-for="Title"
+                                    <label class="form-label" asp-for="Name">Title</label>
+                                    <input class="form-control" asp-for="Name"
                                            placeholder="Enter title of the movie." />
-                                    <span asp-validation-for="Title" class="text-danger"></span>
+                                    <span asp-validation-for="Name" class="text-danger"></span>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label class="form-label" asp-for="Author">Author</label>
-                                    <select asp-for="Author" class="form-control select2-basic-single">
-                                        <option>admin</option>
-                                        <option>user</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label class="form-label" asp-for="Status">Status</label>
-                                    <select asp-for="Status" class="form-control select2-basic-single">
-                                        <option>Published</option>
-                                        <option>Draft</option>
-                                    </select>
+                                    <label class="form-label" asp-for="AgeRating">Age Rating</label>
+                                    <select asp-for="AgeRating" class="form-control select2-basic-single"
+                                            asp-items="Html.GetEnumSelectList<AgeRating>()">
+                                        <option value="" disabled selected>Choose Age Rating</option>
+                                            </select>
+                                    <span asp-validation-for="AgeRating" class="text-danger"></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row mb-5">
-                            <label class="form-label">Content</label>
+                            <label class="form-label" asp-for="Description">Description</label>
                             <div class="col-lg-12">
-                                <div id="editor" style="height:200px"></div>
+                                <textarea asp-for="Description" class="form-control" rows="6"
+                                          placeholder="Enter description of the movie."></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="streamit-upload form-group position-relative tvshow_genre_thumbnail_id_field">
-                                    <label class="form-label">Thumbnail</label>
+                                    <label class="form-label">Thumbnail Image</label>
                                     <div>
                                         <a href="#" class="d-flex align-items-center flex-column justify-content-center gap-4 button streamit_upload_video_button tips">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -72,7 +68,8 @@
                                             <span class="d-block">Choose Media to Upload</span>
                                         </a>
                                     </div>
-                                    <input type="file" class="file_upload" style="display:none;" accept="image/*" />
+                                    <input asp-for="ImageFile" type="file" class="form-control" accept="image/*" />
+                                    <span asp-validation-for="ImageFile" class="text-danger"></span>
                                     <div class="streamit_media_preview-wrap">
                                         <div class="streamit_media_preview">
                                             <img class="tvshow_genre_thumbnail_preview" src="" alt="preview"
@@ -87,9 +84,9 @@
                             </div>
                             <div class="col-lg-9">
                                 <div class="form-group">
-                                    <label class="form-label" asp-for="Excerpt">Excerpt</label>
-                                    <textarea asp-for="Excerpt" class="form-control" rows="7"
-                                              placeholder="Enter excerpt content of the movie."></textarea>
+                                    <label class="form-label" asp-for="CoverFile">Cover Image</label>
+                                    <input asp-for="CoverFile" class="form-control" accept="image/*" />
+                                    <span asp-validation-for="CoverFile" class="text-danger"></span>
                                 </div>
                             </div>
                         </div>
@@ -102,15 +99,11 @@
                                             <div class="nav flex-column nav-pills me-0 me-lg-3 mb-3 mb-md-0 list-inline streamit-tabs"
                                                  role="tablist" aria-orientation="vertical">
                                                 <button class="nav-link active" data-bs-toggle="pill" type="button" data-bs-target="#general_tab" role="tab"><span>General</span></button>
-                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#recommendedMovies_tab" role="tab"><span>Recommended Movies</span></button>
-                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#relatedVideos_tab" role="tab"><span>Related Videos</span></button>
                                                 <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#cast_tab" role="tab"><span>Cast</span></button>
                                                 <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#crew_tab" role="tab"><span>Crew</span></button>
-                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#sources_tab" role="tab"><span>Sources</span></button>
                                                 <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#genres_tab" role="tab"><span>Genres</span></button>
                                                 <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#tags_tab" role="tab"><span>Tags</span></button>
                                                 <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#additionData_tab" role="tab"><span>Additional Data</span></button>
-                                                <button class="nav-link" data-bs-toggle="pill" type="button" data-bs-target="#membershipLevel_tab" role="tab"><span>Membership Level</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -118,189 +111,203 @@
                                     <div class="col-lg-9 edit-tab-content">
                                         <div class="tab-content" id="streamit-tabs-content">
 
+                                            <!-- General Tab -->
                                             <div class="tab-pane fade show active" id="general_tab" role="tabpanel">
                                                 <div class="p-4 px-2">
                                                     <div class="row">
                                                         <div class="col-lg-6">
                                                             <div class="form-group">
-                                                                <label class="form-label">Choose Movie Method</label>
-                                                                <select class="form-select select2-basic-single">
-                                                                    <option>Upload movie</option>
-                                                                    <option>Embed movie</option>
-                                                                    <option>Movie URL</option>
-                                                                </select>
+                                                                <label class="form-label" asp-for="VideoFile">Upload Movie</label>
+                                                                <input asp-for="VideoFile" type="file" class="form-control" accept="video/*" />
+                                                                <span asp-validation-for="VideoFile" class="text-danger"></span>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6">
                                                             <div class="form-group">
-                                                                <label class="form-label">Upload movie <span class="text-danger">*</span></label>
-                                                                <input type="file" class="form-control" accept="video/*" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label">Movie Release Date</label>
-                                                                <input class="form-control flatpickr_humandate" type="text"
+                                                                <label class="form-label" asp-for="ReleaseDate">Movie Release Date <span class="text-danger">*</span></label>
+                                                                <input asp-for="ReleaseDate" class="form-control flatpickr_humandate" type="text"
                                                                        placeholder="Enter the release date of the movie." />
+                                                                <span asp-validation-for="ReleaseDate" class="text-danger"></span>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="row">
-                                                                <label class="form-label">Movie Time Duration</label>
-                                                                <div class="col-lg-6">
-                                                                    <input type="number" class="form-control" name="hours" value="0" placeholder="Hours" min="0" />
-                                                                </div>
-                                                                <div class="col-lg-6">
-                                                                    <input type="number" class="form-control" name="minutes" value="0" placeholder="Minutes" min="0" max="59" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
+                                                        <div class="col-lg-6 mt-3">
                                                             <div class="form-group">
-                                                                <label class="form-label">Movie Censor Rating</label>
-                                                                <input type="text" class="form-control" placeholder="Enter the movie censor rating." />
+                                                                <label class="form-label" asp-for="DurationMinutes">Duration (Minutes)</label>
+                                                                <input asp-for="DurationMinutes" type="number" class="form-control"
+                                                                       placeholder="Enter duration in minutes." min="0" />
+                                                                <span asp-validation-for="DurationMinutes" class="text-danger"></span>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6">
+                                                        <div class="col-lg-6 mt-3">
                                                             <div class="form-group">
-                                                                <label class="form-label">Language</label>
-                                                                <select class="form-select select2-basic-single" asp-for="Language" asp-items="Model.LanguageOptions"></select>
+                                                                <label class="form-label" asp-for="FranchiseId">Franchise</label>
+                                                                <select asp-for="FranchiseId" class="form-control select2-basic-single">
+                                                                    <option value="">-- Select Franchise --</option>
+                                                                    @if (Model.Franchises != null)
+                                                                    {
+                                                                        @foreach (var franchise in Model.Franchises)
+                                                                        {
+                                                                            <option value="@franchise.Id">@franchise.Name</option>
+                                                                        }
+                                                                    }
+                                                                </select>
+                                                                <span asp-validation-for="FranchiseId" class="text-danger"></span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="tab-pane fade" id="recommendedMovies_tab" role="tabpanel">
-                                                <div class="p-4 px-2">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Recommended Movies</label>
-                                                        <select class="form-select select2-basic-multiple" multiple
-                                                                asp-for="RecommendedMovieIds" asp-items="Model.AllMoviesOptions"></select>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="tab-pane fade" id="relatedVideos_tab" role="tabpanel">
-                                                <div class="p-4 px-2">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Related Videos</label>
-                                                        <select class="form-control select2-basic-multiple" multiple
-                                                                asp-for="RelatedVideoIds" asp-items="Model.AllVideosOptions"></select>
-                                                    </div>
-                                                </div>
-                                            </div>
-
+                                            <!-- Cast Tab -->
                                             <div class="tab-pane fade" id="cast_tab" role="tabpanel">
                                                 <div class="p-4 px-2">
-                                                    <div class="row">
-                                                        <div class="col-lg-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label">Choose Cast</label>
-                                                                <div class="d-flex gap-2">
-                                                                    <select class="form-control select2-basic-multiple" multiple
-                                                                            asp-for="CastIds" asp-items="Model.AllCastOptions"></select>
-                                                                    <button type="button" class="btn btn-primary">Add</button>
-                                                                </div>
-                                                            </div>
+                                                    <!-- Input Row -->
+                                                    <div class="row mb-3">
+                                                        <div class="col-lg-5">
+                                                            <select id="actor-select" class="form-control select2-basic-single">
+                                                                <option value="" disabled selected>-- Select Actor --</option>
+                                                                @if (Model.Casts != null)
+                                                                {
+                                                                    @foreach (var actor in Model.Casts)
+                                                                    {
+                                                                        <option value="@actor.Id">@actor.Name @actor.Surname</option>
+                                                                    }
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <select id="role-select" class="form-control select2-basic-single">
+                                                                <option value="" disabled selected>-- Select Role --</option>
+                                                                @foreach (var role in Html.GetEnumSelectList<RoleType>())
+                                                                {
+                                                                    <option value="@role.Value">@role.Text</option>
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <button type="button" class="btn btn-primary w-100" id="add-cast-btn">Add</button>
                                                         </div>
                                                     </div>
+
+                                                    <!-- Table -->
+                                                    <table class="table table-bordered" id="cast-table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Actor</th>
+                                                                <th>Role</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="cast-tbody">
+                                                        </tbody>
+                                                    </table>
+
+                                                    <!-- Hidden inputs for form submission -->
+                                                    <div id="cast-hidden-inputs"></div>
                                                 </div>
                                             </div>
 
+                                            <!-- Crew Tab -->
                                             <div class="tab-pane fade" id="crew_tab" role="tabpanel">
                                                 <div class="p-4 px-2">
-                                                    <div class="row">
-                                                        <div class="col-lg-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label">Choose Crew Member</label>
-                                                                <div class="d-flex gap-2">
-                                                                    <select class="form-control select2-basic-multiple" multiple
-                                                                            asp-for="CrewIds" asp-items="Model.AllCrewOptions"></select>
-                                                                    <button type="button" class="btn btn-primary">Add</button>
-                                                                </div>
-                                                            </div>
+                                                    <!-- Input Row -->
+                                                    <div class="row mb-3">
+                                                        <div class="col-lg-5">
+                                                            <select id="crew-select" class="form-control select2-basic-single">
+                                                                <option value="" disabled selected>-- Select Crew Member --</option>
+                                                                @if (Model.Crews != null)
+                                                                {
+                                                                    @foreach (var crew in Model.Crews)
+                                                                    {
+                                                                        <option value="@crew.Id">@crew.Name @crew.Surname</option>
+                                                                    }
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <select id="crewtype-select" class="form-control select2-basic-single">
+                                                                <option value="" disabled selected>-- Select Crew Type --</option>
+                                                                @foreach (var type in Html.GetEnumSelectList<CrewType>())
+                                                                {
+                                                                    <option value="@type.Value">@type.Text</option>
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <button type="button" class="btn btn-primary w-100" id="add-crew-btn">Add</button>
                                                         </div>
                                                     </div>
+
+                                                    <!-- Table -->
+                                                    <table class="table table-bordered" id="crew-table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Crew Member</th>
+                                                                <th>Type</th>
+                                                                <th style="width: 80px;"></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="crew-tbody">
+                                                        </tbody>
+                                                    </table>
+
+                                                    <!-- Hidden inputs -->
+                                                    <div id="crew-hidden-inputs"></div>
                                                 </div>
                                             </div>
 
-                                            <div class="tab-pane fade" id="sources_tab" role="tabpanel">
-                                                <div class="p-4 px-2">
-                                                    <button id="add-movie-source" type="button" class="btn btn-primary">Add Source</button>
-                                                    <div id="source-container" class="source-container mt-3"></div>
-                                                </div>
-                                            </div>
-
+                                            <!-- Genres Tab -->
                                             <div class="tab-pane fade" id="genres_tab" role="tabpanel">
                                                 <div class="p-4 px-2">
                                                     <div class="form-group">
                                                         <label class="form-label">Choose Movie Genres</label>
                                                         <select class="form-control select2-basic-multiple" multiple
-                                                                asp-for="GenreIds" asp-items="Model.AllGenresOptions"></select>
+                                                                asp-for="GenreIds">
+                                                            <option value="" disabled>--Select Genres--</option>
+                                                            @if (Model.Genres != null)
+                                                            {
+                                                                @foreach (var genre in Model.Genres)
+                                                                {
+                                                                    <option value="@genre.Id">@genre.Name</option>
+                                                                }
+                                                            }
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
 
+                                            <!-- Tags Tab -->
                                             <div class="tab-pane fade" id="tags_tab" role="tabpanel">
                                                 <div class="p-4 px-2">
                                                     <div class="form-group">
                                                         <label class="form-label">Choose Movie Tags</label>
                                                         <select class="form-control select2-basic-multiple" multiple
-                                                                asp-for="TagIds" asp-items="Model.AllTagsOptions"></select>
+                                                                asp-for="TagIds">
+                                                            <option value="" disabled >--Select Tags--</option>
+                                                            @if (Model.Tags != null)
+                                                            {
+                                                                @foreach (var tag in Model.Tags)
+                                                                {
+                                                                    <option value="@tag.Id">@tag.Name</option>
+                                                                }
+                                                            }
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
 
+                                            <!-- Additional Data Tab -->
                                             <div class="tab-pane fade" id="additionData_tab" role="tabpanel">
                                                 <div class="p-4 px-2">
                                                     <div class="row">
                                                         <div class="col-lg-6">
                                                             <div class="form-group">
-                                                                <label class="form-label">Trailer Link</label>
-                                                                <input type="text" class="form-control" asp-for="TrailerLink"
-                                                                       placeholder="Enter the trailer link." />
+                                                                <label class="form-label" asp-for="TrailerUrl">Trailer URL</label>
+                                                                <input asp-for="TrailerUrl" type="text" class="form-control"
+                                                                       placeholder="Enter the trailer URL." />
+                                                                <span asp-validation-for="TrailerUrl" class="text-danger"></span>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6">
-                                                            <label class="d-block form-label">Upcoming</label>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" asp-for="IsUpcoming" />
-                                                                <label class="form-check-label" asp-for="IsUpcoming">This Is Upcoming Movie</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 mt-3">
-                                                            <div class="form-group">
-                                                                <label class="form-label">Upload Portrait Image</label>
-                                                                <input type="file" class="form-control" accept="image/*" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 mt-3">
-                                                            <div class="form-group">
-                                                                <label class="form-label">IMDb Rating</label>
-                                                                <input type="number" class="form-control" asp-for="ImdbRating"
-                                                                       min="0" max="10" step="0.1" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 mt-3">
-                                                            <label class="d-block form-label">Notification</label>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" asp-for="NotifyUser" />
-                                                                <label class="form-check-label" asp-for="NotifyUser">Notify User</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="tab-pane fade" id="membershipLevel_tab" role="tabpanel">
-                                                <div class="p-4 px-2">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Choose PMP Levels</label>
-                                                        <select class="form-control select2-basic-multiple" multiple
-                                                                asp-for="MembershipLevelIds" asp-items="Model.AllMembershipOptions"></select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -326,4 +333,134 @@
             </div>
         </div>
     </div>
-</div> *@
+</div>
+<script>
+        let castIndex = 0;
+
+    document.getElementById('add-cast-btn').addEventListener('click', function () {
+        const actorSelect = document.getElementById('actor-select');
+        const roleSelect = document.getElementById('role-select');
+
+        const actorId = actorSelect.value;
+        const actorText = actorSelect.options[actorSelect.selectedIndex].text;
+        const roleValue = roleSelect.value;
+        const roleText = roleSelect.options[roleSelect.selectedIndex].text;
+
+        if (!actorId || !roleValue) {
+            alert('Please select both an actor and a role.');
+            return;
+        }
+        const existing = document.querySelectorAll('#cast-hidden-inputs div');
+    for (let group of existing) {
+        const existingActor = group.querySelector(`input[name*="ActorId"]`).value;
+        const existingRole = group.querySelector(`input[name*="Role"]`).value;
+        if (existingActor === actorId && existingRole === roleValue) {
+            alert(`${actorText} is already added with the role ${roleText}.`);
+            return;
+        }
+    }
+
+        // Add row to table
+        const tbody = document.getElementById('cast-tbody');
+        const row = document.createElement('tr');
+        row.dataset.index = castIndex;
+        row.innerHTML = `
+            <td>${actorText}</td>
+            <td>${roleText}</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-sm remove-cast-btn">Remove</button>
+            </td>
+        `;
+        tbody.appendChild(row);
+
+        // Add hidden inputs for form submission
+        const hiddenContainer = document.getElementById('cast-hidden-inputs');
+        const hiddenGroup = document.createElement('div');
+        hiddenGroup.dataset.index = castIndex;
+        hiddenGroup.innerHTML = `
+            <input type="hidden" name="MovieCasts[${castIndex}].ActorId" value="${actorId}" />
+            <input type="hidden" name="MovieCasts[${castIndex}].Role" value="${roleValue}" />
+        `;
+        hiddenContainer.appendChild(hiddenGroup);
+
+        castIndex++;
+
+    });
+
+    document.getElementById('cast-tbody').addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-cast-btn')) {
+            const row = e.target.closest('tr');
+            const index = row.dataset.index;
+
+            // Remove table row
+            row.remove();
+
+            // Remove hidden inputs
+            const hiddenGroup = document.querySelector(`#cast-hidden-inputs div[data-index="${index}"]`);
+            if (hiddenGroup) hiddenGroup.remove();
+        }
+    });
+        let crewIndex = 0;
+
+    document.getElementById('add-crew-btn').addEventListener('click', function () {
+        const crewSelect = document.getElementById('crew-select');
+        const crewTypeSelect = document.getElementById('crewtype-select');
+
+        const crewId = crewSelect.value;
+        const crewText = crewSelect.options[crewSelect.selectedIndex].text;
+        const crewTypeValue = crewTypeSelect.value;
+        const crewTypeText = crewTypeSelect.options[crewTypeSelect.selectedIndex].text;
+
+        if (!crewId || !crewTypeValue) {
+            alert('Please select both a crew member and a crew type.');
+            return;
+        }
+
+        // Check for duplicate combination
+        const existing = document.querySelectorAll('#crew-hidden-inputs div');
+        for (let group of existing) {
+            const existingCrew = group.querySelector(`input[name*="CrewId"]`).value;
+            const existingType = group.querySelector(`input[name*="CrewType"]`).value;
+            if (existingCrew === crewId && existingType === crewTypeValue) {
+                alert(`${crewText} is already added with the type ${crewTypeText}.`);
+                return;
+            }
+        }
+
+        // Add row to table
+        const tbody = document.getElementById('crew-tbody');
+        const row = document.createElement('tr');
+        row.dataset.index = crewIndex;
+        row.innerHTML = `
+            <td>${crewText}</td>
+            <td>${crewTypeText}</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-sm remove-crew-btn">Remove</button>
+            </td>
+        `;
+        tbody.appendChild(row);
+
+        // Add hidden inputs
+        const hiddenContainer = document.getElementById('crew-hidden-inputs');
+        const hiddenGroup = document.createElement('div');
+        hiddenGroup.dataset.index = crewIndex;
+        hiddenGroup.innerHTML = `
+            <input type="hidden" name="MovieCrews[${crewIndex}].CrewId" value="${crewId}" />
+            <input type="hidden" name="MovieCrews[${crewIndex}].CrewType" value="${crewTypeValue}" />
+        `;
+        hiddenContainer.appendChild(hiddenGroup);
+
+        crewIndex++;
+
+    });
+
+    document.getElementById('crew-tbody').addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-crew-btn')) {
+            const row = e.target.closest('tr');
+            const index = row.dataset.index;
+            row.remove();
+            const hiddenGroup = document.querySelector(`#crew-hidden-inputs div[data-index="${index}"]`);
+            if (hiddenGroup) hiddenGroup.remove();
+        }
+    });
+</script>

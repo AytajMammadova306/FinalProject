@@ -45,5 +45,11 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
         {
             return await _repository.GetAll().CountAsync();
         }
+        public async Task<ICollection<Franchise>> GetAllFranchiseAsync()
+        {
+            ICollection<Franchise> franchise = await _repository.GetAll().ToListAsync();
+            return franchise;
+        }
+
     }
 }

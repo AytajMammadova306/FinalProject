@@ -34,5 +34,10 @@ namespace Cinemastic.Persistance.Implementations.Services.EntityServices
             IReadOnlyList<Genre> genres = await _repository.GetAll(func: (g => g.TvShowGenres.Count() > 0)).ToListAsync();
             return _mapper.Map<ICollection<GenreCardVM>>(genres);
         }
+        public async Task<ICollection<Genre>> GetAllGenresAsync()
+        {
+            ICollection<Genre> genres = await _repository.GetAll().ToListAsync();
+            return genres;
+        }
     }
 }
