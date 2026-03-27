@@ -18,7 +18,16 @@ namespace Cinemastic.Application.MappingProfiles
 
 
             CreateMap<Slide, GetSlideVM>()
-
+                .ForMember(sVM => sVM.CoverUrl,
+                    opt => opt.MapFrom(s =>
+                    s.Movie != null
+                    ? s.Movie.CoverUrl
+                    : s.TvShow.CoverUrl))
+                .ForMember(sVM => sVM.TrailerUrl,
+                    opt => opt.MapFrom(s =>
+                    s.Movie != null
+                    ? s.Movie.TrailerUrl
+                    : s.TvShow.TrailerUrl))
                 .ForMember(sVM => sVM.Name,
                 opt => opt.MapFrom(s =>
                 s.Movie != null

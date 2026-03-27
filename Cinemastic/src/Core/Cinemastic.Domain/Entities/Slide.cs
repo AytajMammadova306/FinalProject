@@ -13,7 +13,5 @@ namespace Cinemastic.Domain.Entities
         public long? TvShowId { get; set; }
         public Movie? Movie { get; set; }
         public TvShow? TvShow { get; set; }
-        public string CoverUrl { get; set; }
-        public string TrailerUrl { get; set; }
     }
 }

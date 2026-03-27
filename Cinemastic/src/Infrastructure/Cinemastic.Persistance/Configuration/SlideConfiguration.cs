@@ -13,10 +13,6 @@ namespace Cinemastic.Persistance.Configuration
     {
         public void Configure(EntityTypeBuilder<Slide> builder)
         {
-            builder.Property(s => s.CoverUrl)
-                .IsRequired();
-            builder.Property(s=>s.TrailerUrl)
-                .IsRequired();
             builder.HasOne(s => s.Movie)
                 .WithOne(m => m.Slide)
                 .HasForeignKey<Slide>(s => s.MovieId)
